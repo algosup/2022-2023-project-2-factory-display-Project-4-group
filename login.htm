@@ -7,7 +7,21 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.webp">
     <script src="login.js"></script>
+    <script>
+        document.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+        }, false);
+    </script>
+    <script>
+        document.addEventListener("keydown", (e) => {
+            if (e.ctrlKey && e.keyCode == 123) {
+                e.stopPropagation();
+                e.preventDefault();
+            }
+        });
+    </script>
     <title>Interractive login form</title>
+
 </head>
 <body>
     <form class="box" action="login.htm" method="POST">
