@@ -4,7 +4,7 @@
 
 lorem
 
-##Features:
+## Features:
 
 ### Login:
 
@@ -16,3 +16,9 @@ Expected: bug
 Got: ''
 
 ---
+
+| Test Name | Number of Test cases |    Test cases list     |    Expected    |       Got       | 
+| --------- | -------------------- |    ---------------     |    --------    |       ---       | 
+| Log in the page | 3 |    1. Enter your login and password 2. Click on login     |    Error    |     Result       |             
+
+
