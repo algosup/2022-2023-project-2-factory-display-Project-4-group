@@ -14,7 +14,7 @@
     </script>
     <script>
         document.addEventListener("keydown", (e) => {
-            if (e.ctrlKey && e.keyCode == 123) {
+            if (e.ctrlKey || e.keyCode == 123) {
                 e.stopPropagation();
                 e.preventDefault();
             }
