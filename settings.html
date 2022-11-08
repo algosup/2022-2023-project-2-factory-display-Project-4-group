@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <link rel="stylesheet" href="css/settings.css">
+        <title>Settings Menu</title>
+    </head> 
+    <body>
+        <div class="menu">
+      
+          <div class="menu-header">
+              <h2 class="menu-header-title">Theme</h2>
+              <div class="theme-switcher">
+                  <input type="radio" id="light-theme" name="themes" checked />
+                  <label for="light-theme">
+                      <span>
+                          <ion-icon name="sunny"></ion-icon> Light
+                      </span>
+                  </label>
+                  <input type="radio" id="dark-theme" name="themes" />
+                  <label for="dark-theme">
+                      <span>
+                          <ion-icon name="moon"></ion-icon> Dark
+                      </span>
+                  </label>
+                  <input type="radio" id="black-theme" name="themes" />
+                  <label for="black-theme">
+                      <span>
+                          <ion-icon name="contrast"></ion-icon> Black
+                      </span>
+                  </label>
+                  <span class="slider"></span>
+              </div>
+          </div>
+          <div class="menu-body">
+              <a href="#"><ion-icon name="settings-outline"></ion-icon>Account Settings</a>
+              <a href="#"><ion-icon name="chatbox-ellipses-outline"></ion-icon>Give Feedback</a>
+              <a href="#"><ion-icon name="information-circle-outline"></ion-icon>About</a>
+              <a href="#"><ion-icon name="mail-outline"></ion-icon>Support</a>
+          </div>
+      
+      </div>
+      
+      
+      <script>
+        var html = document.getElementsByTagName('html');
+        var radios = document.getElementsByName('themes'); 
+      
+        for (i = 0; i < radios.length; i++) {
+          radios[i].addEventListener('change', function() {
+            html[0].classList.remove(html[0].classList.item(0));
+            html[0].classList.add(this.id);
+          });
+      }
+      </script>
+      </body>
+</html>
