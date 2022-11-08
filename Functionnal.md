@@ -20,7 +20,7 @@
 - [Out Of Scope](#out-of-scope)
 # Introduction
   
-[Jacobi](https://www.jacobi.net), a company located in Vierzon, needs ... that could display informations based on what the user requests.
+[Jacobi](https://www.jacobi.net), a company located in Vierzon, needs a communication tool that could send informations based on what the user requests, in order to facilitate the information transmission between employees.
 
 # Glossary
 
@@ -29,6 +29,8 @@
 # Uses cases
 
 # Risks and Asumptions
+
+**RGPD**: The [RGPD](https://ec.europa.eu/info/law/law-topic/data-protection/data-protection-eu_en) is a law that protects the personal data of the users. It is important to respect this law in order to avoid any problems.
 
 ## About the laws
 
