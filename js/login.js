@@ -5,9 +5,10 @@ function validate() {
    var password = document.getElementById("password").value;
    if (username == "admin" && password == "admin") {
        alert ("Login successfully");
-       return false;
+         window.location = "success.html"; // Redirecting to other page.
    }
    else {
        alert("Invalid username or password");
+        return false;
    }
 }
