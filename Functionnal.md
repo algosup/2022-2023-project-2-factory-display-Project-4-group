@@ -2,9 +2,9 @@
 <sub> Last update : November 7, 2022 </sub>
 
 
-<sub> Author : Victor Leroy
+<sub> Author : [Victor Leroy](https://www.linkedin.com/in/victor-leroy-64baa3229/)
 
-<sub> Team : Laurent Bouquin, Lucas Aubard, Alexis Lasselin, Paul Nowak </sub>
+<sub> Team : [Laurent Bouquin](https://www.linkedin.com/in/laurent-bouquin-60911a1b8/), [Lucas Aubard](https://www.linkedin.com/in/lucas-aubard-596b37251/), [Alexis Lasselin](https://www.linkedin.com/in/alexis-lasselin-318649251/), [Paul Nowak](https://www.linkedin.com/in/paul-nowak-0757a61a7/) </sub>
 
   Table of contents
 
