@@ -5,7 +5,7 @@ function validate() {
    var password = document.getElementById("password").value;
    if (username == "admin" && password == "admin") {
       window.location.href ="settings.html";
-      //alert("Login successfully");
+      alert("Login successfully");
    }
    else {
        alert("Invalid username or password");
