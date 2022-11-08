@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" and dir="ltr">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Animated Login Form</title>
+    <link rel="stylesheet" href="css/login.css">
     <link rel="icon" href="ressources/logo.webp">
     <script src="js/login.js"></script>
-    <script>
-        document.addEventListener("contextmenu", (e) => {
-            e.preventDefault();
-        }, false);
-    </script>
-    <script>
-        document.addEventListener("keydown", (e) => {
-            if (e.ctrlKey || e.keyCode == 123) {
-                e.stopPropagation();
-                e.preventDefault();
-            }
-        });
-    </script>
-    <title>Interractive login form</title>
-
 </head>
+
 <body>
-    <form class="box" action="login.htm" method="POST">
-        <h1>Login</h1>
-        <input type="text" name="username" placeholder="Username" id="username">
-        <input type="password" name="password" placeholder="Password" id="password">
-        <input type="submit" name="submit" value="Login" onclick="validate()">
-    </form>
+    <div class="box">
+        <form autocomplete="off">
+            <h2>Sign in</h2>
+            <div class="inputBox">
+                <input type="text" required="required" id="username">
+                <span>Userame</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required" id="password">
+                <span>Password</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="#">Forgot Password ?</a>
+            </div>
+            <input type="submit" value="Login" onclick="validate()">
+        </form>
+    </div>
 </body>
+
 </html>
