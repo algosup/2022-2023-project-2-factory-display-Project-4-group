@@ -89,3 +89,9 @@ body{
     background-color: white;
     margin: 10px;
 }
+
+ion-icon {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 136px;
+  }
