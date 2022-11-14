@@ -50,9 +50,11 @@ The most important points of this project is to be able to control the displayed
 - Widgets for weather, news, etc. that will be updated on a regular basis
 - An history of the displayed content
 - An access rights to the screen to ensure there is no risk of it being misused
-- An access rights to the tool to ensure that only authorized people can use it
+- An access rights to the tool to ensure that only authorized people can use it (there will only be 4 people who will have their access granted to the tool)
   
 # Out Of Scope
-
-
-
+ 
+Due to time constraints, these features might be included in the upcoming versions :
+- Different languages 
+- Smart screen in Paris to display informations
+- Unique logins for each users 
