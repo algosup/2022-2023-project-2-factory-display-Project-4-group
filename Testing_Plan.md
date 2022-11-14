@@ -18,7 +18,7 @@
 
 ## Screens page:
 
-### Check screens
+### Check screens:
 | Test Name | Description | Number of Test cases |    Test cases list     |    Expected    |       Got       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       | 
 | Filter TV | Filter a particular TV among the list of connected screens| 1 |    1. Filter your TV according to your research on the filter menu <br /> |    Display on the right all the screens corresponding to your research   |     To be tested       |       
@@ -26,7 +26,7 @@
 | TV State | When a remote screen is activated, the website label in green the corresponding screen on the page| 1 |    1. Turn on the TV Screen<br />     |    The screen is labeled in green    |     To be tested       | 
 
 
-### Manage screens
+### Manage screens:
 | Test Name | Description | Number of Test cases |    Test cases list     |    Expected    |       Got       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       | 
 | Screen Update| Update a particular screen with your actual template| 3 |    1. Select your screen<br /> 2. Click on "Update with the template".<br /> 3. Turn on the same TV Screen<br />     |    The screen is updated with the edited template    |     To be tested       |  
@@ -38,9 +38,9 @@
 | Test Name | Description | Number of Test cases |    Test cases list     |    Expected    |       Got       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       | 
 | Check Widget | Verify if a widget with real time data is updated on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should have the widget with the right real time data. |     To be tested       | 
-| Check Hour | //Verify if a widget with real time data is updated on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should have the widget with the right real time data. |     To be tested       | 
-| Check Picture | //Verify if a widget with real time data is updated on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should have the widget with the right real time data. |     To be tested       | 
-| Check Changeable Element | //Verify if a widget with real time data is updated on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should have the widget with the right real time data. |     To be tested       | 
+| Check Hour | //Verify if the real time hour is updated on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display the actual time and be updated dynamically. |     To be tested       | 
+| Check Picture | //Verify if a picture is displayed on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display the picture without issue. |     To be tested       | 
+| Check Changeable Element | //Verify if a an element displayed on screen can be switched with another one smoothly on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display the element, and then this element is replaced smoothly by another one for a while. |     To be tested       | 
 | Prevent screen Cancel | Prevent an user to change the screen to do something else on TV| 1 |    1. Turn on the screen. <br/> 2. Try to change channel with the TV remote. <br/>|    The TV screen will display the message "it's currently not possible to leave the info application." at the top right corner. |     To be tested       |
 
 ## Settings:
