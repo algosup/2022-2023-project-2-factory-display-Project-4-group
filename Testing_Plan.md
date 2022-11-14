@@ -68,6 +68,7 @@
 | Add a text| Add a text area| 5 |    1. Select the text tool. <br/> 2. Select the text form you want. <br/> 3. Drag it on the template's grid at the location you want. <br/> 4. Type the text you want <br/> 5. Click on "Update" <br/>|    The page should show a small screen of a preview of the template with the added text area.  |     To be tested       | 
 | Add a widget| Add a widget which will display the current weather| 4 |    1. Select the widgets tool. <br/> 2. Select the widgets form you want. <br/> 3. Drag it on the template's grid at the location you want. <br/> 4. Click on "Update" <br/>|    The page should show a small screen of a preview of the template with the added widget  |     To be tested       | 
 | Add the hour| Add the hour which will display the actual hour| 4 |    1. Select the time tool. <br/> 2. Select the time form you want. <br/> 3. Drag it on the template's grid at the location you want. <br/> 4. Click on "Update" <br/>|    The page should show a small screen of a preview of the template with the added hour element  |     To be tested       |
+| Add a picture| Add a picture which will be displayed on the template.| 4 |    1. Select the pictures tool. <br/> 2. Select the picture you want. <br/> 3. Drag it on the template's grid at the location you want. <br/> 4. Click on "Update" <br/>|    The page should show a small screen of a preview of the template with the added picture.  |     To be tested       |
 | Add the changeable element| Add a particular element which can change into another, like a picture to another picture, or a text in another text.| 6 |    1. Select the changeable tool.  <br/> 2. Drag it on the template. <br/> 3. Select the first element you want and drag it inside the changeable module.  <br/> 4. Select the second element you want and drag it inside the changeable module.  <br/> 5. Do the transition settings. <br/> 6. Click on "Update" <br/>|    The page should show a small screen of a preview of the template with the added changeable element. Plus, when hovering a mouse over the changeable elements, it should display the order of the elements displayed.  |     To be tested       |  
 
 ### Modify Elements:
@@ -90,12 +91,15 @@
 ### Remove Elements:
 | Test Name | Description | Number of Test cases |    Test cases list     |    Expected    |       Got       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       | 
-| Remove Element| Remove an element out of the template| 4 |    1. Right click on the element. <br/> 2. Select "Delete". <br/> 3. Click on "Update" <br/>|    The page should show a small screen of a preview of the template with the removed element  |     To be tested       |
-| Remove several elements| Remove several elements out of the template| 3 |    1. Right click on the screen.  <br/> 2. Drag the selecting square over the elements you want to delete. <br/> 3. Select "Delete". <br/> 4. Click on "Update" <br/>|    The page should show a small screen of a preview of the template with all the removed elements  |     To be tested       |
+| Remove Element| Remove an element out of the template| 3 |    1. Right click on the element. <br/> 2. Select "Delete". <br/> 3. Click on "Update" <br/>|    The page should show a small screen of a preview of the template with the removed element  |     To be tested       |
+| Remove several elements| Remove several elements out of the template| 4 |    1. Right click on the screen.  <br/> 2. Drag the selecting square over the elements you want to delete. <br/> 3. Select "Delete". <br/> 4. Click on "Update" <br/>|    The page should show a small screen of a preview of the template with all the removed elements  |     To be tested       |
 
-### Get Element:
+### Use Element Tools:
 | Test Name | Description | Number of Test cases |    Test cases list     |    Expected    |       Got       | 
-| --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       | 
+| --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |
+| Display widget| Display a contextual menu showing differents widgets forms| 4 |    1. Select "Elements" tool.  <br/> 2. Select "widgets" tool. <br/>|    A contextual menu showing several shapes for widgets is displayed  |     To be tested       |
+| Get picture| Display a small menu to select a picture from an image database.| 4 |    1. Select "Elements" tool.  <br/> 2. Select "picture" tool. <br/>|    A small menu showing several pictures is displayed  |     To be tested       |
+| Drag element| Allow to drag one element template ot the grid| 4 |    1. Select "Elements" tool.  <br/> 2. Select any subtool. <br/> 3. Select your element template. <br/>|    You can drag the element template while holding the mouse to the grid. |     To be tested       | 
 
 
 
