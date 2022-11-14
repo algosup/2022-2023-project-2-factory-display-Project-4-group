@@ -57,6 +57,10 @@
 ### Update Template:
 | Test Name | Description | Number of Test cases |    Test cases list     |    Expected    |       Got       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       | 
+| Update template | Save your template after editing it. | 2 |    1. Edit your template. <br/> 2. Click on "Update" <br/>|    The page should show a small screen of a preview of the template with the edited information  |     To be tested       |
+| Undo previous action | Undo the previous action you did while editing your template. | 2 |    1. Edit your template. <br/> 2. Do the "undo" shortcut. <br/>|    The template should go back to its previous state.  |     To be tested       | 
+| Redo action after undo | After undoing an action in your template, gives the possibility to redo the cancelled action again. | 3 |    1. Edit your template. <br/> 2. Do the "undo" shortcut. <br/> 3.Do the "redo" shortcut.<br/> |    After redoing an action in your template, the template return to its last modification.  |     To be tested       | 
+
 
 ### Add Elements:
 | Test Name | Description | Number of Test cases |    Test cases list     |    Expected    |       Got       | 
@@ -66,7 +70,7 @@
 ### Modify Elements:
 | Test Name | Description | Number of Test cases |    Test cases list     |    Expected    |       Got       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       | 
-| Edit info | Edit an information on the template| 2 |    1. Edit your information. <br/> 2. Click on "Update" <br/>|    The page should show a small screen of a preview of the template with the edited information  |     To be tested       | 
+
 | Adjust Element Size| Allow to either reduce or grow an element size.| 3 |    1. Right click on an element. <br/> 2. Select one of the white dots at the corner with your mouse. <br/> 3. Hold the mouse and move the white dot diagonally. <br/>|    The selected element will either grow in size or be reduced. |     To be tested       |
 
 ### Manage Elements:
