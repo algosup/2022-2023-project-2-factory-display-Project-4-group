@@ -1,5 +1,24 @@
 # Testing Plan
 
+## Table of contents
+
+
+- [Table of contents](#table-of-contents)
+- [Login](#login)
+- [Website Navigation](#website-navigation)
+- [Screens page](#screens-page)
+  - [Check screens](#check-screens)
+  - [Manage screens](#manage-screens)
+- [Remote TV Screens](#remote-tv-screens)
+- [Settings](#settings)
+- [Template modifying](#template-modifying)
+  - [Update Template](#update-template)
+  - [Add Elements](#add-elements)
+  - [Modify Elements](#modify-elements)
+  - [Manage Elements](#manage-elements)
+  - [Remove Elements](#remove-elements)
+  - [Use Element Tools](#use-element-tools)
+
 ## Login:
 | Test Name | Description | Number of Test cases |    Test cases list     |    Expected    |       Got       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       | 
@@ -97,9 +116,9 @@
 ### Use Element Tools:
 | Test Name | Description | Number of Test cases |    Test cases list     |    Expected    |       Got       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |
-| Display widget| Display a contextual menu showing differents widgets forms| 4 |    1. Select "Elements" tool.  <br/> 2. Select "widgets" tool. <br/>|    A contextual menu showing several shapes for widgets is displayed  |     To be tested       |
-| Get picture| Display a small menu to select a picture from an image database.| 4 |    1. Select "Elements" tool.  <br/> 2. Select "picture" tool. <br/>|    A small menu showing several pictures is displayed  |     To be tested       |
-| Drag element| Allow to drag one element template ot the grid| 4 |    1. Select "Elements" tool.  <br/> 2. Select any subtool. <br/> 3. Select your element template. <br/>|    You can drag the element template while holding the mouse to the grid. |     To be tested       | 
+| Display widget| Display a contextual menu showing differents widgets forms| 2 |    1. Select "Elements" tool.  <br/> 2. Select "widgets" tool. <br/>|    A contextual menu showing several shapes for widgets is displayed  |     To be tested       |
+| Get picture| Display a small menu to select a picture from an image database.| 2 |    1. Select "Elements" tool.  <br/> 2. Select "picture" tool. <br/>|    A small menu showing several pictures is displayed  |     To be tested       |
+| Drag element| Allow to drag one element template ot the grid| 3 |    1. Select "Elements" tool.  <br/> 2. Select any subtool. <br/> 3. Select your element template. <br/>|    You can drag the element template while holding the mouse to the grid. |     To be tested       | 
 
 
 
