@@ -90,7 +90,8 @@
 ### Remove Elements:
 | Test Name | Description | Number of Test cases |    Test cases list     |    Expected    |       Got       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       | 
-| Remove Element| Remove an element out of the template| 3 |    1. Right click on the element. <br/> 2. Select "Delete". <br/> 3. Click on "Update" <br/>|    The page should show a small screen of a preview of the template with the removed element  |     To be tested       |
+| Remove Element| Remove an element out of the template| 4 |    1. Right click on the element. <br/> 2. Select "Delete". <br/> 3. Click on "Update" <br/>|    The page should show a small screen of a preview of the template with the removed element  |     To be tested       |
+| Remove several elements| Remove several elements out of the template| 3 |    1. Right click on the screen.  <br/> 2. Drag the selecting square over the elements you want to delete. <br/> 3. Select "Delete". <br/> 4. Click on "Update" <br/>|    The page should show a small screen of a preview of the template with all the removed elements  |     To be tested       |
 
 ### Get Element:
 | Test Name | Description | Number of Test cases |    Test cases list     |    Expected    |       Got       | 
