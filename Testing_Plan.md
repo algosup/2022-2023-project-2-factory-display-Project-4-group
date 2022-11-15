@@ -8,7 +8,8 @@
 - [Website Navigation](#website-navigation)
 - [Screens page](#screens-page)
   - [Check screens](#check-screens)
-  - [Manage screens](#manage-screens)
+  - [Manage screens Updates](#manage-screens-updates)
+  - [Manage screens Templates](#manage-screens-templates)
 - [Remote TV Screens](#remote-tv-screens)
 - [Settings](#settings)
 - [Template modifying](#template-modifying)
@@ -43,16 +44,23 @@
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       | 
 | Filter TV | Filter a particular TV among the list of connected screens| 1 |    1. Filter your TV according to your research on the filter menu <br /> |    Display on the right all the screens corresponding to your research   |     To be tested       |       
 | Screen Zoom | When we select a screen, it get zoomed in.| 1 |    1. Select the TV Screen<br />     |    The selected screen is zoomed in   |     To be tested       |  
-| TV State | When a remote screen is activated, the website label in green the corresponding screen on the page| 1 |    1. Turn on the TV Screen<br />     |    The screen is labeled in green    |     To be tested       | 
+| Last update | The website labels the screens which got the last update.| 1 |    1. Update a TV screen <br />   |    The screen is labeled.   |     To be tested       | 
 
 
-### Manage screens:
+### Manage screens Updates:
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       | 
 | Screen Update| Update a particular screen with your actual template| 3 |    1. Select your screen<br /> 2. Click on "Update with the template".<br /> 3. Turn on the same TV Screen<br />     |    The screen is updated with the edited template    |     To be tested       |  
 | Select several screens| Turn on a mode to select several screens on the page| 2 |    1. Click on "Select several screens" <br /> 2. Start selecting one or several screens<br />     |    The selected screens's background colors are darkened.    |     To be tested       | 
 | Update many screens | Update several screens with your actual template at the same time| 4 |    1. Click on "Select several screens" <br /> 2. Select all your screens<br /> 3. Click on "Update all of them with the template".<br /> 4. Turn on all the selected TV screens<br />     |    The screen is updated with the edited template    |     To be tested       | 
-| Quit several screens mode| Turn off the select several screens mode| 3 |    1. Click on "Select several screens" <br /> 2. Start selecting one or several screens<br />3. Click on the red cross below "Cancel the selection".<br />       |    The selected screens's background colors which were darkened are back to normal.    |     To be tested       | 
+| Quit several screens mode| Turn off the select several screens mode| 3 |    1. Click on "Select several screens" <br /> 2. Start selecting one or several screens<br />3. Click on the red cross below "Cancel the selection".<br />       |    The selected screens's background colors which were darkened are back to normal.    |     To be tested       |
+
+### Manage screens Templates:
+| Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       | 
+| --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |
+| Change template Update| Change the template used which will be displayed on the screen| 3 |    1. Select your screen<br /> 2. Click on "Change the template".<br /> 3. Choose the template.<br /> 4. Click on "Update New Template".<br /> 5. Turn on the same TV Screen<br />     |    The screen is updated with the new template    |     To be tested       |  
+| Select several screens| Turn on a mode to select several screens on the page| 2 |    1. Click on "Select several screens" <br /> 2. Start selecting one or several screens<br />     |    The selected screens's background colors are darkened.    |     To be tested       | 
+| Change several screens templates | Change the template of several screens with the same template all at the time| 6 |    1. Click on "Select several screens" <br /> 2. Select all your screens<br /> 3. Click on "Change all templates".<br /> 4. Choose the template.<br /> 5. Click on "Update New Template for all" .<br /> 6. Turn on all the selected TV screens<br />     |    All screens are updated with the new template    |     To be tested       | 
 
 ## Remote TV Screens:
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       | 
