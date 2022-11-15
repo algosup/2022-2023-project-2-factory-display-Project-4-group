@@ -13,8 +13,10 @@
 - [Introduction](#introduction)
 - [Glossary](#glossary)
 - [Uses cases](#uses-cases)
-- [Risks and Asumptions](#risks-and-asumptions)
-  - [About the laws](#about-the-laws)
+- [Functional requirements](#functional-requirements)
+  - [Assumptions](#assumptions)
+  - [Constraints](#constraints)
+    - [About the laws](#about-the-laws)
 - [Non goals](#non-goals)
 - [Requirements](#requirements)
 - [Out Of Scope](#out-of-scope)
@@ -28,12 +30,18 @@
 
 # Uses cases
 
-# Risks and Asumptions
+# Functional requirements
+
+## Assumptions
+
+## Constraints
+- There's 3 shifts per day which means we'll have to update the important informations at least 3 times a day.
+
+
+### About the laws
+
 
 **RGPD**: The [RGPD](https://ec.europa.eu/info/law/law-topic/data-protection/data-protection-eu_en) is a law that protects the personal data of the users. It is important to respect this law in order to avoid any problems.
-
-## About the laws
-
 
 # Non goals
 
