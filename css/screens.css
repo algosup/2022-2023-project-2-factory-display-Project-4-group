@@ -17,7 +17,7 @@ body{
     background-color: #45f3ff;
 }
 .page1{
-    background-color: #23242a;
+    background-color: white;
     width: 150px;
     height: 150px;
     grid-column: 2;
@@ -26,7 +26,7 @@ body{
     z-index: 1;
 }
 .page2{
-    background-color: #23242a;
+    background-color: white;
     width: 150px;
     height: 150px;
     grid-column: 4;
@@ -34,7 +34,7 @@ body{
     border: 2px solid #45f3ff;
 }
 .page3{
-    background-color: #23242a;
+    background-color: white;
     width: 150px;
     height: 150px;
     grid-column: 6;
@@ -91,7 +91,7 @@ body{
 }
 
 ion-icon {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 136px;
+    margin-left: 9px;
+    margin-top: 8px;
+    font-size: 130px;
   }
