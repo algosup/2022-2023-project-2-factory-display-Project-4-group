@@ -3,3 +3,22 @@ body {
     background-repeat: no-repeat;
     background-size: 250vh;
 }
+
+h1 {
+    font-size: 100px;
+    color: #FF6600  ;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+.content {
+   font-size: 35px;
+    color: #FF6600  ;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
