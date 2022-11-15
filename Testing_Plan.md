@@ -10,6 +10,9 @@
   - [Check screens](#check-screens)
   - [Manage screens Updates](#manage-screens-updates)
   - [Manage screens Templates](#manage-screens-templates)
+  - [Date Parameters](#date-parameters)
+    - [Update Date Parameters](#update-date-parameters)
+    - [Template Date Parameters](#template-date-parameters)
 - [Remote TV Screens](#remote-tv-screens)
 - [Settings](#settings)
 - [Template modifying](#template-modifying)
@@ -58,9 +61,27 @@
 ### Manage screens Templates:
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |
-| Change template Update| Change the template used which will be displayed on the screen| 3 |    1. Select your screen<br /> 2. Click on "Change the template".<br /> 3. Choose the template.<br /> 4. Click on "Update New Template".<br /> 5. Turn on the same TV Screen<br />     |    The screen is updated with the new template    |     To be tested       |  
+| Change template Update| Change the template used which will be displayed on the screen| 5 |    1. Select your screen<br /> 2. Click on "Change the template".<br /> 3. Choose the template.<br /> 4. Click on "Update New Template".<br /> 5. Turn on the same TV Screen<br />     |    The screen is updated with the new template    |     To be tested       |  
 | Select several screens| Turn on a mode to select several screens on the page| 2 |    1. Click on "Select several screens" <br /> 2. Start selecting one or several screens<br />     |    The selected screens's background colors are darkened.    |     To be tested       | 
-| Change several screens templates | Change the template of several screens with the same template all at the time| 6 |    1. Click on "Select several screens" <br /> 2. Select all your screens<br /> 3. Click on "Change all templates".<br /> 4. Choose the template.<br /> 5. Click on "Update New Template for all" .<br /> 6. Turn on all the selected TV screens<br />     |    All screens are updated with the new template    |     To be tested       | 
+| Change several screens templates | Change the template of several screens with the same template all at the time| 6 |    1. Click on "Select several screens" <br /> 2. Select all your screens<br /> 3. Click on "Change all templates".<br /> 4. Choose the template.<br /> 5. Click on "Update New Template for all" .<br /> 6. Turn on all the selected TV screens<br />     |    All screens are updated with the new template    |     To be tested       |
+
+### Date Parameters:
+
+#### Update Date Parameters:
+| Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       | 
+| --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |
+| Create Update date parameters| Parameter a screen so you can set at which time it is updated.| 6 |    1. Select your screen<br /> 2. Click on "Set a Time change".<br /> 3. Select "Set time for new Update".<br /> 4. Set the time parameters for the screen.<br /> 5. Click on "Save time".<br /> 6. Turn on the same TV Screen and wait at the right moment.<br />     |    The screen will be updated at the moment we set.    |     To be tested       |
+| Modify date parameters| Change the updatedate parameters of the screen.| 6 |    1. Select your screen<br /> 2. Click on "Modify time change".<br /> 3. Select "Set time for new Update".<br /> 4. Set the new update time parameters for the screen.<br /> 5. Click on "Save new time".<br /> 6. Turn on the same TV Screen and wait at the right moment.<br />     |    The screen will be updated at the new moment we set.    |     To be tested       |   
+| Create Update date parameters for several screens| Parameter several screens so you can set at which time it they are all updated.| 3 |    1. Click on "Select several screens"<br /> 2. Select your screens<br /> 3. Click on "Set a Time change for all the screens".<br /> 4. Select "Set time for new Updates".<br /> 5. Set the time parameters for all screens.<br /> 6. Click on "Save time for all screens".<br /> 6. Turn on all the TV Screens and wait at the right moment.<br />     |    All screens will be updated at the moment we set.    |     To be tested       |
+
+
+#### Template Date Parameters:
+| Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       | 
+| --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |
+| Create Template date parameters| Parameter a screen so you can set at which time its template is changed.| 6 |    1. Select your screen<br /> 2. Click on "Set a Time change".<br /> 3. Select "Set time for new Temlate".<br /> 4. Set the time parameters for the screen.<br /> 5. Click on "Save time".<br /> 6. Turn on the same TV Screen and wait at the right moment.<br />     |    The screen will be updated with the new template at the moment we set.    |     To be tested       |
+| Modify Template date parameters| Change the template date parameters of the screen.| 6 |    1. Select your screen<br /> 2. Click on "Modify time change".<br /> 3. Select "Set time for new Template".<br /> 4. Set the new template time parameters for the screen.<br /> 5. Click on "Save new time".<br /> 6. Turn on the same TV Screen and wait at the right moment.<br />     |    The screen's template will change at the new moment we set.    |     To be tested       |   
+| Create Update date parameters for several screens| Parameter several screens so you can set at which time they switch from one template to another.| 3 |    1. Click on "Select several screens"<br /> 2. Select your screens<br /> 3. Click on "Set a Time change for all the screens".<br /> 4. Select "Set time for new Template".<br /> 5. Set the time parameters for all screens.<br /> 6. Click on "Save time for all screens".<br /> 6. Turn on all the TV Screens and wait at the right moment.<br />     |    All screens will be updated with the new template at the moment we set.    |     To be tested       | 
+
 
 ## Remote TV Screens:
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       | 
