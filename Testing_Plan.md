@@ -130,6 +130,8 @@
 | Edit text| Modify a text from the template.| 3 |    1. Click on the text element. <br/> 2. Modify your text. <br/> 3. Click on "Update". <br/>|    The template preview show the modified text. |     To be tested       |
 | Edit widget| Modify a widget from the template.| 3 |    1. Click on the widget element. <br/> 2. Modify your widget. <br/> 3. Click on "Update". <br/>|    The template preview show the modified widgate. |     To be tested       |
 | Modify size| Allow to either reduce or grow an element size.| 3 |    1. Right click on an element. <br/> 2. Select one of the white dots at the corner with your mouse. <br/> 3. Hold the mouse and move the white dot diagonally. <br/>|    The selected element will either grow in size or be reduced. |     To be tested       |
+| Change Background Color| Change the background color of the template.| 2 |    1. Click on the "change background color" icon above the template. <br/> 2. Select your color. <br/>|    The background color of the template is changed. |     To be tested       |
+| Use picture as background| Use a picture as the template's background.| 3 |    1. Click on the picture icon over the template. <br/> 2. Select your picture from your pictures database. <br/> 3. Click "OK". <br/>|    The picture we selected is now used as the background's template. |     To be tested       |
 
 ### Change Parameters:
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       | 
