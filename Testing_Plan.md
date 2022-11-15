@@ -48,7 +48,7 @@
 | Filter TV | Filter a particular TV among the list of connected screens| 1 |    1. Filter your TV according to your research on the filter menu <br /> |    Display on the right all the screens corresponding to your research   |     To be tested       |       
 | Screen Zoom | When we select a screen, it get zoomed in.| 1 |    1. Select the TV Screen<br />     |    The selected screen is zoomed in   |     To be tested       |  
 | Last update | The website labels the screens which got the last update.| 1 |    1. Update a TV screen <br />   |    The screen is labeled.   |     To be tested       |
-| Screen History | Check the history of the screen modifications.| 1 |    1. Select a screen. <br /> 2. Click on "View History". <br />   |    The website display all informations about the screens updates and template changes.   |     To be tested       |  
+| Screen History | Check the history of the screen modifications.| 2 |    1. Select a screen. <br /> 2. Click on "View History". <br />   |    The website display all informations about the screens updates and template changes.   |     To be tested       |  
 
 
 ### Manage screens Updates:
@@ -90,7 +90,10 @@
 | Check Widget | Verify if a widget with real time data is updated on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should have the widget with the right real time data. |     To be tested       | 
 | Check Hour | //Verify if the real time hour is updated on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display the actual time and be updated dynamically. |     To be tested       | 
 | Check Picture | //Verify if a picture is displayed on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display the picture without issue. |     To be tested       | 
-| Check Changeable Element | //Verify if a an element displayed on screen can be switched with another one smoothly on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display the element, and then this element is replaced smoothly by another one for a while. |     To be tested       | 
+| Check Changeable Element | //Verify if a an element displayed on screen can be switched with another one smoothly on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display the element, and then this element is replaced smoothly by another one for a while. |     To be tested       |
+| Check restricted Element | //Verify if a an element restricted on a screen is displayed on this TV but doesn't appear in another one| 1 |    1. Turn on the 2 screens, with one allowed to the restricted element and the other isn't. <br/>|    Only the TV screen allowed will display the restricted element. |     To be tested       |
+| Check Background Color | //Verify if the template's background color is displayed on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display with the updated background color. |     To be tested       |
+| Check Background Picture | //Verify if the template's background picture is displayed on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display with the updated background picture. |     To be tested       |    
 | Prevent screen Cancel | Prevent an user to change the screen to do something else on TV| 2 |    1. Turn on the screen. <br/> 2. Try to change channel with the TV remote. <br/>|    The TV screen will display the message "it's currently not possible to leave the info application." at the top right corner. |     To be tested       |
 
 ## Settings:
