@@ -15,6 +15,7 @@
   - [Update Template](#update-template)
   - [Add Elements](#add-elements)
   - [Modify Elements](#modify-elements)
+  - [Change Parameters](#change-parameters)
   - [Manage Elements](#manage-elements)
   - [Remove Elements](#remove-elements)
   - [Use Element Tools](#use-element-tools)
@@ -96,6 +97,14 @@
 | Edit text| Modify a text from the template.| 3 |    1. Click on the text element. <br/> 2. Modify your text. <br/> 3. Click on "Update". <br/>|    The template preview show the modified text. |     To be tested       |
 | Edit widget| Modify a widget from the template.| 3 |    1. Click on the widget element. <br/> 2. Modify your widget. <br/> 3. Click on "Update". <br/>|    The template preview show the modified widgate. |     To be tested       |
 | Modify size| Allow to either reduce or grow an element size.| 3 |    1. Right click on an element. <br/> 2. Select one of the white dots at the corner with your mouse. <br/> 3. Hold the mouse and move the white dot diagonally. <br/>|    The selected element will either grow in size or be reduced. |     To be tested       |
+
+### Change Parameters:
+| Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       | 
+| --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |
+| Change Color| Change the color of an element (text area, widget...).| 4 |    1. Right click on the element. <br/> 2. Select "Color" on the contextual menu. <br/> 3. Choose a color. <br/> 4. Click on "Update". <br/>|    The template preview show the element with the new color. |     To be tested       |
+| Element Restriction| Restrict an element to only a few screens so only them could display them.| 5 |    1. Right click on the element. <br/> 2. Select "Restrictions" on the contextual menu. <br/> 3. Select "Yes". <br/> 4. Choose the screens with the restricted element.  <br/> 5. Click on "Update". <br/>|    The template preview show the element with a small lock icon. |     To be tested       | 
+| Change Text Font| Change the text font of an element (text area, widget...).| 4 |    1. Right click on the element. <br/> 2. Select "Font" on the contextual menu. <br/> 3. Choose a Font. <br/> 4. Click on "Update". <br/>|    The template preview show the element with the new text font. |     To be tested       | 
+| Change Text Size| Change the text size of an element (text area, widget...).| 4 |    1. Right click on the element. <br/> 2. Select "Text Size" on the contextual menu. <br/> 3. Choose a text size. <br/> 4. Click on "Update". <br/>|    The template preview show the element with the updated text size. |     To be tested       | 
 
 ### Manage Elements:
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       | 
