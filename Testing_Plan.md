@@ -47,7 +47,8 @@
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       | 
 | Filter TV | Filter a particular TV among the list of connected screens| 1 |    1. Filter your TV according to your research on the filter menu <br /> |    Display on the right all the screens corresponding to your research   |     To be tested       |       
 | Screen Zoom | When we select a screen, it get zoomed in.| 1 |    1. Select the TV Screen<br />     |    The selected screen is zoomed in   |     To be tested       |  
-| Last update | The website labels the screens which got the last update.| 1 |    1. Update a TV screen <br />   |    The screen is labeled.   |     To be tested       | 
+| Last update | The website labels the screens which got the last update.| 1 |    1. Update a TV screen <br />   |    The screen is labeled.   |     To be tested       |
+| Screen History | Check the history of the screen modifications.| 1 |    1. Select a screen. <br /> 2. Click on "View History". <br />   |    The website display all informations about the screens updates and template changes.   |     To be tested       |  
 
 
 ### Manage screens Updates:
@@ -72,7 +73,7 @@
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |
 | Create Update date parameters| Parameter a screen so you can set at which time it is updated.| 6 |    1. Select your screen<br /> 2. Click on "Set a Time change".<br /> 3. Select "Set time for new Update".<br /> 4. Set the time parameters for the screen.<br /> 5. Click on "Save time".<br /> 6. Turn on the same TV Screen and wait at the right moment.<br />     |    The screen will be updated at the moment we set.    |     To be tested       |
 | Modify date parameters| Change the updatedate parameters of the screen.| 6 |    1. Select your screen<br /> 2. Click on "Modify time change".<br /> 3. Select "Set time for new Update".<br /> 4. Set the new update time parameters for the screen.<br /> 5. Click on "Save new time".<br /> 6. Turn on the same TV Screen and wait at the right moment.<br />     |    The screen will be updated at the new moment we set.    |     To be tested       |   
-| Create Update date parameters for several screens| Parameter several screens so you can set at which time it they are all updated.| 3 |    1. Click on "Select several screens"<br /> 2. Select your screens<br /> 3. Click on "Set a Time change for all the screens".<br /> 4. Select "Set time for new Updates".<br /> 5. Set the time parameters for all screens.<br /> 6. Click on "Save time for all screens".<br /> 6. Turn on all the TV Screens and wait at the right moment.<br />     |    All screens will be updated at the moment we set.    |     To be tested       |
+| Create Update date parameters for several screens| Parameter several screens so you can set at which time it they are all updated.| 7 |    1. Click on "Select several screens"<br /> 2. Select your screens<br /> 3. Click on "Set a Time change for all the screens".<br /> 4. Select "Set time for new Updates".<br /> 5. Set the time parameters for all screens.<br /> 6. Click on "Save time for all screens".<br /> 7. Turn on all the TV Screens and wait at the right moment.<br />     |    All screens will be updated at the moment we set.    |     To be tested       |
 
 
 #### Template Date Parameters:
