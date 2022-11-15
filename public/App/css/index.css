@@ -5,13 +5,28 @@
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    background-color: #fff;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    background-color: #ff6600;
     color: #fff;
 }
+.time{
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: white;
+    background-color: #2f2828;
+    border: 1px solid #ff6600;
+    border-radius: 10px;
+}
+#time{
+    margin-top: 10%;
+    text-align: center;
+}
 .weather{
-    grid-column: 1/-1;
+    grid-column: 2/-1;
     grid-row: 1;
 }
 .news{
@@ -66,7 +81,7 @@
     background-color: #23242a;
     grid-column: 1/-1;
     border-radius: 10px;
-    grid-row: 6;
+    grid-row: 8;
     width: 100vw;
     display: block;
     border-top: 1px solid #ff6600;
