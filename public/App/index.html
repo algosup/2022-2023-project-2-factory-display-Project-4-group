@@ -9,6 +9,7 @@
 </head>
 <body style="margin: 0">
     <div class="down">
+        <div class="time"><p id="time"></p></div>
         <div class="weather"><a class="weatherwidget-io" href="https://forecast7.com/en/47d222d07/vierzon/" data-label_1="Vierzon" data-label_2="WEATHER" data-theme="dark" >Vierzon WEATHER</a></div>
         <meta class="news" http-equiv="Content-Type" content="https://edition.cnn.com/2022/11/13/politics/joe-biden-xi-jinping-meeting-g20-bali/index.html" charset="UTF-8">
         <p class="news1">Biden and Xi try to avoid a new Cold War, even if all isn’t "kumbaya"</p>
@@ -20,6 +21,9 @@
     </div>
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+var time = document.getElementById("time");
+var date = new Date().toLocaleTimeString();
+time.innerHTML = date;
 </script>
 </body>
 </html>
