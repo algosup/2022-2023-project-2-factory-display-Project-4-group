@@ -1,68 +1,84 @@
-# Factory Display
-<sub> Last update : November 7, 2022 </sub>
+<details>
+<summary><b id="toc">Table of Content</b></summary>
 
-
-<sub> Author : [Victor Leroy](https://www.linkedin.com/in/victor-leroy-64baa3229/)
-
-<sub> Team : [Laurent Bouquin](https://www.linkedin.com/in/laurent-bouquin-60911a1b8/), [Lucas Aubard](https://www.linkedin.com/in/lucas-aubard-596b37251/), [Alexis Lasselin](https://www.linkedin.com/in/alexis-lasselin-318649251/), [Paul Nowak](https://www.linkedin.com/in/paul-nowak-0757a61a7/) </sub>
-
-  Table of contents
-
-
-- [Factory Display](#factory-display)
+- [AppNews Network](#appnews-network)
+  - [Glossary](#glossary)
 - [Introduction](#introduction)
-- [Glossary](#glossary)
-- [Uses cases](#uses-cases)
+  - [Scope](#scope)
+  - [In Scope](#in-scope)
+  - [Out Of Scope](#out-of-scope)
 - [Functional requirements](#functional-requirements)
   - [Assumptions](#assumptions)
   - [Constraints](#constraints)
-    - [About the laws](#about-the-laws)
-- [Non goals](#non-goals)
-- [Requirements](#requirements)
-- [Out Of Scope](#out-of-scope)
-# Introduction
+  - [Use Cases Analysis](#use-cases-analysis)
+  - [About the laws](#about-the-laws)
+
+</details> 
   
-[Jacobi](https://www.jacobi.net), a company located in Vierzon, needs a communication tool that could send informations based on what the user requests, in order to facilitate the information transmission between employees.
+# AppNews Network
 
-# Glossary
 
-- **Factory Display** : The project that we are working on.
 
-# Uses cases
+<sub> Author : [Victor Leroy](https://www.linkedin.com/in/victor-leroy-64baa3229/) (Program Manager)
+
+<sub> Team : [Laurent Bouquin](https://www.linkedin.com/in/laurent-bouquin-60911a1b8/) (Project Leader), [Lucas Aubard](https://www.linkedin.com/in/lucas-aubard-596b37251/) (Technical Leader),   
+  [Alexis Lasselin](https://www.linkedin.com/in/alexis-lasselin-318649251/) (Software Engineer), [Paul Nowak](https://www.linkedin.com/in/paul-nowak-0757a61a7/) (Quality insurance) </sub>
+
+## Glossary
+
+- **AppNews Network** : The project that we are working on.
+
+# Introduction
+
+[Jacobi](https://www.jacobi.net), a company located in Vierzon, needs a communication tool that could send informations based on  what the user requests, in order to facilitate the information transmission between employees. Jacobi has their head office in Paris. 
+
+## Scope
+
+The most important points of this project is to be able to control the displayed content remotely, they also have to be independent to each other, which means that we could display different content on each screen. 
+
+## In Scope
+
+These are the mains features that are planned in our V0 : 
+- Adapt the content to the screen size
+- Widgets for weather, news, etc. that will be updated on a regular basis
+- An history of the displayed content with a tracking of who changed what
+- An login page to the tool to ensure that only authorized people can use it (there will only be 4 people who will have their access granted to the tool)
+- Planning messages for a given date (i.e Friday for Monday)
+- English and French languages
+- Draft system (you can start writing a message and finish writing it later)
+  
+## Out Of Scope
+ 
+Due to time and resources constraints, these features might be included in the upcoming versions :
+- Different languages (other than English or French)
+- Smart screen in Paris to display informations
+- Unique logins for each users 
+
+
+
 
 # Functional requirements
 
 ## Assumptions
-
+- Content will be displayed horizontally.
+- Both buildings are connected to the same network.
+- 
 ## Constraints
-- There's 3 shifts per day which means we'll have to update the important informations at least 3 times a day.
+
+- There are 3 shifts per day. 
+- Small shutdown at Christmas time.
+- Wi-Fi sometimes had issues.
+
+## Use Cases Analysis
 
 
-### About the laws
+
+## About the laws
 
 
 **RGPD**: The [RGPD](https://ec.europa.eu/info/law/law-topic/data-protection/data-protection-eu_en) is a law that protects the personal data of the users. It is important to respect this law in order to avoid any problems.
 
-# Non goals
 
-This project won't support the following features :
 
-- ...
-- ...
 
-# Requirements 
-
-The most important points of this project is to be able to control the displayed content remotely, they also have to be independent to each other, which means that we could display different content on each screen. We have planned those features :
-
-- Adapt the content to the screen size
-- Widgets for weather, news, etc. that will be updated on a regular basis
-- An history of the displayed content
-- An access rights to the screen to ensure there is no risk of it being misused
-- An access rights to the tool to ensure that only authorized people can use it (there will only be 4 people who will have their access granted to the tool)
   
-# Out Of Scope
- 
-Due to time constraints, these features might be included in the upcoming versions :
-- Different languages 
-- Smart screen in Paris to display informations
-- Unique logins for each users 
