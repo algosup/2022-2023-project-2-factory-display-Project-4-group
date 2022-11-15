@@ -17,6 +17,7 @@
 - [Settings](#settings)
 - [Template modifying](#template-modifying)
   - [Update Template](#update-template)
+  - [Manage Templates](#manage-templates)
   - [Add Elements](#add-elements)
   - [Modify Elements](#modify-elements)
   - [Change Parameters](#change-parameters)
@@ -113,6 +114,16 @@
 | Update template | Save your template after editing it. | 2 |    1. Edit your template. <br/> 2. Click on "Update" <br/>|    The page should show a small screen of a preview of the template with the edited information  |     To be tested       |
 | Undo previous action | Undo the previous action you did while editing your template. | 2 |    1. Edit your template. <br/> 2. Do the "undo" shortcut. <br/>|    The template should go back to its previous state.  |     To be tested       | 
 | Redo action after undo | After undoing an action in your template, gives the possibility to redo the cancelled action again. | 3 |    1. Edit your template. <br/> 2. Do the "undo" shortcut. <br/> 3.Do the "redo" shortcut.<br/> |    After redoing an action in your template, the template return to its last modification.  |     To be tested       | 
+
+### Manage Templates:
+| Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       | 
+| --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       | 
+| Create template | Create a new template from scratch which can be used. | 4 |    1. Click on "Create new template" above the actual template. <br/> 2. Click on "Start from scratch" <br/> 3. Type your new template's name. <br/> 4. Click on "Create". <br/>|    The website will replace the actual template with a new blank template we created.  |     To be tested       |
+| Create template using old template| Create a new template which is a copy of your actual template so we can edit it. | 5 |    1. Open an existing template. <br/> 2. Click on "Create new template" above the actual template. <br/> 3. Click on "Copy this template to create a new one". <br/> 4. Type your new template's name. <br/> 5. Click on "Create". <br/>|    The website show seemingly the same template but with the new name displayed.  |     To be tested       |
+| Select template | Choose the template to work with among those we already saved. | 3 |    1. Click on "Select template" above the actual template. <br/> 2. Search and Select the template you want. <br/> 3. Click on "Edit template". <br/>|    The website will then show the template we want to edit.  |     To be tested       |
+| Rename template | Choose the template you want to rename among those we already saved. | 5 |    1. Click on "Select template" above the actual template. <br/> 2. Search and Select the template you want. <br/> 3. Click on "Rename template". <br/> 4. Type the updated name. <br/> 5. Click on "Ok". <br/>|    The template selection show the template with the new name.  |     To be tested       |
+| Delete template on screen | Delete the actual template on screen. | 5 |    1. Click on "Delete template" above the actual template. <br/> 2. Click on "Yes" to confirm. <br/>|    The template will now be completely blank.  |     To be tested       |
+| Delete template on screen on the selection menu| Delete a template among those we already saved. | 4 |    1. Click on "Select template" above the actual template. <br/> 2. Search and Select the template you want. <br/> 3. Click on "Delete template". <br/> 4. Click "Yes" to confirm. <br/>|    The deleted template should disappear from the selection list.  |     To be tested       |
 
 
 ### Add Elements:
