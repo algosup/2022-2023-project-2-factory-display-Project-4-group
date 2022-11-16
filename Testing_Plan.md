@@ -29,8 +29,9 @@
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       |       Priority       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |       ---       | 
 | Good password | We enter our login and password to get connected| 3 |    1. Enter your login <br /> 2.Enter your password  <br /> 3. Click on login     |    Get connected in the website    |     To be tested       |     N/A     |        
-| Change password | In case we don't remember our password, we want to click on a link sending us to a page where we could modify it.| 1 |    1. Click on "forgotten password ?"<br />     |    Go to the changing password procedure page    |     To be tested       |     N/A     |     
 | Wrong password | Display a message when the password entered is wrong.| 3 |    1. Enter your login <br /> 2.Enter a wrong password  <br /> 3. Click on login     |    The website displays "wrong password".   |     To be tested       |     N/A     |   
+| Forgot password | Display a pop up to enter our username/email in case we forgot our password.| 1 |    1. Click on "forgotten password ?"<br />     |    The popup allowing us to type our username or email appears on screen.   |     To be tested       |     N/A     |
+| Send New password request | Go to your mail application to allow us sending a new Password request.| 3 |    1. Click on "forgotten password ?"<br /> 2. Type your username/email.<br /> 3. Click on "OK"<br />    |    This will open directly the default mail application with the prewritten message to send.   |     To be tested       |     N/A     |         
 | Inexisting user | Display a message when the login doesn't exist.| 3 |    1. Enter a random login <br /> 2.Enter a random password  <br /> 3. Click on login     |    The website displays "This user doesn't exist".   |     To be tested       |     N/A     |   
 
 ## Website Navigation:
