@@ -103,7 +103,9 @@
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |       ---       | 
 | Change language | Switch the website language from English to French| 2 |    1. Select language  <br /> 2. Click on OK|    The website should restore and be set in French  |     To be tested       |     N/A     |     
 | Set to Dark mode| Change the website dominant background color to black | 1 |    1. Select "dark mode"  <br />|    The website should restore and be set with its main background color in black  |     To be tested       |     N/A     |    
-| Set to Light mode| Change the website dominant background color to white | 1 |    1. Select "light mode"  <br />|    The website should restore and be set with its main background color in white  |     To be tested       |     N/A     |    
+| Set to Light mode| Change the website dominant background color to white | 1 |    1. Select "light mode"  <br />|    The website should restore and be set with its main background color in white  |     To be tested       |     N/A     |
+| Change password | Display a pop up to enter our username/email in case we want to change our password.| 1 |    1. Click on "Change password"<br />     |    The popup allowing us to type our username or email appears on screen.   |     To be tested       |     N/A     |
+| Send New password request | Go to your mail application to allow us sending a new Password request.| 3 |    1. Click on "Change password".<br /> 2. Type your username/email.<br /> 3. Click on "OK".<br />    |    This will open directly the default mail application with the prewritten message to send.   |     To be tested       |     N/A     |      
 
 
 
