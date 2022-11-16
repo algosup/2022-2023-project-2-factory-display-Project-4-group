@@ -27,7 +27,7 @@
   - [Manage Elements](#manage-elements)
   - [Remove Elements](#remove-elements)
   - [Use Element Tools](#use-element-tools)
-  - [Interactive UI](#interactive-ui)
+  - [Tools UI](#tools-ui)
 
 ## Login:
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       |       Priority       | 
@@ -77,12 +77,12 @@
 | Set date parameters for Template change| Parameter a screen so you can set at which time its template is changed.| 6 |    1. Select your screen<br /> 2. Click on "Change the template".<br />  3. Select your template from the database.<br /> 4. Set the time parameters for the screen.<br /> 5. Click on "Confirm Template Change".<br /> 6. Turn on the same TV Screen and wait at the right moment.<br />    |    The screen will be updated with the new template at the moment we set.    |     To be tested       |     N/A     |        
 | Set date parameters for several screens Template Change Version| Parameter several screens so you can set at which time they switch from one template to another.| 6 |    1. Select your screens<br /> 2. Click on "Change all templates".<br /> 3. Choose the template from your template database. <br />  4. Set the time parameters for all screens.<br /> 5. Click on "Confirm All Templates Changes".<br /> 6. Turn on all the TV Screens and wait at the right moment.<br />     |    All screens will be updated with the new template at the moment we set.    |     To be tested       |     N/A     |
 
-### Interactive UI:
+### Interactive UI :
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       |       Priority       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |       ---       |
 | Select several screens| Click on the square at the top right corner of a screen to select it, allowing a potential selection of several screens.| 2 |    1. Click on a square at the top right corner of a screen <br /> 2. Do the same for other screens<br />     |    The selected screens's squares contain a cross.    |     To be tested       |     N/A     |
 | Use Filter| Display a research menu to filter screens.| 1 |    1. Click on the "Filter' button on the left side of the screen. <br />      |    A small filter contextual menu should appear on the left.    |     To be tested       |     N/A     |
-| Use Time parameters| Display a pop up to set time parameters of a screen.| 1 |    1. Click on the screen of your choice. <br /> 2. Click on either "Update with the template" or "Change with the template". <br /> 3. Select "Set Time Parameters". <br />     |    The parameters are showing time parameters to show date and hour.    |     To be tested       |     N/A     |
+| Use Time parameters| Display a pop up to set time parameters of a screen.| 3 |    1. Click on the screen of your choice. <br /> 2. Click on either "Update with the template" or "Change with the template". <br /> 3. Select "Set Time Parameters". <br />     |    The parameters are showing time parameters to show date and hour.    |     To be tested       |     N/A     |
 | Update All Button| Display a pop up to update several screens.| 2 |    1. Select at least 2 screens. <br /> 2. Click the button "Update All". <br />    |    The button should appear when at least 2 screens are selected, and a pop-up to parameter the update of several screens should appear when clicked.    |     To be tested       |     N/A     |
 | Change All Template Button| Display a pop up to change the template of several screens.| 2 |    1. Select at least 2 screens. <br /> 2. Click the button "Change All Templates". <br />    |    The button should appear when at least 2 screens are selected, and a pop-up to set the parameters (new template and time parameters) for all templates selected when clicked.     |     To be tested       |     N/A     |                  
 | Select New Template| Display a pop up to selecting the new template for 1 or several screens.| 2 |    1. Go to a Change Template parameters pop-up (either for one or several). <br /> 2. Click on the Template Area. <br />    |    A pop-up to select the template of our choice is displayed.     |     To be tested       |     N/A     |
@@ -162,7 +162,7 @@
 | Change Color| Change the color of an element (text area, widget...).| 4 |    1. Right click on the element. <br/> 2. Select "Color" on the contextual menu. <br/> 3. Choose a color. <br/> 4. Click on "Update". <br/>|    The template preview show the element with the new color. |     To be tested       |     N/A     |
 | Element Restriction| Restrict an element to only a few screens so only them could display them.| 5 |    1. Right click on the element. <br/> 2. Select "Restrictions" on the contextual menu. <br/> 3. Select "Yes". <br/> 4. Choose the screens with the restricted element.  <br/> 5. Click on "Update". <br/>|    The template preview show the element with a small lock icon. |     To be tested       |     N/A     | 
 | Change Text Font| Change the text font of an element (text area, widget...).| 4 |    1. Right click on the element. <br/> 2. Select "Font" on the contextual menu. <br/> 3. Choose a Font. <br/> 4. Click on "Update". <br/>|    The template preview show the element with the new text font. |     To be tested       |     N/A     | 
-| Change Text Size| Change the text size of an element (text area, widget...).| 4 |    1. Right click on the element. <br/> 2. Select "Text Size" on the contextual menu. <br/> 3. Choose a text size. <br/> 4. Click on "Update". <br/>|    The template preview show the element with the updated text size. |     To be tested       |     N/A     | 
+| Change Text Size| Change the text size of an element (text area, widget...).| 3 |    1. Right click on the element. <br/> 2. Choose a text size. <br/> 3. Click on "Update". <br/>|    The template preview show the element with the updated text size. |     To be tested       |     N/A     | 
 
 ### Manage Elements:
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       |       Priority       | 
@@ -187,6 +187,15 @@
 | Get picture| Display a small menu to select a picture from an image database.| 2 |    1. Select "Elements" tool.  <br/> 2. Select "picture" tool. <br/>|    A small menu showing several pictures is displayed  |     To be tested       |     N/A     |
 | Drag element| Allow to drag one element template ot the grid| 3 |    1. Select "Elements" tool.  <br/> 2. Select any subtool. <br/> 3. Select your element template. <br/>|    You can drag the element template while holding the mouse to the grid. |     To be tested       |     N/A     |
 
+### Tools UI:
+| Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       |       Priority       | 
+| --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |       ---       | 
+| Create New Template pop-up| Display a pop-up for selecting how to create a new template.| 1 |    1. Click on "Create New Template" button. <br/>|    A pop-up proposing "Start from Scratch" and "Copy this template to create new template" should appear.  |     To be tested       |     N/A     |
+| Select New Template pop-up| Display a pop-up for selecting the template to work with.| 1 |    1. Click on "Select template" above the actual template.<br/>|    A pop-up showing all available templates should appear.  |     To be tested       |     N/A     |
+| Select Color pop-up| Display a pop-up for selecting the color of an element.| 2 |    1. Right Click on an element.<br/> 2. Select "Color" on the contextual menu. <br/>|    A pop-up showing a set of color should appear.  |     To be tested       |     N/A     |
+| Select Background Color pop-up| Display a pop-up for selecting the background color of the template.| 1 |    1. Click on the "change background color" icon above the template.<br/>|    A pop-up showing a set of color should appear.  |     To be tested       |     N/A     |
+| Select Background Picture pop-up| Display a pop-up for selecting the Picture used as a background.| 1 |    1. Click on the picture icon over the template.  <br/>|    A pop-up showing a list of available pictures should appear.  |     To be tested       |     N/A     |
+| Select Restrictions pop-up| Display a pop-up for selecting the screens which could see the selected element.| 3 |    1. Right click on the element. <br/>2. Select "Restrictions" on the contextual menu. <br/>3. Select "Yes". <br/>|    A pop-up showing a list of all your screens should appear.  |     To be tested       |     N/A     |
 
 
 
