@@ -17,12 +17,12 @@ body{
     background-color: #45f3ff;
 }
 .page1{
-    background-color: #23242a;
+    background-color: #45f3ff;
     width: 150px;
     height: 150px;
     grid-column: 2;
     border-radius: 1000px;
-    border: 2px solid #45f3ff;
+    /* border: 2px solid #45f3ff; */
     z-index: 1;
 }
 .page2{
@@ -42,11 +42,12 @@ body{
     border: 2px solid #45f3ff;
 }
 .page1:hover{
-    background-color: #2d2828;
+    background-color: #45f3ff;
     width: 150px;
     height: 150px;
     grid-column: 2;
     border-radius: 1000px;
+    border: 10px solid #2d2828;
 }
 .page2:hover{
     background-color: #2d2828;

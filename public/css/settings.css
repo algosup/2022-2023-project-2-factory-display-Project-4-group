@@ -7,8 +7,8 @@
   width: 100vw;
   height: 75px;
   top: 0px;
-
   background-color: var(--c-bg-body);
+  border-bottom: 2px solid #45f3ff;
 }
 
 .nav-buttons{
@@ -99,6 +99,13 @@
 
   .menu-header {
     padding: 1rem;
+  }
+
+  .down{
+      margin-top: 60px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
   }
   
   .menu-heaser-title {
