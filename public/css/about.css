@@ -1,0 +1,48 @@
+
+.tooltip {
+    position: absolute;
+    background: whitesmoke;
+    border: 4px solid #666;
+    width: 400px;
+    padding: 30px;
+	color: #FF6600;
+    font-size: 25px;
+
+    top: 52px;
+    left: -224px;
+    opacity: 0;
+    pointer-events: none;
+}
+.tooltip::after, .tooltip::before {
+    content: "";
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+.tooltip::after {
+    border-bottom-color: whitesmoke;
+    border-width: 25px;
+    margin-left: -25px;
+}
+.tooltip::before {
+    border-bottom-color: #666;
+    border-width: 30px;
+    margin-left: -30px;
+}
+.btn {
+    display: inline;
+    position: relative;
+}
+.btn img {
+    position: relative;
+    top: 4px;
+    width: 20px;
+}
+.btn:hover .tooltip{
+    pointer-events: all;
+    opacity: 1;
+    transition: all 0.4s ease;
+}
