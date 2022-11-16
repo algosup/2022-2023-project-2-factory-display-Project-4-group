@@ -14,6 +14,8 @@
     - [Update Date Parameters](#update-date-parameters)
     - [Template Date Parameters](#template-date-parameters)
 - [Remote TV Screens](#remote-tv-screens)
+  - [Check TVs](#check-tvs)
+  - [TV Application](#tv-application)
 - [Settings](#settings)
 - [Template modifying](#template-modifying)
   - [Update Template](#update-template)
@@ -87,6 +89,8 @@
 
 
 ## Remote TV Screens:
+
+### Check TVs:
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       |       Priority       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |       ---       | 
 | Check Widget | Verify if a widget with real time data is updated on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should have the widget with the right real time data. |     To be tested       |     N/A     |    
@@ -95,7 +99,12 @@
 | Check Changeable Element | //Verify if a an element displayed on screen can be switched with another one smoothly on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display the element, and then this element is replaced smoothly by another one for a while. |     To be tested       |     N/A     |   
 | Check restricted Element | //Verify if a an element restricted on a screen is displayed on this TV but doesn't appear in another one| 1 |    1. Turn on the 2 screens, with one allowed to the restricted element and the other isn't. <br/>|    Only the TV screen allowed will display the restricted element. |     To be tested       |     N/A     |   
 | Check Background Color | //Verify if the template's background color is displayed on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display with the updated background color. |     To be tested       |     N/A     |   
-| Check Background Picture | //Verify if the template's background picture is displayed on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display with the updated background picture. |     To be tested       |     N/A     |       
+| Check Background Picture | //Verify if the template's background picture is displayed on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display with the updated background picture. |     To be tested       |     N/A     |  
+
+### TV Application:
+| Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       |       Priority       | 
+| --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |       ---       |
+| Open Application directly | When we switch on a TV, it will immediately open to the application with the template.| 1 |    1. Turn on the TV when it's shut down. <br/>|    The TV screen will immediately display the template. |     To be tested       |     N/A     |       
 | Prevent screen Cancel | Prevent an user to change the screen to do something else on TV| 2 |    1. Turn on the screen. <br/> 2. Try to change channel with the TV remote. <br/>|    The TV screen will display the message "it's currently not possible to leave the info application." at the top right corner. |     To be tested       |     N/A     |   
 
 ## Settings:
