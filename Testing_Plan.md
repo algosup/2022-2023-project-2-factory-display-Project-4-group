@@ -41,10 +41,10 @@
 ## Website Navigation:
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       |       Priority       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |       ---       | 
-| Screens| Navigate to the "Screens" page| 1 |    1. Outside the Screens page, click on "Screens" on your navbar <br /> |    The website (excepted the navbar) should switch to "Screens" page.   |     To be tested       |     High     |       
+| Screens| Navigate to the "Screens" page| 1 |    1. Outside the Screens page, click on "Screens" on your navbar <br /> |    The website (excepted the navbar) should switch to "Screens" page.   |     Success       |     High     |       
 | Template modifying| Navigate to the "Template modifying" page| 1 |    1. Outside the Template modifying page, click on "Template modifying" on your navbar <br /> |    The website (excepted the navbar) should switch to "Template modifying" page.   |     To be tested       |     High     |       
-| Settings| Navigate to the "Settings" page| 1 |    1. Outside the Settings page, click on "Settings" on your navbar <br /> |    The website (excepted the navbar) should switch to "Settings" page.   |     To be tested       |     High     |      
-| Log out| Get disconnected from your website account| 3 |    1. Click on "Log Out" on your navbar <br /> 2. Display the message "Are you sure ?" <br/> 3. Click on "Yes"|    The website should switch to "Login" page and you get disconnected.   |     To be tested       |     Medium     |     
+| Settings| Navigate to the "Settings" page| 1 |    1. Outside the Settings page, click on "Settings" on your navbar <br /> |    The website (excepted the navbar) should switch to "Settings" page.   |     Success       |     High     |      
+| Log out| Get disconnected from your website account| 3 |    1. Click on "Log Out" on your navbar <br /> 2. Display the message "Are you sure ?" <br/> 3. Click on "Yes"|    The website should switch to "Login" page and you get disconnected.   |     Success       |     Medium     |     
 
 ## Screens page:
 
@@ -110,8 +110,9 @@
 ## Settings:
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       |       Priority       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |       ---       | 
-| Change language | Switch the website language from English to French| 2 |    1. Select language  <br /> 2. Click on OK|    The website should restore and be set in French  |     To be tested       |     Low     |     
-| Set to Dark mode| Change the website dominant background color to black | 1 |    1. Select "dark mode"  <br />|    The website should restore and be set with its main background color in black  |     To be tested       |     Medium     |    
+| Change language | Switch the website language from English to French| 2 |    1. Select language  <br /> 2. Click on OK|    The website should restore and be set in French  |     To be tested       |     Low     |
+| Set to Dark mode| Change the website dominant background color to black | 1 |    1. Select "black mode"  <br />|    The website should restore and be set with its main background color in black  |     To be tested       |     Medium     | 
+| Set to Dark mode| Change the website dominant background color to dark | 1 |    1. Select "dark mode"  <br />|    The website should restore and be set with its main background color in dark  |     To be tested       |     Medium     |    
 | Set to Light mode| Change the website dominant background color to white | 1 |    1. Select "light mode"  <br />|    The website should restore and be set with its main background color in white  |     To be tested       |     Medium     |
 | Change password | Display a pop up to enter our username/email in case we want to change our password.| 1 |    1. Click on "Change password"<br />     |    The popup allowing us to type our username or email appears on screen.   |     To be tested       |     Low     |
 | Send New password request | Go to your mail application to allow us sending a new Password request.| 3 |    1. Click on "Change password".<br /> 2. Type your username/email.<br /> 3. Click on "OK".<br />    |    This will open directly the default mail application with the prewritten message to send.   |     To be tested       |     Low     |      
