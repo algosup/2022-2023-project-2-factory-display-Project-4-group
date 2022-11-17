@@ -98,8 +98,7 @@
 | Check Picture | //Verify if a picture is displayed on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display the picture without issue. |     To be tested       |     Medium     |    
 | Check Changeable Element | //Verify if a an element displayed on screen can be switched with another one smoothly on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display the element, and then this element is replaced smoothly by another one for a while. |     To be tested       |     Medium     |   
 | Check restricted Element | //Verify if a an element restricted on a screen is displayed on this TV but doesn't appear in another one| 1 |    1. Turn on the 2 screens, with one allowed to the restricted element and the other isn't. <br/>|    Only the TV screen allowed will display the restricted element. |     To be tested       |     High    |   
-| Check Background Color | //Verify if the template's background color is displayed on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display with the updated background color. |     To be tested       |     Low     |   
-| Check Background Picture | //Verify if the template's background picture is displayed on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display with the updated background picture. |     To be tested       |     Low     |  
+| Check Background Color | //Verify if the template's background color is displayed on the TV| 1 |    1. Turn on the screen. <br/>|    The TV screen should display with the same background color. |     To be tested       |     Low     |   
 
 ### TV Application:
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       |       Priority       | 
@@ -111,7 +110,7 @@
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       |       Priority       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |       ---       | 
 | Change language | Switch the website language from English to French| 2 |    1. Select language  <br /> 2. Click on OK|    The website should restore and be set in French  |     To be tested       |     Low     |
-| Set to Dark mode| Change the website dominant background color to black | 1 |    1. Select "black mode"  <br />|    The website should restore and be set with its main background color in black  |     To be tested       |     Medium     | 
+| Set to Black mode| Change the website dominant background color to black | 1 |    1. Select "Black mode"  <br />|    The website should restore and be set with its main background color in black  |     To be tested       |     Medium     | 
 | Set to Dark mode| Change the website dominant background color to dark | 1 |    1. Select "dark mode"  <br />|    The website should restore and be set with its main background color in dark  |     To be tested       |     Medium     |    
 | Set to Light mode| Change the website dominant background color to white | 1 |    1. Select "light mode"  <br />|    The website should restore and be set with its main background color in white  |     To be tested       |     Medium     |
 | Change password | Display a pop up to enter our username/email in case we want to change our password.| 1 |    1. Click on "Change password"<br />     |    The popup allowing us to type our username or email appears on screen.   |     To be tested       |     Low     |
@@ -153,13 +152,10 @@
 | Edit text| Modify a text from the template.| 3 |    1. Click on the text element. <br/> 2. Modify your text. <br/> 3. Click on "Update". <br/>|    The template preview show the modified text. |     To be tested       |     Medium     |
 | Edit widget| Modify a widget from the template.| 3 |    1. Click on the widget element. <br/> 2. Modify your widget. <br/> 3. Click on "Update". <br/>|    The template preview show the modified widgate. |     To be tested       |     Medium     |
 | Modify size| Allow to either reduce or grow an element size.| 3 |    1. Right click on an element. <br/> 2. Select one of the white dots at the corner with your mouse. <br/> 3. Hold the mouse and move the white dot diagonally. <br/>|    The selected element will either grow in size or be reduced. |     To be tested       |     Medium     |
-| Change Background Color| Change the background color of the template.| 2 |    1. Click on the "change background color" icon above the template. <br/> 2. Select your color. <br/>|    The background color of the template is changed. |     To be tested       |     Low     |
-| Use picture as background| Use a picture as the template's background.| 3 |    1. Click on the picture icon over the template. <br/> 2. Select your picture from your pictures database. <br/> 3. Click "OK". <br/>|    The picture we selected is now used as the background's template. |     To be tested       |     Low     |
 
 ### Change Parameters:
 | Test Name | Description | Number of steps |    Steps list     |    Expected    |       Got       |       Priority       | 
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |       ---       | 
-| Change Color| Change the color of an element (text area, widget...).| 4 |    1. Right click on the element. <br/> 2. Select "Color" on the contextual menu. <br/> 3. Choose a color. <br/> 4. Click on "Update". <br/>|    The template preview show the element with the new color. |     To be tested       |     Low     |
 | Element Restriction| Restrict an element to only a few screens so only them could display them.| 5 |    1. Right click on the element. <br/> 2. Select "Restrictions" on the contextual menu. <br/> 3. Select "Yes". <br/> 4. Choose the screens with the restricted element.  <br/> 5. Click on "Update". <br/>|    The template preview show the element with a small lock icon. |     To be tested       |     High     | 
 | Change Text Font| Change the text font of an element (text area, widget...).| 4 |    1. Right click on the element. <br/> 2. Select "Font" on the contextual menu. <br/> 3. Choose a Font. <br/> 4. Click on "Update". <br/>|    The template preview show the element with the new text font. |     To be tested       |     Medium     | 
 | Change Text Size| Change the text size of an element (text area, widget...).| 3 |    1. Right click on the element. <br/> 2. Choose a text size. <br/> 3. Click on "Update". <br/>|    The template preview show the element with the updated text size. |     To be tested       |     Medium     | 
@@ -193,9 +189,7 @@
 | --------- | ----------------- | -------------------- |    ---------------     |    --------    |       ---       |       ---       | 
 | Create New Template pop-up| Display a pop-up for selecting how to create a new template.| 1 |    1. Click on "Create New Template" button. <br/>|    A pop-up proposing "Start from Scratch" and "Copy this template to create new template" should appear.  |     To be tested       |     High    |
 | Select New Template pop-up| Display a pop-up for selecting the template to work with.| 1 |    1. Click on "Select template" above the actual template.<br/>|    A pop-up showing all available templates should appear.  |     To be tested       |     High    |
-| Select Color pop-up| Display a pop-up for selecting the color of an element.| 2 |    1. Right Click on an element.<br/> 2. Select "Color" on the contextual menu. <br/>|    A pop-up showing a set of color should appear.  |     To be tested       |     Low     |
-| Select Background Color pop-up| Display a pop-up for selecting the background color of the template.| 1 |    1. Click on the "change background color" icon above the template.<br/>|    A pop-up showing a set of color should appear.  |     To be tested       |     Low     |
-| Select Background Picture pop-up| Display a pop-up for selecting the Picture used as a background.| 1 |    1. Click on the picture icon over the template.  <br/>|    A pop-up showing a list of available pictures should appear.  |     To be tested       |     Low     |
+| Select Picture pop-up| Display a pop-up for selecting a Picture.| 1 |    1. Click on the picture icon over the template.  <br/>|    A pop-up showing a list of available pictures should appear.  |     To be tested       |     Low     |
 | Select Restrictions pop-up| Display a pop-up for selecting the screens which could see the selected element.| 3 |    1. Right click on the element. <br/>2. Select "Restrictions" on the contextual menu. <br/>3. Select "Yes". <br/>|    A pop-up showing a list of all your screens should appear.  |     To be tested       |     High     |
 
 
