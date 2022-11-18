@@ -33,6 +33,10 @@
 
 - **ANSSI** : Abreviation of "**A**gence **N**ationale de la **S**écurité des **S**ystèmes d'**I**nformation"
 
+- **PBKDF2** : This is an encryption method used to reduce vulnerability of brute-force attacks.
+
+- **Brute-force attack** : A brute-force attack consists of an attacker submitting many passwords or passphrases (sequence of words) with the hope of eventually guessing correctly.
+
 # Introduction
 
 [Jacobi](https://www.jacobi.net), a company located in Vierzon, needs a communication tool that could send informations based on  what the user requests, in order to facilitate the information transmission between employees. Jacobi has their head office in Paris. 
@@ -68,7 +72,7 @@ Due to time and resources constraints, these features might be included in the u
 ## Assumptions
 - Content will be displayed horizontally.
 - Both buildings are connected to the same network.
-- 
+  
 ## Constraints
 
 - There are 3 shifts per day. 
@@ -91,15 +95,17 @@ Due to time and resources constraints, these features might be included in the u
 
 ## About the laws
 
-Following the ANSSI's guidelines, we ensured that our product followed the DICP criteria. (AIPT)
+Following the [ANSSI's guidelines](https://www.ssi.gouv.fr/en/cybersecurity-in-france/ciip-in-france/), we ensured that our product followed the DICP criteria. (AIPT)
 
 - Availability : By using an Ethernet connection, we ensure that the screen will always be connected to the website.
 
 - Integrity : By using an authentication system we ensure that no unauthorized person can connect to the website.
 
+- Privacy : By using [PBKDF2](https://en.wikipedia.org/wiki/PBKDF2), we ensure a good data encryption to prevent any potential hackers to steal any data.
+
 - Traceability : We're using a database to store every modifications done, containing the user name and the date.
 
-For more informations, we recommend you to visit the websites dedicated to these laws.
+For more informations, we recommend you to visit the websites dedicated to that law.
 
 
 
