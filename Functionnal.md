@@ -79,18 +79,50 @@ Due to time and resources constraints, these features might be included in the u
 - Small shutdown at Christmas time.
 - Wi-Fi sometimes had issues.
 
-## Use Cases Analysis
+## Use Cases Analysis 
 
+<details>
+<summary style=" font-size:125%"><b id="toc">Use case table</b></summary> 
 | Use Case # | Addresses Business/User Requirement n° | Name                                                  | Description                                                                               | Actor(s)                                                 | Pre-Conditions                                                                                                                                                                                                                                                                                                                                                                                                                                       | Flow of Events                                                                                                                                                                                        | Post-Conditions                                                                                                                                         | Exit Criteria                                                                                                                 |
 | ---------- | -------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | UC 1       | U.R #1                                | Login                            | The customer wants to login to the website via the login page | Content producer | Actor must have access   to the login informations which will be given to the authorized users the device must be connected to the Network in order to access the website         | The actor enters its credentials in the input boxes then press the login button                                  | A pop-up shows up saying "successefully logged in" the actor then have access to the website      | The case is complete when the user is successefully logged in   
 | UC 2      | U.R #2                               | Watch screen                           | The customer wants to watch what is displayed on the screen through the website | Content producer | Actor must be logged in and connected to the device he wants to display the content on         | The actor goes to the screen displaying page and selects the screen he wants to watch                                  | The actor can now watch what is displayed on the screen     | The case is complete when the user can watch the screen     
 | UC 3      | U.R #3                               | Change displayed content                           | The customer wants to change the displayed content | Content producer | Actor must be logged in and connected to the device he wants to display the content on he also must have selected the screens that he wants to change the content          | The actor selects the screen that he wants to change the content, he then can either write a message or change any widget                                   | The actor can now see their changes displayed on the screen      | The case is complete when the user see their message on the screen                                                         
 | UC 4      | U.R #4                               | Planning message                           | The customer wants to schedule a message for the next week | Content producer | Actor must be logged in and have selected the screen he wants to display the content on          | The actor types the message that he wants to be scheduled, he then clicks on the "Scheduling" button. After clicking the button, the actor can now choose the date he wants, after selecting the date he then clicks the "Confirm scheduling" button                                   | A message saying "message successfully scheduled" appears       | The case is complete when the scheduled message is sent
+</details>  
+
+
+  
 
 ## Functional Analysis
 
+- UC1 (Login to the website) :  
+    - User connects to the website
+    - Enters his credentials
+    - Accesses the website
+    - Case is closed
 
+- UC2 (Watch screen) :  
+    - User accesses the website
+    - User selects the screen he wants to watch
+    - User can now watch the screen
+    - Case is closed
+
+- UC3 (Change displayed content) :  
+    - User accesses the website
+    - User selects the screen he wants to change the content on
+    - User now can see the content he can change
+    - User selects the content he wants to change
+    - Content is changed    
+    - Case is closed
+
+- UC4 (Planning message) :  
+    - User accesses the website
+    - User selects the screen he wants to display the content on
+    - User types the message he wants to schedule
+    - User selects the date he wants to schedule the message
+    - Message is scheduled
+    - Case is closed
 
 
 ## About the laws
