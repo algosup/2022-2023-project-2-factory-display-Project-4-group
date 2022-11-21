@@ -95,6 +95,7 @@
     background-color: var(--c-bg-primary);
     transition: background-color .30s ease;
     border-radius: 15px;
+	transform: scale(0.85);
   }
 
   .menu-header {
@@ -193,4 +194,18 @@
     margin-right: 5px;
     font-size: 20px;
     margin-top: 2px;
+  }
+
+  .menu-footer {
+	width: 95vw;
+	position: absolute;
+	
+  }
+
+  .menu-footer-item-title {
+	margin-top: 75px;
+	height: 10vh;
+	text-align: end;
+	font-size: 1.2rem;
+	font-weight: 700;
   }
