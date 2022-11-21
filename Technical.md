@@ -70,10 +70,10 @@ The features that will arrive in the next versions :
 - Smart screen in Paris to display informations
 - Unique logins for each users
 
-### 1.6 References
-#### Smart TV
+### 1.6 Hardware
+#### Samsung TV
 
-Here is the [smart TV](https://www.but.fr/produits/8806094416671/Televiseur-55-138-cm-4K-SAMSUNG-55AU7025.html?utm_campaign=LIA_Brand&utm_source=google&utm_medium=cpc&gclid=CjwKCAiA68ebBhB-EiwALVC-NnkEjwU159bcN8QK8JjI0SckVqkgc4viZTl09nVMytn0d5ASNoSoehoCzWkQAvD_BwE&gclsrc=aw.ds) we have chosen for the project. We chose it for these reasons :
+Here is the [smart TV](https://www.but.fr/produits/8806094416671/Televiseur-55-138-cm-4K-SAMSUNG-55AU7025.html?utm_campaign=LIA_Brand&utm_source=google&utm_medium=cpc&gclid=CjwKCAiA68ebBhB-EiwALVC-NnkEjwU159bcN8QK8JjI0SckVqkgc4viZTl09nVMytn0d5ASNoSoehoCzWkQAvD_BwE&gclsrc=aw.ds) samsung that uses the operating system Tizen we have chosen for the project. We chose it for these reasons :
 
 - It's cheaper than monqitors
 - It's easier to install with a [wall arm](https://www.but.fr/produits/8006023265794/Pack-support-mural-40-a-80-MELICONI-PACK-VESA-400-FIXE.html?comingFrom=t2s)
