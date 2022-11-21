@@ -13,6 +13,7 @@
   - [Use Cases Analysis](#use-cases-analysis)
   - [Functional Analysis](#functional-analysis)
   - [About the laws](#about-the-laws)
+- [Conclusion](#conclusion)
 
 </details> 
   
@@ -147,7 +148,11 @@ Following the [ANSSI's guidelines](https://www.ssi.gouv.fr/en/cybersecurity-in-f
 
 For more informations, we recommend you to visit the websites dedicated to that law.
 
+# Conclusion
 
+We had a lot of freedom for this project which led us finding a lot of interesting ideas and implement them on our website.
+
+We would like to thank the stakeholders, Jacobi, and especially Mr Usman SAEED who was here to answer to our questions and was always available when we needed, this project could never have been made without a good communication between our stakeholders and ALGOSUP.
 
 
   
