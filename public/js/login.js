@@ -7,7 +7,7 @@ function validate() {
 			alert("Login successfully");
 		} else {
 			window.location.assign("settings.html");
-	   	alert("Login successfully");
+	   		alert("Login successfully");
 	}} else {
 	alert("Invalid username or password");
 	   return false;
