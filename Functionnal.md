@@ -33,7 +33,7 @@
 
 - **ANSSI** : Abreviation of "**A**gence **N**ationale de la **S**écurité des **S**ystèmes d'**I**nformation"
 
-- **PBKDF2** : This is an encryption method used to reduce vulnerability of brute-force attacks.
+- **Bcrypt** : This is an encryption method used to reduce vulnerability of brute-force attacks.
 
 - **Brute-force attack** : A brute-force attack consists of an attacker submitting many passwords or passphrases (sequence of words) with the hope of eventually guessing correctly.
 
@@ -83,17 +83,17 @@ Due to time and resources constraints, these features might be included in the u
 ## Use Cases Analysis 
 
 <details>
-<summary style=" font-size:125%"><b id="toc">Use case table</b></summary> 
+<summary><b id="toc">Use case table</b></summary>
 
 | Use Case # | Addresses Business/User Requirement n° | Name                                                  | Description                                                                               | Actor(s)                                                 | Pre-Conditions                                                                                                                                                                                                                                                                                                                                                                                                                                       | Flow of Events                                                                                                                                                                                        | Post-Conditions                                                                                                                                         | Exit Criteria                                                                                                                 |
 | ---------- | -------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | UC 1       | U.R #1                                | Login                            | The customer wants to login to the website via the login page | Content producer | Actor must have access   to the login informations which will be given to the authorized users the device must be connected to the Network in order to access the website         | The actor enters its credentials in the input boxes then press the login button                                  | A pop-up shows up saying "successefully logged in" the actor then have access to the website      | The case is complete when the user is successefully logged in   
-| UC 2      | U.R #2                               | Watch screen                           | The customer wants to watch what is displayed on the screen through the website | Content producer | Actor must be logged in and connected to the device he wants to display the content on         | The actor goes to the screen displaying page and selects the screen he wants to watch                                  | The actor can now watch what is displayed on the screen     | The case is complete when the user can watch the screen     
+| UC 2      | U.R #2                               | Monitoring screen                           | The customer wants to monitor what is displayed on the screen through the website | Content producer | Actor must be logged in and connected to the device he wants to display the content on         | The actor goes to the screen displaying page and selects the screen he wants to watch                                  | The actor can now watch what is displayed on the screen     | The case is complete when the user can watch the screen     
 | UC 3      | U.R #3                               | Change displayed content                           | The customer wants to change the displayed content | Content producer | Actor must be logged in and connected to the device he wants to display the content on he also must have selected the screens that he wants to change the content          | The actor selects the screen that he wants to change the content, he then can either write a message or change any widget                                   | The actor can now see their changes displayed on the screen      | The case is complete when the user see their message on the screen                                                         
 | UC 4      | U.R #4                               | Planning message                           | The customer wants to schedule a message for the next week | Content producer | Actor must be logged in and have selected the screen he wants to display the content on          | The actor types the message that he wants to be scheduled, he then clicks on the "Scheduling" button. After clicking the button, the actor can now choose the date he wants, after selecting the date he then clicks the "Confirm scheduling" button                                   | A message saying "message successfully scheduled" appears       | The case is complete when the scheduled message is sent
-</details>  
+| UC 5      | U.R #5                               | Watching screen                         | The employee wants to watch the screen to see some new inormations | Employee, content producer | The actor must be in front of the screen in order to see the informations          | The actor watches the informations on the screen                                   | The actor knows the latest news and can head to work       | The case is complete when the actor is aware of the latest news
 
-
+</details>
   
 
 ## Functional Analysis
@@ -104,9 +104,9 @@ Due to time and resources constraints, these features might be included in the u
     - Accesses the website
     - Case is closed
 
-- UC2 (Watch screen) :  
+- UC2 (Monitoring screen) :  
     - User accesses the website
-    - User selects the screen he wants to watch
+    - User selects the screen he wants to monitor
     - User can now watch the screen
     - Case is closed
 
@@ -126,6 +126,12 @@ Due to time and resources constraints, these features might be included in the u
     - Message is scheduled
     - Case is closed
 
+- UC5 (Watching screen) : 
+  - User comes to the screen
+  - User watches the screen content
+  - User is aware of the latest news
+  - Case is closed
+
 
 ## About the laws
 
@@ -135,7 +141,7 @@ Following the [ANSSI's guidelines](https://www.ssi.gouv.fr/en/cybersecurity-in-f
 
 - Integrity : By using an authentication system we ensure that no unauthorized person can connect to the website.
 
-- Privacy : By using [PBKDF2](https://en.wikipedia.org/wiki/PBKDF2), we ensure a good data encryption to prevent any potential hackers to steal any data.
+- Privacy : By using [Bcrypt](https://fr.wikipedia.org/wiki/Bcrypt), we ensure a good data encryption to prevent any potential hackers to steal any data.
 
 - Traceability : We're using a database to store every modifications done, containing the user name and the date.
 
