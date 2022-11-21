@@ -24,7 +24,7 @@
 <sub> Author : [Victor Leroy](https://www.linkedin.com/in/victor-leroy-64baa3229/) (Program Manager)
 
 <sub> Team : [Laurent Bouquin](https://www.linkedin.com/in/laurent-bouquin-60911a1b8/) (Project Leader), [Lucas Aubard](https://www.linkedin.com/in/lucas-aubard-596b37251/) (Technical Leader),   
-  [Alexis Lasselin](https://www.linkedin.com/in/alexis-lasselin-318649251/) (Software Engineer), [Paul Nowak](https://www.linkedin.com/in/paul-nowak-0757a61a7/) (Quality insurance) </sub>
+  [Alexis Lasselin](https://www.linkedin.com/in/alexis-lasselin-318649251/) (Software Engineer), [Paul Nowak](https://www.linkedin.com/in/paul-nowak-0757a61a7/) (Quality Assurance) </sub>
 
 ## Glossary
 
