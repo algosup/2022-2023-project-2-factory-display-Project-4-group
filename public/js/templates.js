@@ -1,7 +1,7 @@
 
 var container = document.getElementById('display');
 
-for (let index = 0; index < 48; index++) {
+for (let index = 1; index < 48; index++) {
 	var grid = document.createElement('div');
 	grid.classList.add('grid');
 	grid.className = `square1`;
