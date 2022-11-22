@@ -73,13 +73,14 @@ The features that will arrive in the next versions :
 ### 1.6 Hardware
 #### Samsung TV
 
-Here is the [smart TV](https://www.but.fr/produits/8806094416671/Televiseur-55-138-cm-4K-SAMSUNG-55AU7025.html?utm_campaign=LIA_Brand&utm_source=google&utm_medium=cpc&gclid=CjwKCAiA68ebBhB-EiwALVC-NnkEjwU159bcN8QK8JjI0SckVqkgc4viZTl09nVMytn0d5ASNoSoehoCzWkQAvD_BwE&gclsrc=aw.ds) samsung that uses the operating system Tizen we have chosen for the project. We chose it for these reasons :
+Here is the [smart TV](https://www.but.fr/produits/8806094416671/Televiseur-55-138-cm-4K-SAMSUNG-55AU7025.html?utm_campaign=LIA_Brand&utm_source=google&utm_medium=cpc&gclid=CjwKCAiA68ebBhB-EiwALVC-NnkEjwU159bcN8QK8JjI0SckVqkgc4viZTl09nVMytn0d5ASNoSoehoCzWkQAvD_BwE&gclsrc=aw.ds) samsung that uses the operating system Tizen that we have chosen for the project. We chose it for these reasons :
 
 - It's cheaper than monitors
 - It's easier to install with a [wall arm](https://www.but.fr/produits/8006023265794/Pack-support-mural-40-a-80-MELICONI-PACK-VESA-400-FIXE.html?comingFrom=t2s)
 - It has a good graphic uality
 - Bigger than a monitor
 
+### 1.7 Software
 #### Tizen Studio
 
 It's an application that allows to translate html, css and js code into a web app by putting the smart TV in developer mode
