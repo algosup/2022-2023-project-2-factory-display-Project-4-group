@@ -60,7 +60,7 @@ body {
     }
 }
 
-form {
+.form {
     position: absolute;
     inset: 2px;
     background: white;

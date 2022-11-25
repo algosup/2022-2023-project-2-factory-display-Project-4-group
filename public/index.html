@@ -6,15 +6,15 @@
     <title>Connexion</title>
     <link rel="stylesheet" href="css/login.css">
     <link rel="icon" href="ressources/logo.webp">
-    <script src="js/login.js"></script>
+    <script type="module" src="js/login.js"></script>
 </head>
 
 <body>
     <div class="box">
-        <form autocomplete="off">
+        <div class="form">
             <h2>Inscription</h2>
             <div class="inputBox">
-                <input type="text" required="required" id="username">
+                <input type="text" required="required" id="e-mail">
                 <span>adresse e-mail</span>
                 <i></i>
             </div>
@@ -26,8 +26,8 @@
             <div class="links">
                 <a href="mailto:appnewsnetworksup@gmail.com?subject=Mot de passe oublié">Mot de Passe Oublié ?</a>
             </div>
-            <button type="submit" value="Login" onclick="validate()"> Login </button>
-        </form>
+            <button id="submit"> Login </button>
+        </div>
     </div>
 </body>
 

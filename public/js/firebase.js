@@ -1,10 +1,17 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+
 const firebaseConfig = {
-    apiKey: "AIzaSyDOLs8HAI5mvU4W_8bZ9UkeukOzZsZSNgs",
-    authDomain: "portfolio-7cb4c.firebaseapp.com",
-    databaseURL: "https://portfolio-7cb4c-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "portfolio-7cb4c",
-    storageBucket: "portfolio-7cb4c.appspot.com",
-    messagingSenderId: "497691677894",
-    appId: "1:497691677894:web:d2bffecff07a15e17573c7"
-};
-firebase.initializeApp(firebaseConfig);
+	apiKey: "AIzaSyBNJfiIZuZDQDUbpvuket5tZaj6RIZQqyc",
+	authDomain: "appnewsnetwork-174cd.firebaseapp.com",
+	projectId: "appnewsnetwork-174cd",
+	storageBucket: "appnewsnetwork-174cd.appspot.com",
+	messagingSenderId: "596547983046",
+	appId: "1:596547983046:web:d9bdd6cedf386b59ba29c7",
+	measurementId: "G-TFCP1K1G1J"
+  };
+
+  
+  export function initializeFirebase() {
+	  const app = initializeApp(firebaseConfig);
+	  return app;
+  }

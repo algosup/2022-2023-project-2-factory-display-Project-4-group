@@ -1,15 +1,29 @@
-function validate() {
-	var username = document.getElementById("username").value;
-	var password = document.getElementById("password").value;
-	if (username == "admin" && password == "admin") {
-		if (navigator.userAgent.indexOf('Mac OS X') != -1) {
-			login.href='settings.html';
-			alert("Login successfully");
-		} else {
-			window.location.assign("settings.html");
-	   		alert("Login successfully");
-	}} else {
-	alert("Invalid username or password");
-	   return false;
-	}
- }
+import { initializeFirebase } from "./firebase.js";
+import { getFirestore, getDocs, collection, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
+
+var app = initializeFirebase();
+var db = getFirestore(app);
+
+function login() {
+
+    var email;
+    var password;
+	console.log("login");
+    getDocs(collection(db, "users")).then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+			email = doc.data().email;
+			password = doc.data().password;
+			if (email == document.getElementById("e-mail").value && password == document.getElementById("password").value) {
+				self.location = "settings.html";
+				console.log("Login successful");
+			}
+        });
+	}).catch((error) => {
+		console.log("Error getting documents: ", error);
+	});
+
+}
+
+let button = document.getElementById("submit");
+
+button.addEventListener("click", login);
