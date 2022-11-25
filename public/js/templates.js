@@ -1,7 +1,10 @@
 
 var container = document.getElementById('display');
+let squares = 0;
+let last = 0;
 
-for (let index = 1; index < 48; index++) {
+
+for (let index = 1; index <= 48; index++) {
 	var grid = document.createElement('div');
 	grid.classList.add('grid');
 	grid.className = `square1`;
@@ -12,10 +15,46 @@ for (let index = 1; index < 48; index++) {
 
 function changeColor(element) {
 	if (element.className == 'square1') {
-		element.className = 'square2';
+		if (squares > 0) {
+			// console.log(element.id, last, squares, element.className);
+			if (element.id == (last -(-1))){
+				console.log(+1);
+				element.className = 'square2';
+				squares++;
+				last = element.id;
+			}
+			else if (element.id == last -1){
+				element.className = 'square2';
+				squares++;
+				last = element.id;
+				console.log(-1);
+			} 
+			else if (element.id == (last -(-8))){
+				element.className = 'square2';
+				squares++;
+				last = element.id;
+				console.log(+8);
+			}
+			else if (element.id == last -8){
+				element.className = 'square2';
+				squares++;
+				last = element.id;
+				console.log(-8);
+			}
+		}
+		else {
+			// console.log(element.id)
+			element.className = 'square2';
+			squares++;
+			last = element.id;
+		}
+		// squares++;
+		// element.className = 'square2';
 	} else if (element.className == 'square2') {
 		element.className = 'square1';
+		squares--;
 	}
+	// console.log(squares);
 }
 
 // Comment bloquer les cases ?
