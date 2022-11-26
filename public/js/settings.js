@@ -1,6 +1,6 @@
 let html = document.getElementsByTagName('html');
 let radios = document.getElementsByName('themes'); 
-      
+
 for (i = 0; i < radios.length; i++) {
     radios[i].addEventListener('change', function() {
     html[0].classList.remove(html[0].classList.item(0));

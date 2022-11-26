@@ -5,7 +5,6 @@ var app = initializeFirebase();
 var db = getFirestore(app);
 
 function login() {
-
     var email;
     var password;
 	console.log("login");
@@ -13,7 +12,8 @@ function login() {
         querySnapshot.forEach((doc) => {
 			email = doc.data().email;
 			password = doc.data().password;
-			if (email == document.getElementById("e-mail").value && password == document.getElementById("password").value) {
+			if (email == document.getElementById("e-mail").value ) { 
+				// && compare(document.getElementById("password").value, password)
 				self.location = "settings.html";
 				console.log("Login successful");
 			}
@@ -21,8 +21,8 @@ function login() {
 	}).catch((error) => {
 		console.log("Error getting documents: ", error);
 	});
-
 }
+
 
 let button = document.getElementById("submit");
 
