@@ -12,15 +12,14 @@ function login() {
         querySnapshot.forEach((doc) => {
 			email = doc.data().email;
 			password = doc.data().password;
-			if (email == document.getElementById("e-mail").value ) { 
-				// && compare(document.getElementById("password").value, password)
+			if (email == document.getElementById("e-mail").value && password == document.getElementById("password").value) { 
 				self.location = "settings.html";
 				console.log("Login successful");
 			}
         });
-	}).catch((error) => {
-		console.log("Error getting documents: ", error);
 	});
+	document.getElementById("password").value = "";
+	return alert("Login failed");
 }
 
 
