@@ -12,6 +12,15 @@
 	background-color: whitesmoke;
 	display: -webkit-box;
 }
+.display{
+	background-color: #1f1f1f;
+	border: 0.5vw solid whitesmoke;
+	width: 64vw;
+	height: 36vw;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(8, 1fr);	
+}
 #display{
 	background-color: #1f1f1f;
 	border: 0.5vw solid whitesmoke;
@@ -53,6 +62,12 @@
 	background-color: #d22d2d;
 }
 
+.squareT{
+	background-color: #1f1f1f;
+	border: 0.5px solid #1f1f1f;
+	border-radius: 5px;
+}
+
 
 
 .news{
@@ -63,6 +78,13 @@
 	border-radius: 10px 10px 0 0;
 	grid-column: 1/-1;
 	grid-row: 8;
+}
+
+.contentButtons{
+	width: 30%;
+	height: 100%;
+	background-color: whitesmoke;
+	border-radius: 5px;
 }
 
 #sizes{
@@ -81,11 +103,15 @@
 #rotate{
 	height: 5vh;
 	margin-top: 1vh;
-	width: 5vh;
+	width: 32vw;
 	color: #fff;
-	background-color: #ff6600;
+	background-color: gray;
 	border-radius: 5px;
 	border: 1px solid #000;
+	font-size: 1.5vw;
+	text-align: center;
+	outline: none !important;
+	cursor: not-allowed;
 }
 
 #displayed{
