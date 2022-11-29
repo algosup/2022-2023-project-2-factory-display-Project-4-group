@@ -18,8 +18,6 @@ function login() {
 			}
         });
 	});
-	document.getElementById("password").value = "";
-	return alert("Login failed");
 }
 
 
