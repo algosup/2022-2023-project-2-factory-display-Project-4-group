@@ -10,6 +10,8 @@
 - [Functional Requirements](#functional-requirements)
   - [Assumptions](#assumptions)
   - [Constraints](#constraints)
+  - [Personas](#personas)
+    - [Robert (Content Producer)](#robert-content-producer)
   - [Use Cases Analysis](#use-cases-analysis)
   - [Functional Analysis](#functional-analysis)
   - [About the laws](#about-the-laws)
@@ -37,6 +39,8 @@
 - **Bcrypt** : This is an encryption method used to reduce vulnerability of brute-force attacks.
 
 - **Brute-force attack** : A brute-force attack consists of an attacker submitting many passwords or passphrases (sequence of words) with the hope of eventually guessing correctly.
+
+- **Content producer** : The content producer is in charge of creating and changing the displayed content.
 
 # Introduction
 
@@ -81,6 +85,13 @@ Due to time and resources constraints, these features might be included in the u
 - Small shutdown at Christmas time.
 - Wi-Fi sometimes had issues.
 
+## Personas 
+
+### Robert (Content Producer)
+
+Robert has been working at Jacobi since July 2020, he works as an HR manager. He is 31 years old and single. He likes listening to music while he is working. He lives in Vierzon, so he comes most of the time walking, or he uses the bike when he is a bit late. 
+
+He will need to access the screen in order to provide informations for his colleagues, about upcoming recruitment campaigns but also to give informations and advices if an intern is in the factory.
 ## Use Cases Analysis 
 
 <details>
