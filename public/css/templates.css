@@ -10,6 +10,7 @@
 	width: 100vw;
 	height: 85vh;
 	background-color: whitesmoke;
+	display: -webkit-box;
 }
 #display{
 	background-color: #1f1f1f;
@@ -62,4 +63,42 @@
 	border-radius: 10px 10px 0 0;
 	grid-column: 1/-1;
 	grid-row: 8;
+}
+
+#sizes{
+	width: 32vw;
+	height: 5vh;
+	margin-top: 1vh;
+	color: #fff;
+	background-color: #ff6600;
+	border-radius: 5px;
+	border: 1px solid #000;
+	text-align: center;
+	font-size: 1.5vw;
+	outline: none !important;
+	cursor: pointer;
+}
+#rotate{
+	height: 5vh;
+	margin-top: 1vh;
+	width: 5vh;
+	color: #fff;
+	background-color: #ff6600;
+	border-radius: 5px;
+	border: 1px solid #000;
+}
+
+#displayed{
+	display: block;
+	width: 32vw;
+	height: 5vh;
+	margin-top: 1vh;
+	color: #fff;
+	background-color: #ff6600;
+	border-radius: 5px;
+	border: 1px solid #000;
+	text-align: center;
+	font-size: 1.5vw;
+	outline: none !important;
+	cursor: pointer;
 }

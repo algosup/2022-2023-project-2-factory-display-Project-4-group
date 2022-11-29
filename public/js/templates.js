@@ -13,6 +13,33 @@ for (let index = 1; index <= 48; index++) {
 	container.appendChild(grid);
 }
 
+// Display the selected template size
+function displayTemplate(){
+	let element = document.getElementById('sizes');
+	var rows = element.options[element.selectedIndex].value[0];
+	var columns = element.options[element.selectedIndex].value[2];
+	console.log(rows, columns);
+	displaySelected(rows, columns);
+}
+
+
+function displaySelected(rows, columns){
+	for (let index = 1; index <= 48; index++) {
+		var grid = document.getElementById(index);
+		grid.className = `square1`;
+	}
+	var count = 1;
+	for (let rowsIndex = 1; rowsIndex <= rows; rowsIndex++) {
+		for (let columnsIndex = 1; columnsIndex <= columns; columnsIndex++) {
+			var grid = document.getElementById(count);
+			grid.className = `square2`;
+			count+=1;
+		}
+	count -= (columns);
+	count += 8
+	}
+}
+
 function changeColor(element) {
 	if (element.className == 'square1') {
 		if (squares > 0) {
