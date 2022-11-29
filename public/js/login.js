@@ -7,7 +7,6 @@ var db = getFirestore(app);
 function login() {
     var email;
     var password;
-	console.log("login");
     getDocs(collection(db, "users")).then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
 			email = doc.data().email;
@@ -16,9 +15,12 @@ function login() {
 				self.location = "settings.html";
 				console.log("Login successful");
 			}
-        });
-	});
-}
+		});
+        }).then(() => {
+			document.getElementById("error").style = "color: red; display: block; text-align: center;";
+			document.getElementById("password").value = "";
+		});
+	}
 
 
 let button = document.getElementById("submit");
