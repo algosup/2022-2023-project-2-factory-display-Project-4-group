@@ -18,6 +18,7 @@
   - [4.2. Viewers](#42-viewers)
     - [4.2.1 **Bryan**](#421-bryan)
     - [4.2.2 **Frédéric**](#422-frédéric)
+    - [4.3.3. **Marie**](#433-marie)
 - [5. Use cases](#5-use-cases)
   - [5.1. Use Cases Analysis](#51-use-cases-analysis)
   - [5.2. Functional Analysis](#52-functional-analysis)
@@ -98,13 +99,17 @@ Due to time and resources constraints, these features might be included in the u
 
 ### 4.1.1. **Robert**
 
-Robert has been working for Jacobi since July 2020, he works as an HR manager. He is 31 years old and single. He likes listening to music while he is working but he also likes climbing and other extreme sports. Robert lives in Vierzon, so he comes most of the time walking, or he uses the bike when he is a bit late. 
+Robert has been working for Jacobi since July 2020, he works as an HR manager. He is 31 years old and single. He likes listening to music while he is working but he also likes climbing and other extreme sports.   
+
+Robert lives in Vierzon, so he comes most of the time walking, or he uses the bike when he is a bit late. 
 
 He will need to access the screen in order to provide informations for his colleagues, about upcoming recruitment campaigns but also to give informations and advices if an intern is in the factory.
 
 ### 4.1.2. **Jeanne**
 
-Jeanne has been working for Jacobi since December 2021, she is working as the factory manager. She is 42 years old and lives in Orleans, she is married and has 2 children. She loves playing tennis with her husband and her childs. Because she is far from the factory, she takes the train every morning and evening, when she arrives at the train station, Bryan, her colleague picks her up and drive her to the factory, which takes around 10 minutes.
+Jeanne has been working for Jacobi since December 2021, she is working as the factory manager. She is 42 years old and lives in Orleans, she is married and has 2 children. She loves playing tennis with her husband and her childs.   
+
+Because she is far from the factory, she takes the train every morning and evening, when she arrives at the train station, Bryan, her colleague picks her up and drive her to the factory, which takes around 10 minutes.
 
 Jeanne's use of the screen displaying is pretty clear and simple, she wants to display the production numbers for her colleagues in order for them to have an idea on if they are doing well or not, but also to give them a heads up everyday. She would also like to have a widget displaying the weather, so that she can plan her day accordingly.
 
@@ -112,12 +117,27 @@ Jeanne's use of the screen displaying is pretty clear and simple, she wants to d
 
 ### 4.2.1 **Bryan** 
 
-Bryan is an engineer that has been working for Jacobi since 2018, he is 28 years old and lives in Paris. He is single and lives with his family. He likes playing video games and watching movies. He comes to Vierzon by car at the end of the week-end, he takes the highway and it takes him around 3 hour to get there; where he stays for the week and then goes back to Paris on Friday evening. He comes to the factory every day by car, picking up Jeanne at the train station and then driving her to the factory. 
+Bryan is a technician that has been working for Jacobi since 2018, he is 28 years old and lives in Paris. He is single and lives with his family. He likes playing video games and watching movies. He comes to Vierzon by car at the end of the week-end, he takes the highway and it takes him around 3 hour to get there; where he stays for the week and then goes back to Paris on Friday evening.   
 
-Bryan wants to use the screen in order to know if there is any important information that he needs to know about, he also wants to know if there is any important information about the factory, like if there is a problem with the machines or if there is a problem with the production.
+He comes to the factory every day by car, picks up Jeanne at the train station and then drives her to the factory. 
+
+Bryan wants to use the screen in order to know if there is any important information that he needs to know about, he also wants to know if there is any important information about the factory, such as if there is a problem with the machines.
 
 ### 4.2.2 **Frédéric**
 
+Frédéric is an engineer that has been working for Jacobi since 2016, he is 56 years old and lives in Salbris. He is married and has 4 children. He likes watching his son's rugby matches on his weekends.   
+
+He comes to Vierzon by car everyday which takes him around 30 minutes to get to the factory.
+
+Frédéric needs the screen in order to know if there is any important information that he needs to know about, mostly informations that concerns the production rate of the factory. He also wants to have some feedbacks from his manager, on the quality of the products that are being produced.
+
+### 4.3.3. **Marie**
+
+Marie is an intern that joined Jacobi in September 2022, she is 21 years old and lives in Toulouse. She is here for 6 months and she is doing an internship in the factory. She likes mangas, parties and hanging out with her friends. She is currently living with her uncle in Vierzon. She comes back to Toulouse once every 2 weeks in order to see her family and her friends. 
+
+Because her uncle is also working in the factory, he drives her to the factory everyday which takes around 15 minutes. 
+
+Marie will need the screen because she wants to get the factory informations everyday, in order to not miss anything important. She also wants to get the latest news about the company, in order to know what is going on in the company.
 
 # 5. Use cases
 ## 5.1. Use Cases Analysis 
