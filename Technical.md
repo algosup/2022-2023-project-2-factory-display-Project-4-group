@@ -73,10 +73,10 @@ The features that will arrive in the next versions :
 ### 1.6 Hardware
 #### Samsung TV
 
-Here is the [smart TV](https://www.but.fr/produits/8806094416671/Televiseur-55-138-cm-4K-SAMSUNG-55AU7025.html?utm_campaign=LIA_Brand&utm_source=google&utm_medium=cpc&gclid=CjwKCAiA68ebBhB-EiwALVC-NnkEjwU159bcN8QK8JjI0SckVqkgc4viZTl09nVMytn0d5ASNoSoehoCzWkQAvD_BwE&gclsrc=aw.ds) samsung that uses the operating system Tizen that we have chosen for the project. We chose it for these reasons :
+Here is the [wall arm](https://www.but.fr/produits/8006023265794/Pack-support-mural-40-a-80-MELICONI-PACK-VESA-400-FIXE.html?comingFrom=t2s) and the [smart TV](https://www.but.fr/produits/8806094416671/Televiseur-55-138-cm-4K-SAMSUNG-55AU7025.html?utm_campaign=LIA_Brand&utm_source=google&utm_medium=cpc&gclid=CjwKCAiA68ebBhB-EiwALVC-NnkEjwU159bcN8QK8JjI0SckVqkgc4viZTl09nVMytn0d5ASNoSoehoCzWkQAvD_BwE&gclsrc=aw.ds) samsung that uses the operating system Tizen that we have chosen for the project. We chose it for these reasons :
 
 - It's cheaper than monitors
-- It's easier to install with a [wall arm](https://www.but.fr/produits/8006023265794/Pack-support-mural-40-a-80-MELICONI-PACK-VESA-400-FIXE.html?comingFrom=t2s)
+- It's easier to install with a wall arm
 - It has a good graphic uality
 - Bigger than a monitor
 
@@ -88,3 +88,26 @@ It's an application that allows to translate html, css and js code into a web ap
 #### Firebase
 
 It's a database that allows to store mails, passwords and all the information that will be displayed on the smart TV
+
+### 1.8 Software architecture
+
+#### getCurrentTimeDate ()
+
+It's a function that allows to get the current time.
+
+#### getWeather ()
+
+It's a function that allows to get the weather.
+
+#### login ()
+
+This function allows us to connect to the website through a login page.
+
+#### displayTemplate ()
+
+This function allows us to display the template of the website.
+
+#### displaySelected ()
+
+This function allows to display the modification boxes for the widgets.
+
