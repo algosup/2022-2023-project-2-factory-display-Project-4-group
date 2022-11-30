@@ -18,7 +18,7 @@
   - [4.2. Viewers](#42-viewers)
     - [4.2.1 **Bryan**](#421-bryan)
     - [4.2.2 **Frédéric**](#422-frédéric)
-    - [4.3.3. **Marie**](#433-marie)
+    - [4.2.3. **Marie**](#423-marie)
 - [5. Use cases](#5-use-cases)
   - [5.1. Use Cases Analysis](#51-use-cases-analysis)
   - [5.2. Functional Analysis](#52-functional-analysis)
@@ -131,7 +131,7 @@ He comes to Vierzon by car everyday which takes him around 30 minutes to get to 
 
 Frédéric needs the screen in order to know if there is any important information that he needs to know about, mostly informations that concerns the production rate of the factory. He also wants to have some feedbacks from his manager, on the quality of the products that are being produced.
 
-### 4.3.3. **Marie**
+### 4.2.3. **Marie**
 
 Marie is an intern that joined Jacobi in September 2022, she is 21 years old and lives in Toulouse. She is here for 6 months and she is doing an internship in the factory. She likes mangas, parties and hanging out with her friends. She is currently living with her uncle in Vierzon. She comes back to Toulouse once every 2 weeks in order to see her family and her friends. 
 
