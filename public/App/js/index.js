@@ -2,12 +2,13 @@ function getCurrentTimeDate() {
 	let currentTimeDate = new Date();
 	var hours   =  currentTimeDate.getHours();
 	var minutes =  currentTimeDate.getMinutes();
+	var seconds =  currentTimeDate.getSeconds();
 	minutes = minutes < 10 ? '0'+minutes : minutes;
 	var currentTime = `${hours}:${minutes}`;
 	document.getElementById('time').innerHTML = currentTime;
 	setTimeout(getCurrentTimeDate, 500);
-	if (minutes == 00 || minutes == 30) {
-		GetWeather();
+	if ((minutes == 00 || minutes == 30) && seconds == 00) {
+		location.reload();
 	}
 }
 function GetWeather() {
