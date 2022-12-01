@@ -22,7 +22,12 @@
 - [5. Use cases](#5-use-cases)
   - [5.1. Use Cases Analysis](#51-use-cases-analysis)
   - [5.2. Functional Analysis](#52-functional-analysis)
-- [6. About the laws](#6-about-the-laws)
+- [6. Non-Functional Requirements](#6-non-functional-requirements)
+  - [6.1. Costs](#61-costs)
+    - [6.1.1. Hardware](#611-hardware)
+    - [6.1.2. Software](#612-software)
+    - [6.1.3. Energy consumption](#613-energy-consumption)
+  - [6.2. Security](#62-security)
 - [7. Conclusion](#7-conclusion)
 
 </details> 
@@ -50,7 +55,9 @@
 
 - **Content producer** : The content producer is in charge of creating and changing the displayed content.
 
-- **Viewer** : We consider the viewer as someone viewing one of Jacobi's connected screen.
+- **Viewer** : We consider the viewer as someone viewing any of Jacobi's connected screen.
+
+- **Cloud** : A cloud is a network of remote servers hosted on the Internet to store, manage, and process data, rather than a local server or a personal computer.
 
 # 2. Introduction
 
@@ -192,8 +199,29 @@ Here is a more detailed version of the functional analysis below :
   - User is aware of the latest news
   - Case is closed
 
+# 6. Non-Functional Requirements
 
-# 6. About the laws
+## 6.1. Costs
+
+### 6.1.1. Hardware
+
+The hardware that will be used for this project is the following :
+
+- A Smart TV with a screen size of 55 inches, and a resolution of 3840x2160 pixels (4K UHD)
+- A wall bracket for the television
+- An Ethernet cable to connect the TV to the network
+
+The toal cost of the hardware is around 550€.
+
+### 6.1.2. Software
+
+The database we will be using is [Firebase](https://firebase.google.com). It is a cloud database, which means that it is hosted on the cloud and we don't need to install it on our computer. It is also **free to use**, which is a good thing for us.
+
+### 6.1.3. Energy consumption
+
+The energy consumption of the TV is 0.084kWh. The TV will be turned on 24/7, so it will consume around 2.016kWh per day. The TV will be used the whole year, so it will consume around 735.84kWh per year. The price of the electricity in France is 0.1024€ per kWh, so one TV will cost around 75.35€ per year.
+
+## 6.2. Security 
 
 Following the [ANSSI's guidelines](https://www.ssi.gouv.fr/en/cybersecurity-in-france/ciip-in-france/), we ensured that our product followed the DICP criteria. (AIPT)
 
