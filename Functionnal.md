@@ -25,6 +25,7 @@
 - [6. Non-Functional Requirements](#6-non-functional-requirements)
   - [6.1. Costs](#61-costs)
     - [6.1.1. Hardware](#611-hardware)
+      - [**Maintenance**](#maintenance)
     - [6.1.2. Software](#612-software)
     - [6.1.3. Energy consumption](#613-energy-consumption)
   - [6.2. Security](#62-security)
@@ -61,7 +62,7 @@
 
 # 2. Introduction
 
-[Jacobi](https://www.jacobi.net), a company located in Vierzon, needs a communication tool that could send informations based on  what the user requests, in order to facilitate the information transmission between employees. Jacobi has their head office in Paris. 
+[Jacobi](https://www.jacobi.net), a company located in Vierzon, needs a communication tool that could send informations based on what the user requests, in order to facilitate the information transmission between employees. Jacobi has their head office in Paris. 
 
 ## 2.1. Scope
 
@@ -92,6 +93,7 @@ Due to time and resources constraints, these features might be included in the u
 - Content will be displayed horizontally.
 - Both buildings are connected to the same network.
 - The screens will be connected to the same network.  
+- Ethernet is the safest way to connect the screens to the network.
   
 ## 3.2. Constraints
 
@@ -213,6 +215,12 @@ The hardware that will be used for this project is the following :
 
 The toal cost of the hardware is around 550€.
 
+#### **Maintenance**
+
+- The Smart TV will be maintained by the company, in order to make sure that it is always working properly. The television will last at least 7 years, time of the guarantee.  
+  
+- The wall bracket shouldn't need any maintenance, it is a simple bracket that will be used to hang the television on the wall. As long as no one touches or breaks it, it should last for a long time.
+    
 ### 6.1.2. Software
 
 The database we will be using is [Firebase](https://firebase.google.com). It is a cloud database, which means that it is hosted on the cloud and we don't need to install it on our computer. It is also **free to use**, which is a good thing for us.
