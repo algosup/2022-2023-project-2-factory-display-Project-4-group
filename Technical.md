@@ -30,16 +30,16 @@
 
 ## 1. Introduction
 
-### 1.1 Overview
+### 1.1. Overview
 
 Project ordered by [Jacobi](https://jacobi.com/), supervised by [ALGOSUP](https://algosup.com).
 
 
-### 1.2 Problem description
+### 1.2. Problem description
 
 [Jacobi](https://jacobi.com/), a company located in Vierzon, needs a communication tool that could send informations based on what the user requests, in order to facilitate the information transmission between employees. [Jacobi](https://jacobi.com/) has their head office in Paris.
 
-### 1.3 Glossary
+### 1.3. Glossary
 
 | Word                                   | Definition                                                                             |
 | -------------------------------------- | -------------------------------------------------------------------------------------- |
@@ -47,8 +47,8 @@ Project ordered by [Jacobi](https://jacobi.com/), supervised by [ALGOSUP](https:
 | AppNews Network                        | the application that [Jacobi](https://jacobi.com/) will have at the end of the project |
 | [ALGOSUP](https://algosup.com/fr.html) | School where the project is made                                                       |
 | [Jacobi](https://jacobi.com/)          | The company that ordered the project                                                   |
-
-### 1.4 In scope
+## 2. Technical specifications
+### 2.1. In scope
 
 The final product should be able to :
 
@@ -62,7 +62,7 @@ The final product should be able to :
 - Not being able to change the TV source so as not to watch another TV function than the one intended 
 - Be able to make modifications remotely
 
-### 1.5 Out of scope
+### 2.2. Out of scope
 
 The features that will arrive in the next versions :
 
@@ -70,7 +70,7 @@ The features that will arrive in the next versions :
 - Smart screen in Paris to display informations
 - Unique logins for each users
 
-### 1.6 Hardware
+### 2.3. Hardware
 #### Samsung TV
 
 Here is the [wall arm](https://www.but.fr/produits/8006023265794/Pack-support-mural-40-a-80-MELICONI-PACK-VESA-400-FIXE.html?comingFrom=t2s) and the [smart TV](https://www.electrodepot.fr/led-samsung-55au6925-uhd-4k-smart.html?gclid=Cj0KCQiAvqGcBhCJARIsAFQ5ke5Y3svlndPqg3oE-S6rhCtynBwlKOWwZm90iZxnxMvUwbKh55gkmPQaAhvlEALw_wcB) samsung that uses the operating system Tizen that we have chosen for the project. We chose it for these reasons :
@@ -80,49 +80,51 @@ Here is the [wall arm](https://www.but.fr/produits/8006023265794/Pack-support-mu
 - It has a good graphic uality
 - Bigger than a monitor
 
-### 1.7 Software
-#### Tizen Studio
+### 2.4. Software
+#### 2.4.1. Tizen Studio
 
 It's an application that allows to translate html, css and js code into a web app by putting the smart TV in developer mode
 
-#### Firebase
+#### 2.4.2. Firebase
 
 It's a database that allows to store mails, passwords and all the information that will be displayed on the smart TV
 
-### 1.8 Software architecture
+## 3. Software architecture
 
-#### getCurrentTimeDate ()
+#### 3.1. getCurrentTimeDate ()
 
 It's a function that allows to get the current time.
 
-#### getWeather ()
+#### 3.2. getWeather ()
 
 It's a function that allows to get the weather.
 
-#### login ()
+#### 3.3. login ()
 
 This function allows us to connect to the website through a login page.
 
-#### displayTemplate ()
+#### 3.4.displayTemplate ()
 
 This function allows us to display the template of the website.
 
-#### displaySelected ()
+#### 3.5. displaySelected ()
 
 This function allows to display the modification boxes for the widgets.
 
-#### initializeFirebase ()
+#### 3.6. initializeFirebase ()
 
 This function allows us to initialize the firebase database.
 
-#### displayTemplate ()
+#### 3.7. displayTemplate ()
 
 This function allows us to display the selected template size.
 
-#### rotateTemplate ()
+#### 3.7. rotateTemplate ()
 
 This function allows us to rotate the template.
 
-#### submitTemplate ()
+#### 3.8. submitTemplate ()
 
 This function allows us to submit the template.
+
+## 3. Program architecture diagram
