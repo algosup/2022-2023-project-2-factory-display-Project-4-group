@@ -16,7 +16,7 @@
 
 - Created on: 2022-11-08
 
-- [Bug tracker]()
+- [Bug tracker](https://github.com/algosup/2022-2023-project-2-factory-display-Project-4-group/blob/QA/Bug_Tracker.md)
 
 ## Table of content
 
@@ -73,7 +73,7 @@ The features that will arrive in the next versions :
 ### 1.6 Hardware
 #### Samsung TV
 
-Here is the [wall arm](https://www.but.fr/produits/8006023265794/Pack-support-mural-40-a-80-MELICONI-PACK-VESA-400-FIXE.html?comingFrom=t2s) and the [smart TV](https://www.but.fr/produits/8806094416671/Televiseur-55-138-cm-4K-SAMSUNG-55AU7025.html?utm_campaign=LIA_Brand&utm_source=google&utm_medium=cpc&gclid=CjwKCAiA68ebBhB-EiwALVC-NnkEjwU159bcN8QK8JjI0SckVqkgc4viZTl09nVMytn0d5ASNoSoehoCzWkQAvD_BwE&gclsrc=aw.ds) samsung that uses the operating system Tizen that we have chosen for the project. We chose it for these reasons :
+Here is the [wall arm](https://www.but.fr/produits/8006023265794/Pack-support-mural-40-a-80-MELICONI-PACK-VESA-400-FIXE.html?comingFrom=t2s) and the [smart TV](https://www.electrodepot.fr/led-samsung-55au6925-uhd-4k-smart.html?gclid=Cj0KCQiAvqGcBhCJARIsAFQ5ke5Y3svlndPqg3oE-S6rhCtynBwlKOWwZm90iZxnxMvUwbKh55gkmPQaAhvlEALw_wcB) samsung that uses the operating system Tizen that we have chosen for the project. We chose it for these reasons :
 
 - It's cheaper than monitors
 - It's easier to install with a wall arm
@@ -111,3 +111,18 @@ This function allows us to display the template of the website.
 
 This function allows to display the modification boxes for the widgets.
 
+#### initializeFirebase ()
+
+This function allows us to initialize the firebase database.
+
+#### displayTemplate ()
+
+This function allows us to display the selected template size.
+
+#### rotateTemplate ()
+
+This function allows us to rotate the template.
+
+#### submitTemplate ()
+
+This function allows us to submit the template.
