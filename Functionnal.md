@@ -5,9 +5,10 @@
 - [AppNews Network](#appnews-network)
   - [1. Glossary](#1-glossary)
 - [2. Introduction](#2-introduction)
-  - [2.1. Scope](#21-scope)
-  - [2.2. In Scope](#22-in-scope)
-  - [2.3. Out Of Scope](#23-out-of-scope)
+  - [2.1. Goal of the project](#21-goal-of-the-project)
+  - [2.2. Scope](#22-scope)
+  - [2.3. In Scope](#23-in-scope)
+  - [2.4. Out Of Scope](#24-out-of-scope)
 - [3. Functional Requirements](#3-functional-requirements)
   - [3.1. Assumptions](#31-assumptions)
   - [3.2. Constraints](#32-constraints)
@@ -62,13 +63,21 @@
 
 # 2. Introduction
 
-[Jacobi](https://www.jacobi.net), a company located in Vierzon, needs a communication tool that could send informations based on what the user requests, in order to facilitate the information transmission between employees. Jacobi has their head office in Paris. 
+Jacobi Group is world leader in purification solution of air and water, using Activated Carbon, Ion Exchange Resins and Mobile Filtration Units. With its factory in Forges industrial zone since 1956, it has a heritage of being the only French industry manufacturing this unique product and supplying customers like Veolia, Valeo, Honeywell and French Ministry of Defence to name a few. There are over 1000 applications in which activated carbon is used which you can read up on [their website](https://www.jacobi.net). The factory in Vierzon is the oldest in the Group however one of the most successful thanks to a flexible and can-do approach.   
 
-## 2.1. Scope
+The Managing Director of Jacobi in France, Mr Saeed is constantly seeking ways to improve his management. One of his favourite subjects, which is also the one for which he receives most feedback, is communication. Communication - updated, accurate and transparent. The short and sweet wishlist!  
+
+One of the many ways to achieve this is to digitalise the communication of the Company and make it easy to publish the content. Currently, factory news and important announcements are done by email to groups, on MS Teams Groups, Yammer, etc. However, of the 64 factory staff, only around half of the aforementioned have Company email addresses. Displaying paper format information is outdated and in a huge factory of 8 hectares, it is not efficient.
+
+## 2.1. Goal of the project
+
+The goal of this project is to create a communication tool that will be used to facilitate the communication between the company and its employees. 
+
+## 2.2. Scope
 
 The most important points of this project is to be able to control the displayed content remotely, they also have to be independent to each other, which means that we could display different content on each  screen. 
 
-## 2.2. In Scope
+## 2.3. In Scope
 
 These are the mains features that are planned in our V0 : 
 - Adapt the content to the screen size
@@ -80,7 +89,7 @@ These are the mains features that are planned in our V0 :
 - Draft system (you can start writing a message and finish writing it later)
 
   
-## 2.3. Out Of Scope
+## 2.4. Out Of Scope
  
 Due to time and resources constraints, these features might be included in the upcoming versions :
 - Different languages (other than English or French)
