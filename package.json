@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/algosup/2022-2023-project-2-factory-display-Project-4-group#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3"
+    "bcryptjs": "^2.4.3",
+    "firebase-admin": "^11.3.0"
   }
 }
