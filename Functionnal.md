@@ -1,19 +1,29 @@
 <details>
 <summary><b id="toc">Table of Content</b></summary>
 
+
 - [AppNews Network](#appnews-network)
-  - [Glossary](#glossary)
-- [Introduction](#introduction)
-  - [Scope](#scope)
-  - [In Scope](#in-scope)
-  - [Out Of Scope](#out-of-scope)
-- [Functional Requirements](#functional-requirements)
-  - [Assumptions](#assumptions)
-  - [Constraints](#constraints)
-  - [Use Cases Analysis](#use-cases-analysis)
-  - [Functional Analysis](#functional-analysis)
-  - [About the laws](#about-the-laws)
-- [Conclusion](#conclusion)
+  - [1. Glossary](#1-glossary)
+- [2. Introduction](#2-introduction)
+  - [2.1. Scope](#21-scope)
+  - [2.2. In Scope](#22-in-scope)
+  - [2.3. Out Of Scope](#23-out-of-scope)
+- [3. Functional Requirements](#3-functional-requirements)
+  - [3.1. Assumptions](#31-assumptions)
+  - [3.2. Constraints](#32-constraints)
+- [4. Personas](#4-personas)
+  - [4.1. Content Producers](#41-content-producers)
+    - [4.1.1. **Robert**](#411-robert)
+    - [4.1.2. **Jeanne**](#412-jeanne)
+  - [4.2. Viewers](#42-viewers)
+    - [4.2.1 **Bryan**](#421-bryan)
+    - [4.2.2 **Frédéric**](#422-frédéric)
+    - [4.2.3. **Marie**](#423-marie)
+- [5. Use cases](#5-use-cases)
+  - [5.1. Use Cases Analysis](#51-use-cases-analysis)
+  - [5.2. Functional Analysis](#52-functional-analysis)
+- [6. About the laws](#6-about-the-laws)
+- [7. Conclusion](#7-conclusion)
 
 </details> 
   
@@ -26,27 +36,31 @@
 <sub> Team : [Laurent Bouquin](https://www.linkedin.com/in/laurent-bouquin-60911a1b8/) (Project Leader), [Lucas Aubard](https://www.linkedin.com/in/lucas-aubard-596b37251/) (Technical Leader),   
   [Alexis Lasselin](https://www.linkedin.com/in/alexis-lasselin-318649251/) (Software Engineer), [Paul Nowak](https://www.linkedin.com/in/paul-nowak-0757a61a7/) (Quality Assurance) </sub>
 
-## Glossary
-
+## 1. Glossary
+ We recommend the reader to read this glossary in order to understand the following parts.  
 - **AppNews Network** : The project we are working on.  
   
 - **Cyberattack** : A cyberattack is an attempt from hackers to damage or destroy a computer network or system.
 
 - **ANSSI** : Abreviation of "**A**gence **N**ationale de la **S**écurité des **S**ystèmes d'**I**nformation"
 
-- **Bcrypt** : This is an encryption method used to reduce vulnerability of brute-force attacks.
+- **Bcrypt** : This is an encryption method used to reduce vulnerability of brute-force attacks.  
 
 - **Brute-force attack** : A brute-force attack consists of an attacker submitting many passwords or passphrases (sequence of words) with the hope of eventually guessing correctly.
 
-# Introduction
+- **Content producer** : The content producer is in charge of creating and changing the displayed content.
+
+- **Viewer** : We consider the viewer as someone viewing one of Jacobi's connected screen.
+
+# 2. Introduction
 
 [Jacobi](https://www.jacobi.net), a company located in Vierzon, needs a communication tool that could send informations based on  what the user requests, in order to facilitate the information transmission between employees. Jacobi has their head office in Paris. 
 
-## Scope
+## 2.1. Scope
 
-The most important points of this project is to be able to control the displayed content remotely, they also have to be independent to each other, which means that we could display different content on each screen. 
+The most important points of this project is to be able to control the displayed content remotely, they also have to be independent to each other, which means that we could display different content on each  screen. 
 
-## In Scope
+## 2.2. In Scope
 
 These are the mains features that are planned in our V0 : 
 - Adapt the content to the screen size
@@ -58,33 +72,78 @@ These are the mains features that are planned in our V0 :
 - Draft system (you can start writing a message and finish writing it later)
 
   
-## Out Of Scope
+## 2.3. Out Of Scope
  
 Due to time and resources constraints, these features might be included in the upcoming versions :
 - Different languages (other than English or French)
 - Smart screen in Paris to display informations
-- Unique logins for each users 
+- Unique logins for each users   
+    
+# 3. Functional Requirements
 
-
-
-
-# Functional Requirements
-
-## Assumptions
+## 3.1. Assumptions
 - Content will be displayed horizontally.
 - Both buildings are connected to the same network.
 - The screens will be connected to the same network.  
   
-## Constraints
+## 3.2. Constraints
 
 - There are 3 shifts per day. 
 - Small shutdown at Christmas time.
 - Wi-Fi sometimes had issues.
 
-## Use Cases Analysis 
 
+# 4. Personas 
+
+## 4.1. Content Producers
+
+### 4.1.1. **Robert**
+
+Robert has been working for Jacobi since July 2020, he works as an HR manager. He is 31 years old and single. He likes listening to music while he is working but he also likes climbing and other extreme sports.   
+
+Robert lives in Vierzon, so he comes most of the time walking, or he uses the bike when he is a bit late. 
+
+He will need to access the screen in order to provide informations for his colleagues, about upcoming recruitment campaigns but also to give informations and advices if an intern is in the factory.
+
+### 4.1.2. **Jeanne**
+
+Jeanne has been working for Jacobi since December 2021, she is working as the factory manager. She is 42 years old and lives in Orleans, she is married and has 2 children. She loves playing tennis with her husband and her childs.   
+
+Because she is far from the factory, she takes the train every morning and evening, when she arrives at the train station, Bryan, her colleague picks her up and drive her to the factory, which takes around 10 minutes.
+
+Jeanne's use of the screen displaying is pretty clear and simple, she wants to display the production numbers for her colleagues in order for them to have an idea on if they are doing well or not, but also to give them a heads up everyday. She would also like to have a widget displaying the weather, so that she can plan her day accordingly.
+
+## 4.2. Viewers
+
+### 4.2.1 **Bryan** 
+
+Bryan is a technician that has been working for Jacobi since 2018, he is 28 years old and lives in Paris. He is single and lives with his family. He likes playing video games and watching movies. He comes to Vierzon by car at the end of the week-end, he takes the highway and it takes him around 3 hour to get there; where he stays for the week and then goes back to Paris on Friday evening.   
+
+He comes to the factory every day by car, picks up Jeanne at the train station and then drives her to the factory. 
+
+Bryan wants to use the screen in order to know if there is any important information that he needs to know about, he also wants to know if there is any important information about the factory, such as if there is a problem with the machines.
+
+### 4.2.2 **Frédéric**
+
+Frédéric is an engineer that has been working for Jacobi since 2016, he is 56 years old and lives in Salbris. He is married and has 4 children. He likes watching his son's rugby matches on his weekends.   
+
+He comes to Vierzon by car everyday which takes him around 30 minutes to get to the factory.
+
+Frédéric needs the screen in order to know if there is any important information that he needs to know about, mostly informations that concerns the production rate of the factory. He also wants to have some feedbacks from his manager, on the quality of the products that are being produced.
+
+### 4.2.3. **Marie**
+
+Marie is an intern that joined Jacobi in September 2022, she is 21 years old and lives in Toulouse. She is here for 6 months and she is doing an internship in the factory. She likes mangas, parties and hanging out with her friends. She is currently living with her uncle in Vierzon. She comes back to Toulouse once every 2 weeks in order to see her family and her friends. 
+
+Because her uncle is also working in the factory, he drives her to the factory everyday which takes around 15 minutes. 
+
+Marie will need the screen because she wants to get the factory informations everyday, in order to not miss anything important. She also wants to get the latest news about the company, in order to know what is going on in the company.
+
+# 5. Use cases
+## 5.1. Use Cases Analysis 
+Here is a more detailed version of the functional analysis below :
 <details>
-<summary><b id="toc">Use case table</b></summary>
+<summary><b id="toc"><u>Use case table</u></b></summary>
 
 | Use Case # | Addresses Business/User Requirement n° | Name                                                  | Description                                                                               | Actor(s)                                                 | Pre-Conditions                                                                                                                                                                                                                                                                                                                                                                                                                                       | Flow of Events                                                                                                                                                                                        | Post-Conditions                                                                                                                                         | Exit Criteria                                                                                                                 |
 | ---------- | -------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -97,7 +156,7 @@ Due to time and resources constraints, these features might be included in the u
 </details>
   
 
-## Functional Analysis
+## 5.2. Functional Analysis
 
 - UC1 (Login to the website) :  
     - User connects to the website
@@ -134,7 +193,7 @@ Due to time and resources constraints, these features might be included in the u
   - Case is closed
 
 
-## About the laws
+# 6. About the laws
 
 Following the [ANSSI's guidelines](https://www.ssi.gouv.fr/en/cybersecurity-in-france/ciip-in-france/), we ensured that our product followed the DICP criteria. (AIPT)
 
@@ -148,7 +207,7 @@ Following the [ANSSI's guidelines](https://www.ssi.gouv.fr/en/cybersecurity-in-f
 
 For more informations, we recommend you to visit the websites dedicated to that law.
 
-# Conclusion
+# 7. Conclusion
 
 We had a lot of freedom for this project which led us finding a lot of interesting ideas and implement them on our website.
 
