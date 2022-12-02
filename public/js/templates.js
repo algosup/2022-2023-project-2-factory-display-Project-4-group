@@ -4,7 +4,8 @@ var container2 = document.getElementById('display2');
 let squares = 0;
 let last = 0;
 let rot = 0;
-let element = document.getElementById('sizes');
+let sizes = document.getElementById('sizes');
+let type = document.getElementById('selectType');
 let colorsIndex = 0;
 let colors = ['#03045E', '#0077B6', '#00B4D8', '#90E0EF', '#03254C', '#1167B1', '#187BCD', '#2A9DF4', '#D0EFFF', '#0000FF', '#003CFF', '#07006B', '#3C00FF', '#043E7D'];
 
@@ -36,21 +37,30 @@ for (let index = 49; index <= 96; index++) {
 	container2.appendChild(gridA);
 }
 
+
 // Display the selected template size
 function displayTemplate(){
 	var rows = element.options[element.selectedIndex].value[0];
 	var columns = element.options[element.selectedIndex].value[2];
+	displaySelected(rows, columns);
+	let coun = 0;
 	for (let index = 1; index <= 48; index++) {
 		var grid = document.getElementById(index);
 		if (grid.innerHTML[2] == '_' && grid.className == 'square2'){
-			let submit = document.getElementById('displayed');
-			submit.style.backgroundColor = 'gray';
-			submit.style.cursor = 'not-allowed';
-			submit.disabled = true;
+			coun += 1;
 		}
 	}
-	console.log(rows, columns);
-	displaySelected(rows, columns);
+	if (coun != 0){
+		let submit = document.getElementById('displayed');
+		submit.style.backgroundColor = 'gray';
+		submit.style.cursor = 'not-allowed';
+		submit.disabled = true;
+	} else {
+		let submit = document.getElementById('displayed');
+		submit.style.backgroundColor = '#ff6600';
+		submit.style.cursor = 'pointer';
+		submit.disabled = false;
+	}
 	if (element.options[element.selectedIndex].value[0] == element.options[element.selectedIndex].value[2] || element.options[element.selectedIndex].value[2] == 8){
 		let rotate = document.getElementById('rotate');
 		rotate.style.backgroundColor = 'gray';
@@ -123,9 +133,11 @@ function submitTemplate(){
 }
 
 
+
+let txt = document.getElementById('textInput');
 document.addEventListener('keydown', function(e) {
-	let code = e.code;
-	if (code == 'ArrowRight'&& document.getElementById(8).className != 'square2' && document.getElementById(16).className != 'square2' && document.getElementById(24).className != 'square2' && document.getElementById(32).className != 'square2' && document.getElementById(40).className != 'square2' && document.getElementById(48).className != 'square2'){
+		let code = e.code;
+		if (code == 'ArrowRight'&& document.getElementById(8).className != 'square2' && document.getElementById(16).className != 'square2' && document.getElementById(24).className != 'square2' && document.getElementById(32).className != 'square2' && document.getElementById(40).className != 'square2' && document.getElementById(48).className != 'square2' && txt.matches(':focus') == false){
 		for (let index = 47; index >= 1; index--) {
 			var grid = document.getElementById(index);
 			if (grid.className == 'square2'){
@@ -156,8 +168,8 @@ document.addEventListener('keydown', function(e) {
 			submit.style.cursor = 'pointer';
 			submit.disabled = false;
 		}
-	}
-	else if (code == 'ArrowLeft' && document.getElementById(1).className != 'square2' && document.getElementById(9).className != 'square2' && document.getElementById(17).className != 'square2' && document.getElementById(25).className != 'square2' && document.getElementById(33).className != 'square2' && document.getElementById(41).className != 'square2'){
+		}
+		else if (code == 'ArrowLeft' && document.getElementById(1).className != 'square2' && document.getElementById(9).className != 'square2' && document.getElementById(17).className != 'square2' && document.getElementById(25).className != 'square2' && document.getElementById(33).className != 'square2' && document.getElementById(41).className != 'square2' && txt.matches(':focus') == false){
 		for (let index = 1; index <= 48; index++) {
 			var grid = document.getElementById(index);
 			if (grid.className == 'square2'){
@@ -188,8 +200,8 @@ document.addEventListener('keydown', function(e) {
 			submit.style.cursor = 'pointer';
 			submit.disabled = false;
 		}
-	}
-	else if (code == 'ArrowUp' && document.getElementById(1).className != 'square2' && document.getElementById(2).className != 'square2' && document.getElementById(3).className != 'square2' && document.getElementById(4).className != 'square2' && document.getElementById(5).className != 'square2' && document.getElementById(6).className != 'square2' && document.getElementById(7).className != 'square2' && document.getElementById(8).className != 'square2'){
+		}
+		else if (code == 'ArrowUp' && document.getElementById(1).className != 'square2' && document.getElementById(2).className != 'square2' && document.getElementById(3).className != 'square2' && document.getElementById(4).className != 'square2' && document.getElementById(5).className != 'square2' && document.getElementById(6).className != 'square2' && document.getElementById(7).className != 'square2' && document.getElementById(8).className != 'square2' && txt.matches(':focus') == false){
 		for (let index = 1; index <= 48; index++) {
 			var grid = document.getElementById(index);
 			if (grid.className == 'square2'){
@@ -220,8 +232,8 @@ document.addEventListener('keydown', function(e) {
 			submit.style.cursor = 'pointer';
 			submit.disabled = false;
 		}
-	}
-	else if (code == 'ArrowDown' && document.getElementById(41).className != 'square2' && document.getElementById(42).className != 'square2' && document.getElementById(43).className != 'square2' && document.getElementById(44).className != 'square2' && document.getElementById(45).className != 'square2' && document.getElementById(46).className != 'square2' && document.getElementById(47).className != 'square2' && document.getElementById(48).className != 'square2'){
+		}
+		else if (code == 'ArrowDown' && document.getElementById(41).className != 'square2' && document.getElementById(42).className != 'square2' && document.getElementById(43).className != 'square2' && document.getElementById(44).className != 'square2' && document.getElementById(45).className != 'square2' && document.getElementById(46).className != 'square2' && document.getElementById(47).className != 'square2' && document.getElementById(48).className != 'square2' && txt.matches(':focus') == false){
 		for (let index = 40; index >= 1; index--) {
 			var grid = document.getElementById(index);
 			if (grid.className == 'square2'){
@@ -252,9 +264,20 @@ document.addEventListener('keydown', function(e) {
 			submit.style.cursor = 'pointer';
 			submit.disabled = false;
 		}
-	}
+		}
 });
-
 // Calls
 
-element.addEventListener('change', displayTemplate);
+sizes.addEventListener('change', displayTemplate);
+
+type.addEventListener('change', function(){
+	let img = document.getElementById('ImageSelector');
+	let txt = document.getElementById('textInput');
+	if (type.value == 'Image'){
+		img.style.display = 'block';
+		txt.style.display = 'none';
+	} else {
+		img.style.display = 'none';
+		txt.style.display = 'block';
+	}
+});

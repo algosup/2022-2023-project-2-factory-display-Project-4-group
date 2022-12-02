@@ -120,6 +120,54 @@
 	cursor: not-allowed;
 }
 
+#selectType{
+	display: block;
+	width: 32vw;
+	height: 5vh;
+	margin-top: 1vh;
+	color: #fff;
+	background-color: #ff6600;
+	border-radius: 5px;
+	border: 1px solid #000;
+	text-align: center;
+	font-size: 1.5vw;
+	outline: none !important;
+	cursor: pointer;
+}
+
+#textInput{
+	width: 31.5vw;
+	height: 20vh;
+	margin-top: 1vh;
+	color: #fff;
+	background-color: #ff6600;
+	border-radius: 5px;
+	border: 1px solid #000;
+	text-align: center;
+	font-size: 1.5vw;
+}
+
+#imageInput{
+	display: none;
+}
+#ImageSelector{
+	width: 32vw;
+	height: 5vh;
+	margin-top: 1vh;
+	color: #fff;
+	background-color: #ff6600;
+	border-radius: 5px;
+	border: 1px solid #000;
+	text-align: center;
+	font-size: 1.5vw;
+	outline: none !important;
+	cursor: pointer;
+	display: none;
+}
+label{
+	cursor: pointer;
+}
+
 #displayed{
 	display: block;
 	width: 32vw;

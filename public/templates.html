@@ -34,6 +34,17 @@
 				<option id="14" value="6x8">6x8</option>
 			</select>
 			<button id="rotate" onclick=""> Rotate </button>
+			<select name="type" id="selectType">
+				<option value="Text">Text</option>
+				<option value="Image">Image</option>
+			</select>
+			<textarea id="textInput" type="text"></textarea>
+			<div id="ImageSelector">	
+				<label for="imageInput">
+					Choose an image
+					<input id="imageInput" type="file" accept="Image/jpg, Image/png, Image/jpeg" />
+				</label>
+			</div>
 			<button id="displayed" onclick="submitTemplate()">Submit</button>
 		</div>
 	</div>
