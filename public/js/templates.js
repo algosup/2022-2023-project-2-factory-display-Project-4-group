@@ -40,8 +40,8 @@ for (let index = 49; index <= 96; index++) {
 
 // Display the selected template size
 function displayTemplate(){
-	var rows = element.options[element.selectedIndex].value[0];
-	var columns = element.options[element.selectedIndex].value[2];
+	var rows = sizes.options[sizes.selectedIndex].value[0];
+	var columns = sizes.options[sizes.selectedIndex].value[2];
 	displaySelected(rows, columns);
 	let coun = 0;
 	for (let index = 1; index <= 48; index++) {
@@ -61,7 +61,7 @@ function displayTemplate(){
 		submit.style.cursor = 'pointer';
 		submit.disabled = false;
 	}
-	if (element.options[element.selectedIndex].value[0] == element.options[element.selectedIndex].value[2] || element.options[element.selectedIndex].value[2] == 8){
+	if (sizes.options[sizes.selectedIndex].value[0] == sizes.options[sizes.selectedIndex].value[2] || sizes.options[sizes.selectedIndex].value[2] == 8){
 		let rotate = document.getElementById('rotate');
 		rotate.style.backgroundColor = 'gray';
 		rotate.style.cursor = 'not-allowed';
@@ -76,17 +76,16 @@ function displayTemplate(){
 }
 
 function rotateTemplate(){
-	let element = document.getElementById('sizes');
-	if (rot == 0 && element.options[element.selectedIndex].value[2] != 8){
-		var rows = element.options[element.selectedIndex].value[2];
-		var columns = element.options[element.selectedIndex].value[0];
+	if (rot == 0 && sizes.options[sizes.selectedIndex].value[2] != 8){
+		var rows = sizes.options[sizes.selectedIndex].value[2];
+		var columns = sizes.options[sizes.selectedIndex].value[0];
 		console.log(rows, columns);
 		displaySelected(rows, columns);
 		rot = 1;
 	}
-	else if (rot == 1 && element.options[element.selectedIndex].value[2] != 8){
-		var rows = element.options[element.selectedIndex].value[0];
-		var columns = element.options[element.selectedIndex].value[2];
+	else if (rot == 1 && sizes.options[sizes.selectedIndex].value[2] != 8){
+		var rows = sizes.options[sizes.selectedIndex].value[0];
+		var columns = sizes.options[sizes.selectedIndex].value[2];
 		console.log(rows, columns);
 		displaySelected(rows, columns);
 		rot = 0;
