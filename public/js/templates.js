@@ -1,4 +1,8 @@
 
+// import { initializeFirebase } from "./firebase.js";
+// import { getFirestore, getDocs, collection, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";var container = document.getElementById('display');
+
+
 var container = document.getElementById('display');
 var container2 = document.getElementById('display2');
 let squares = 0;
@@ -6,11 +10,20 @@ let last = 0;
 let rot = 0;
 let sizes = document.getElementById('sizes');
 let type = document.getElementById('selectType');
+let rotate = document.getElementById('rotate');
 let colorsIndex = 0;
 let colors = ['#03045E', '#0077B6', '#00B4D8', '#90E0EF', '#03254C', '#1167B1', '#187BCD', '#2A9DF4', '#D0EFFF', '#0000FF', '#003CFF', '#07006B', '#3C00FF', '#043E7D'];
 
 let row = 1;
 let column = 0;
+
+
+
+// var app = initializeFirebase();
+// var db = getFirestore(app);
+
+
+
 for (let index = 1; index <= 48; index++) {
 	var grid = document.createElement('div');
 	grid.classList.add('grid');
@@ -40,6 +53,7 @@ for (let index = 49; index <= 96; index++) {
 
 // Display the selected template size
 function displayTemplate(){
+	rotate.setAttribute('onclick', 'rotateTemplate()');
 	var rows = sizes.options[sizes.selectedIndex].value[0];
 	var columns = sizes.options[sizes.selectedIndex].value[2];
 	displaySelected(rows, columns);
@@ -62,16 +76,14 @@ function displayTemplate(){
 		submit.disabled = false;
 	}
 	if (sizes.options[sizes.selectedIndex].value[0] == sizes.options[sizes.selectedIndex].value[2] || sizes.options[sizes.selectedIndex].value[2] == 8){
-		let rotate = document.getElementById('rotate');
 		rotate.style.backgroundColor = 'gray';
 		rotate.style.cursor = 'not-allowed';
-		rotate.setAttribute('onclick', '');
+		rotate.disabled = true;
 	}
 	else {
-		let rotate = document.getElementById('rotate');
 		rotate.style.backgroundColor = '#ff6600';
 		rotate.style.cursor = 'pointer';
-		rotate.setAttribute('onclick', 'rotateTemplate()');
+		rotate.disabled = false;
 	}
 }
 
