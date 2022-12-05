@@ -44,22 +44,26 @@
   [Alexis Lasselin](https://www.linkedin.com/in/alexis-lasselin-318649251/) (Software Engineer), [Paul Nowak](https://www.linkedin.com/in/paul-nowak-0757a61a7/) (Quality Assurance) </sub>
 
 ## 1. Glossary
+
  We recommend the reader to read this glossary in order to understand the following parts.  
+
+ - **ANSSI** : Abreviation of "**A**gence **N**ationale de la **S**écurité des **S**ystèmes d'**I**nformation"
+  
 - **AppNews Network** : The project we are working on.  
+  
+- **Bcrypt** : This is an encryption method used to reduce vulnerability of brute-force attacks.  
+  
+- **Brute-force attack** : A brute-force attack consists of an attacker submitting many passwords or passphrases (sequence of words) with the hope of eventually guessing correctly.
+  
+- **Cloud** : A cloud is a network of remote servers hosted on the Internet to store, manage, and process data, rather than a local server or a personal computer.
+  
+- **Content producer** : The content producer is in charge of creating and changing the displayed content.
   
 - **Cyberattack** : A cyberattack is an attempt from hackers to damage or destroy a computer network or system.
 
-- **ANSSI** : Abreviation of "**A**gence **N**ationale de la **S**écurité des **S**ystèmes d'**I**nformation"
-
-- **Bcrypt** : This is an encryption method used to reduce vulnerability of brute-force attacks.  
-
-- **Brute-force attack** : A brute-force attack consists of an attacker submitting many passwords or passphrases (sequence of words) with the hope of eventually guessing correctly.
-
-- **Content producer** : The content producer is in charge of creating and changing the displayed content.
-
 - **Viewer** : We consider the viewer as someone viewing any of Jacobi's connected screen.
 
-- **Cloud** : A cloud is a network of remote servers hosted on the Internet to store, manage, and process data, rather than a local server or a personal computer.
+
 
 # 2. Introduction
 
