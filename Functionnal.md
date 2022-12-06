@@ -5,9 +5,10 @@
 - [AppNews Network](#appnews-network)
   - [1. Glossary](#1-glossary)
 - [2. Introduction](#2-introduction)
-  - [2.1. Scope](#21-scope)
-  - [2.2. In Scope](#22-in-scope)
-  - [2.3. Out Of Scope](#23-out-of-scope)
+  - [2.1. Goal of the project](#21-goal-of-the-project)
+  - [2.2. Scope](#22-scope)
+  - [2.3. In Scope](#23-in-scope)
+  - [2.4. Out Of Scope](#24-out-of-scope)
 - [3. Functional Requirements](#3-functional-requirements)
   - [3.1. Assumptions](#31-assumptions)
   - [3.2. Constraints](#32-constraints)
@@ -22,7 +23,13 @@
 - [5. Use cases](#5-use-cases)
   - [5.1. Use Cases Analysis](#51-use-cases-analysis)
   - [5.2. Functional Analysis](#52-functional-analysis)
-- [6. About the laws](#6-about-the-laws)
+- [6. Non-Functional Requirements](#6-non-functional-requirements)
+  - [6.1. Costs](#61-costs)
+    - [6.1.1. Hardware](#611-hardware)
+      - [**Maintenance**](#maintenance)
+    - [6.1.2. Software](#612-software)
+    - [6.1.3. Energy consumption](#613-energy-consumption)
+  - [6.2. Security](#62-security)
 - [7. Conclusion](#7-conclusion)
 
 </details> 
@@ -37,47 +44,60 @@
   [Alexis Lasselin](https://www.linkedin.com/in/alexis-lasselin-318649251/) (Software Engineer), [Paul Nowak](https://www.linkedin.com/in/paul-nowak-0757a61a7/) (Quality Assurance) </sub>
 
 ## 1. Glossary
+
  We recommend the reader to read this glossary in order to understand the following parts.  
+
+ - **ANSSI** : Abreviation of "**A**gence **N**ationale de la **S**écurité des **S**ystèmes d'**I**nformation"
+  
 - **AppNews Network** : The project we are working on.  
+  
+- **Bcrypt** : This is an encryption method used to reduce vulnerability of brute-force attacks.  
+  
+- **Brute-force attack** : A brute-force attack consists of an attacker submitting many passwords or passphrases (sequence of words) with the hope of eventually guessing correctly.
+  
+- **Cloud** : A cloud is a network of remote servers hosted on the Internet to store, manage, and process data, rather than a local server or a personal computer.
+  
+- **Content producer** : The content producer is in charge of creating and changing the displayed content.
   
 - **Cyberattack** : A cyberattack is an attempt from hackers to damage or destroy a computer network or system.
 
-- **ANSSI** : Abreviation of "**A**gence **N**ationale de la **S**écurité des **S**ystèmes d'**I**nformation"
+- **Viewer** : We consider the viewer as someone viewing any of Jacobi's connected screen.
 
-- **Bcrypt** : This is an encryption method used to reduce vulnerability of brute-force attacks.  
 
-- **Brute-force attack** : A brute-force attack consists of an attacker submitting many passwords or passphrases (sequence of words) with the hope of eventually guessing correctly.
-
-- **Content producer** : The content producer is in charge of creating and changing the displayed content.
-
-- **Viewer** : We consider the viewer as someone viewing one of Jacobi's connected screen.
 
 # 2. Introduction
 
-[Jacobi](https://www.jacobi.net), a company located in Vierzon, needs a communication tool that could send informations based on  what the user requests, in order to facilitate the information transmission between employees. Jacobi has their head office in Paris. 
+Jacobi Group is world leader in purification solution of air and water, using Activated Carbon, Ion Exchange Resins and Mobile Filtration Units. With its factory in Forges industrial zone since 1956, it has a heritage of being the only French industry manufacturing this unique product and supplying customers like Veolia, Valeo, Honeywell and French Ministry of Defence to name a few. There are over 1000 applications in which activated carbon is used which you can read up on [their website](https://www.jacobi.net). The factory in Vierzon is the oldest in the Group however one of the most successful thanks to a flexible and can-do approach.   
 
-## 2.1. Scope
+The Managing Director of Jacobi in France, Mr Saeed is constantly seeking ways to improve his management. One of his favourite subjects, which is also the one for which he receives most feedback, is communication. Communication - updated, accurate and transparent. The short and sweet wishlist!  
+
+One of the many ways to achieve this is to digitalise the communication of the Company and make it easy to publish the content. Currently, factory news and important announcements are done by email to groups, on MS Teams Groups, Yammer, etc. However, of the 64 factory staff, only around half of the aforementioned have Company email addresses. Displaying paper format information is outdated and in a huge factory of 8 hectares, it is not efficient.
+
+## 2.1. Goal of the project
+
+The goal of this project is to create a communication tool that will be used to facilitate the communication between the company and its employees. 
+
+## 2.2. Scope
 
 The most important points of this project is to be able to control the displayed content remotely, they also have to be independent to each other, which means that we could display different content on each  screen. 
 
-## 2.2. In Scope
+## 2.3. In Scope
 
 These are the mains features that are planned in our V0 : 
 - Adapt the content to the screen size
 - Widgets for weather, news, etc. that will be updated on a regular basis
-- An history of the displayed content with a tracking of who changed what
 - A login page the website to ensure that only authorized people can use it (there will only be 4 people who will have their access granted to the tool)
 - Planning messages for a given date (i.e Friday for Monday)
-- English and French languages
 - Draft system (you can start writing a message and finish writing it later)
 
   
-## 2.3. Out Of Scope
+## 2.4. Out Of Scope
  
 Due to time and resources constraints, these features might be included in the upcoming versions :
-- Different languages (other than English or French)
+- Different languages
 - Smart screen in Paris to display informations
 - Unique logins for each users   
+- An history of the displayed content with a tracking of who changed what
     
 # 3. Functional Requirements
 
@@ -85,6 +105,7 @@ Due to time and resources constraints, these features might be included in the u
 - Content will be displayed horizontally.
 - Both buildings are connected to the same network.
 - The screens will be connected to the same network.  
+- Ethernet is the safest way to connect the screens to the network.
   
 ## 3.2. Constraints
 
@@ -192,8 +213,35 @@ Here is a more detailed version of the functional analysis below :
   - User is aware of the latest news
   - Case is closed
 
+# 6. Non-Functional Requirements
 
-# 6. About the laws
+## 6.1. Costs
+
+### 6.1.1. Hardware
+
+The hardware that will be used for this project is the following :
+
+- A Smart TV with a screen size of 55 inches, and a resolution of 3840x2160 pixels (4K UHD)
+- A wall bracket for the television
+- An Ethernet cable to connect the TV to the network
+
+The toal cost of the hardware is around 550€.
+
+#### **Maintenance**
+
+- The Smart TV will be maintained by the company, in order to make sure that it is always working properly. The television will last at least 7 years, time of the guarantee.  
+  
+- The wall bracket shouldn't need any maintenance, it is a simple bracket that will be used to hang the television on the wall. As long as no one touches or breaks it, it should last for a long time.
+    
+### 6.1.2. Software
+
+The database we will be using is [Firebase](https://firebase.google.com). It is a cloud database, which means that it is hosted on the cloud and we don't need to install it on our computer. It is also **free to use**, which is a good thing for us.
+
+### 6.1.3. Energy consumption
+
+The energy consumption of the TV is 0.084kWh. The TV will be turned on 24/7, so it will consume around 2.016kWh per day. The TV will be used the whole year, so it will consume around 735.84kWh per year. The price of the electricity in France is 0.1024€ per kWh, so one TV will cost around 75.35€ per year.
+
+## 6.2. Security 
 
 Following the [ANSSI's guidelines](https://www.ssi.gouv.fr/en/cybersecurity-in-france/ciip-in-france/), we ensured that our product followed the DICP criteria. (AIPT)
 
