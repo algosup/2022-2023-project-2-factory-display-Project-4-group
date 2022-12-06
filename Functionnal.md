@@ -9,6 +9,7 @@
   - [2.2. Scope](#22-scope)
   - [2.3. In Scope](#23-in-scope)
   - [2.4. Out Of Scope](#24-out-of-scope)
+  - [2.5. Deadlines](#25-deadlines)
 - [3. Functional Requirements](#3-functional-requirements)
   - [3.1. Assumptions](#31-assumptions)
   - [3.2. Constraints](#32-constraints)
@@ -99,7 +100,11 @@ Due to time and resources constraints, these features might be included in the u
 - Smart screen in Paris to display informations
 - Unique logins for each users   
 - An history of the displayed content with a tracking of who changed what
-    
+  
+## 2.5. Deadlines
+
+The deadline for the hardware choosing is the 14th November 2022. The deadline for the V0 is the 16th December 2022.
+
 # 3. Functional Requirements
 
 ## 3.1. Assumptions
@@ -234,7 +239,7 @@ The hardware that will be used for this project is the following :
 - A wall bracket for the television
 - An Ethernet cable to connect the TV to the network
 
-The toal cost of the hardware is around 550€.
+The toal cost of the hardware for one screen is around 550€. Because there are 2 screens in the factory, the total cost of the hardware is around 1100€.
 
 #### **Maintenance**
 
