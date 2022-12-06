@@ -41,12 +41,19 @@ Project ordered by [Jacobi](https://jacobi.com/), supervised by [ALGOSUP](https:
 
 ### 1.3. Glossary
 
-| Word                                   | Definition                                                                             |
-| -------------------------------------- | -------------------------------------------------------------------------------------- |
-| Smart TV                               | The LED Sign                                                                           |
-| AppNews Network                        | the application that [Jacobi](https://jacobi.com/) will have at the end of the project |
-| [ALGOSUP](https://algosup.com/fr.html) | School where the project is made                                                       |
-| [Jacobi](https://jacobi.com/)          | The company that ordered the project                                                   |
+| Word                                   | Definition                                                                                      |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Smart TV                               | The LED Sign                                                                                    |
+| AppNews Network                        | the application that [Jacobi](https://jacobi.com/) will have at the end of the project          |
+| [ALGOSUP](https://algosup.com/fr.html) | School where the project is made                                                                |
+| [Jacobi](https://jacobi.com/)          | The company that ordered the project                                                            |
+| ANSSI                                  | Abreviation of "**A**gence **N**ationale de la **S**écurité des **S**ystèmes d'**I**nformation" |
+| Bcrypt                                        |This is an encryption method used to reduce vulnerability of brute-force attacks
+| Brute-force attack | A brute-force attack consists of an attacker submitting many passwords or passphrases (sequence of words) with the hope of eventually guessing correctly
+| Cloud | A cloud is a network of remote servers hosted on the Internet to store, manage, and process data, rather than a local server or a personal computer
+| Content produce | The content producer is in charge of creating and changing the displayed content
+| Cyberattack | A cyberattack is an attempt from hackers to damage or destroy a computer network or system
+| Viewer | We consider the viewer as someone viewing any of Jacobi's connected screen
 ## 2. Technical specifications
 ### 2.1. In scope
 
@@ -69,6 +76,7 @@ The features that will arrive in the next versions :
 - Adding new languages
 - Smart screen in Paris to display informations
 - Unique logins for each users
+- An history of the displayed content with a tracking of who changed what
 
 ### 2.3. Hardware
 #### Samsung TV
@@ -126,5 +134,3 @@ This function allows us to rotate the template.
 #### 3.8. submitTemplate()
 
 This function allows us to submit the template.
-
-## 3. Program architecture diagram
