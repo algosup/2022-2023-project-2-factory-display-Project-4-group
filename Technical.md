@@ -91,39 +91,39 @@ It's a database that allows to store mails, passwords and all the information th
 
 ## 3. Software architecture
 
-#### 3.1. getCurrentTimeDate ()
+#### 3.1. getCurrentTimeDate()
 
 It's a function that allows to get the current time.
 
-#### 3.2. getWeather ()
+#### 3.2. getWeather()
 
 It's a function that allows to get the weather.
 
-#### 3.3. login ()
+#### 3.3. login()
 
 This function allows us to connect to the website through a login page.
 
-#### 3.4.displayTemplate ()
+#### 3.4.displayTemplate()
 
 This function allows us to display the template of the website.
 
-#### 3.5. displaySelected ()
+#### 3.5. displaySelected()
 
 This function allows to display the modification boxes for the widgets.
 
-#### 3.6. initializeFirebase ()
+#### 3.6. initializeFirebase()
 
 This function allows us to initialize the firebase database.
 
-#### 3.7. displayTemplate ()
+#### 3.7. displayTemplate()
 
 This function allows us to display the selected template size.
 
-#### 3.7. rotateTemplate ()
+#### 3.7. rotateTemplate()
 
 This function allows us to rotate the template.
 
-#### 3.8. submitTemplate ()
+#### 3.8. submitTemplate()
 
 This function allows us to submit the template.
 
