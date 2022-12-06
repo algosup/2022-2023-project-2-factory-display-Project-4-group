@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/templates.css">
 	<link rel="stylesheet" href="css/settings.css">
 	<title>Templates</title>
+	<script type="module" src="js/templatesDb.js" defer></script>
 </head>
 <body>
 	
@@ -28,7 +29,7 @@
 	</div>
 	<div class="content">
 		<div class="display" id="display">
-			<div name="square" class="time">14:36</div>
+			<div name="square" id="time">14:36</div>
 			<div name="square" class="weather"></div>
 			<div class="news"></div>
 		</div>
@@ -50,7 +51,7 @@
 				<option id="13" value="6x6">6x6</option>
 				<option id="14" value="6x8">6x8</option>
 			</select>
-			<button id="rotate" onclick=""> Rotate </button>
+			<button id="rotate" onclick="rotateTemplate()"> Rotate </button>
 			<select name="type" id="selectType">
 				<option value="Text">Text</option>
 				<option value="Image">Image</option>
@@ -67,9 +68,12 @@
 	</div>
 	<div class="content">
 		<div class="display" id="display2">
-			<div name="square" class="time">14:36</div>
+			<div name="square" id="time">14:36</div>
 			<div name="square" class="weather"></div>
 			<div class="news"></div>
+		</div>
+		<div class="contentButtons">
+			<select name="Templates" id="templates"></select>
 		</div>
 	</div>
 	

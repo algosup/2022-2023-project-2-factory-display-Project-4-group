@@ -1,8 +1,3 @@
-
-// import { initializeFirebase } from "./firebase.js";
-// import { getFirestore, getDocs, collection, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";var container = document.getElementById('display');
-
-
 var container = document.getElementById('display');
 var container2 = document.getElementById('display2');
 let squares = 0;
@@ -16,11 +11,6 @@ let colors = ['#03045E', '#0077B6', '#00B4D8', '#90E0EF', '#03254C', '#1167B1', 
 
 let row = 1;
 let column = 0;
-
-
-
-// var app = initializeFirebase();
-// var db = getFirestore(app);
 
 
 
@@ -89,15 +79,15 @@ function displayTemplate(){
 
 function rotateTemplate(){
 	if (rot == 0 && sizes.options[sizes.selectedIndex].value[2] != 8){
-		var rows = sizes.options[sizes.selectedIndex].value[2];
-		var columns = sizes.options[sizes.selectedIndex].value[0];
+		let rows = sizes.options[sizes.selectedIndex].value[2];
+		let columns = sizes.options[sizes.selectedIndex].value[0];
 		console.log(rows, columns);
 		displaySelected(rows, columns);
 		rot = 1;
 	}
 	else if (rot == 1 && sizes.options[sizes.selectedIndex].value[2] != 8){
-		var rows = sizes.options[sizes.selectedIndex].value[0];
-		var columns = sizes.options[sizes.selectedIndex].value[2];
+		let rows = sizes.options[sizes.selectedIndex].value[0];
+		let columns = sizes.options[sizes.selectedIndex].value[2];
 		console.log(rows, columns);
 		displaySelected(rows, columns);
 		rot = 0;
