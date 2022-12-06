@@ -20,9 +20,10 @@
     - [4.2.1 **Bryan**](#421-bryan)
     - [4.2.2 **Frédéric**](#422-frédéric)
     - [4.2.3. **Marie**](#423-marie)
+    - [4.2.4. **Kim Seonghwa**](#424-kim-seonghwa)
 - [5. Use cases](#5-use-cases)
-  - [5.1. Use Cases Analysis](#51-use-cases-analysis)
-  - [5.2. Functional Analysis](#52-functional-analysis)
+  - [5.1. Functional Analysis](#51-functional-analysis)
+  - [5.2. Use Cases Analysis](#52-use-cases-analysis)
 - [6. Non-Functional Requirements](#6-non-functional-requirements)
   - [6.1. Costs](#61-costs)
     - [6.1.1. Hardware](#611-hardware)
@@ -160,9 +161,52 @@ Because her uncle is also working in the factory, he drives her to the factory e
 
 Marie will need the screen because she wants to get the factory informations everyday, in order to not miss anything important. She also wants to get the latest news about the company, in order to know what is going on in the company.
 
+### 4.2.4. **Kim Seonghwa**
+
+Seonghwa is a customer of Jacobi since 2013, he is living in Korea and comes once every 6 months in order to have a meeting with Jeanne. He loves listening to K-pop music because his brother is working in this industry. It takes Seonghwa one day to come to Paris by plane, he then comes to Vierzon taking the train which takes him approximately 2 hours, then Jeanne picks him up at the train station and drives him to the factory. 
+
+Seonghwa will need an authorization in order to access the room where the screens are located, because there might be confidential informations displayed on the screen. He will also need to know if there is any important information that he needs to know about, in order to have a good meeting with Jeanne.
+
 # 5. Use cases
-## 5.1. Use Cases Analysis 
-Here is a more detailed version of the functional analysis below :
+
+## 5.1. Functional Analysis
+
+- UC1 (Login to the website) :  
+    - Robert connects to the website
+    - He enters his credentials
+    - He accesses the website
+    - Case is closed
+
+- UC2 (Monitoring screen) :  
+    - Jeanne accesses the website
+    - She selects the screen she wants to monitor
+    - She can now watch the screen
+    - Case is closed
+
+- UC3 (Change displayed content) :  
+    - Robert accesses the website
+    - He selects the screen he wants to change the content on
+    - He can now see the content he can change
+    - He selects the content he wants to change
+    - Content is changed    
+    - Case is closed
+
+- UC4 (Planning message) :  
+    - Jeanne accesses the website
+    - She selects the screen she wants to display the content on
+    - She types the message she wants to schedule
+    - She selects the date she wants to schedule the message
+    - Message is scheduled
+    - Case is closed
+
+- UC5 (Watching screen) : 
+  - Marie comes to the screen
+  - She watches the screen content
+  - She is aware of the latest news
+  - Case is closed
+
+## 5.2. Use Cases Analysis 
+Here is a more detailed version of the functional analysis above :
 <details>
 <summary><b id="toc"><u>Use case table</u></b></summary>
 
@@ -174,44 +218,9 @@ Here is a more detailed version of the functional analysis below :
 | UC 4      | U.R #4                               | Planning message                           | The customer wants to schedule a message for the next week | Content producer | Actor must be logged in and have selected the screen he wants to display the content on          | The actor types the message that he wants to be scheduled, he then clicks on the "Scheduling" button. After clicking the button, the actor can now choose the date he wants, after selecting the date he then clicks the "Confirm scheduling" button                                   | A message saying "message successfully scheduled" appears       | The case is complete when the scheduled message is sent
 | UC 5      | U.R #5                               | Watching screen                         | The employee wants to watch the screen to see some new inormations | Employee, content producer | The actor must be in front of the screen in order to see the informations          | The actor watches the informations on the screen                                   | The actor knows the latest news and can head to work       | The case is complete when the actor is aware of the latest news
 
-</details>
+</details>   
+
   
-
-## 5.2. Functional Analysis
-
-- UC1 (Login to the website) :  
-    - User connects to the website
-    - Enters his credentials
-    - Accesses the website
-    - Case is closed
-
-- UC2 (Monitoring screen) :  
-    - User accesses the website
-    - User selects the screen he wants to monitor
-    - User can now watch the screen
-    - Case is closed
-
-- UC3 (Change displayed content) :  
-    - User accesses the website
-    - User selects the screen he wants to change the content on
-    - User now can see the content he can change
-    - User selects the content he wants to change
-    - Content is changed    
-    - Case is closed
-
-- UC4 (Planning message) :  
-    - User accesses the website
-    - User selects the screen he wants to display the content on
-    - User types the message he wants to schedule
-    - User selects the date he wants to schedule the message
-    - Message is scheduled
-    - Case is closed
-
-- UC5 (Watching screen) : 
-  - User comes to the screen
-  - User watches the screen content
-  - User is aware of the latest news
-  - Case is closed
 
 # 6. Non-Functional Requirements
 
