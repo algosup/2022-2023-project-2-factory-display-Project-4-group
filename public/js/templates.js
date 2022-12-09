@@ -5,6 +5,20 @@ var app = initializeFirebase();
 var db = getFirestore(app);
 
 
+var container = document.getElementById('display');
+var container2 = document.getElementById('display2');
+let rot = 0;
+let sizes = document.getElementById('sizes');
+let type = document.getElementById('selectType');
+let rotate = document.getElementById('rotate');
+let colorsIndex = 0;
+let colors = ['#03045E', '#0077B6', '#00B4D8', '#90E0EF', '#03254C', '#1167B1', '#187BCD', '#2A9DF4', '#D0EFFF', '#0000FF', '#003CFF', '#07006B', '#3C00FF', '#043E7D'];
+
+let row = 1;
+let column = 0;
+let rowsArray;
+let columnsArray;
+let templateAdd = new Array();
 
 let templateSelect = document.getElementById('templates')
 
@@ -22,6 +36,7 @@ getTemplatesInSelect()
 
 function getTemplates(templateid) {
     let name;
+    let templateName = document.getElementById('templateName');
     getDocs(collection(db, "Screens") /*, where("id", "==", "-1")*/ ).then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             if (doc.data().id == "-1") {
@@ -34,13 +49,16 @@ function getTemplates(templateid) {
             querySnapshot.forEach((doc) => {
                 if (doc.data().id == templateid) {
                     doc.data().test.forEach((item) => {
-                        console.log(item.start, item.rows, item.columns)
                         if (templateSelect.selectedIndex != 0) {
                             displayTemplate(Number(item.rows), Number(item.columns), item.start)
                             submitTemplate()
+                            templateName.value = doc.data().name
+                            templateName.setAttribute('readonly', true)
                         } else {
                             clearGrids()
                             displayTemplate(1, 1)
+                            templateName.value = ''
+                            templateName.removeAttribute('readonly')
                         }
                     })
                 }
@@ -48,28 +66,6 @@ function getTemplates(templateid) {
         })
     });
 }
-
-// getTemplates(0);
-
-
-
-
-
-
-
-
-var container = document.getElementById('display');
-var container2 = document.getElementById('display2');
-let rot = 0;
-let sizes = document.getElementById('sizes');
-let type = document.getElementById('selectType');
-let rotate = document.getElementById('rotate');
-let colorsIndex = 0;
-let colors = ['#03045E', '#0077B6', '#00B4D8', '#90E0EF', '#03254C', '#1167B1', '#187BCD', '#2A9DF4', '#D0EFFF', '#0000FF', '#003CFF', '#07006B', '#3C00FF', '#043E7D'];
-
-let row = 1;
-let column = 0;
-
 
 
 for (let index = 1; index <= 48; index++) {
@@ -138,22 +134,21 @@ function displayTemplate(rows, columns, start) {
 }
 
 function rotateTemplate() {
+    let rows = sizes.options[sizes.selectedIndex].value[2];
+    let columns = sizes.options[sizes.selectedIndex].value[0];
     if (rot == 0 && sizes.options[sizes.selectedIndex].value[2] != 8) {
-        let rows = sizes.options[sizes.selectedIndex].value[2];
-        let columns = sizes.options[sizes.selectedIndex].value[0];
-        console.log(rows, columns);
         displaySelected(rows, columns);
         rot = 1;
     } else if (rot == 1 && sizes.options[sizes.selectedIndex].value[2] != 8) {
-        let rows = sizes.options[sizes.selectedIndex].value[0];
-        let columns = sizes.options[sizes.selectedIndex].value[2];
-        console.log(rows, columns);
-        displaySelected(rows, columns);
+        displaySelected(columns, rows);
         rot = 0;
     }
 }
 
 function displaySelected(rows, columns, start) {
+    if (start == undefined) {
+        start = '11'
+    }
     for (let index = 1; index <= 48; index++) {
         var grid = document.getElementById(index);
         if (grid.className == 'square2') {
@@ -165,15 +160,15 @@ function displaySelected(rows, columns, start) {
         }
     }
     var count = 1;
-    for (let rowsIndex = 1; rowsIndex <= Number(start[0]) + rows - 1; rowsIndex++) {
-        for (let columnsIndex = 1; columnsIndex <= Number(start[1]) + columns - 1; columnsIndex++) {
+    for (let rowsIndex = 1; rowsIndex <= Number(start[0]) + Number(rows) - 1; rowsIndex++) {
+        for (let columnsIndex = 1; columnsIndex <= Number(start[1]) + Number(columns) - 1; columnsIndex++) {
             if (rowsIndex >= Number(start[0]) && columnsIndex >= Number(start[1])) {
                 var grid = document.getElementById(count);
-                grid.className = `square2`;
+                grid.className = 'square2';
             }
             count += 1;
         }
-        count -= (Number(start[1]) + columns - 1);
+        count -= (Number(start[1]) + Number(columns) - 1);
         count += 8
     }
 }
@@ -181,6 +176,33 @@ function displaySelected(rows, columns, start) {
 
 function submitTemplate() {
     let color = colors[colorsIndex];
+    let appear = 0
+    let first;
+    // for (let i = 1; i <= 48; i++) {
+    //     var grid = document.getElementById(i);
+    //     if (grid.className == 'square2' && appear == 0) {
+    //         appear = 1;
+    //         first = grid.innerHTML.substring(0, 2)
+    //         console.log(first)
+    //             // templateAdd.push( new Map(grid.innerHTML.substring(0, 2), rows, columns))
+    //     }
+    // }
+    // let columnLenght = 0;
+    // for (let i = (8 * (Number(first[0]) - 1) + 1); i <= (8 * (Number(first[0]) - 1) + 1) + 8; i++) {
+    //     var grid = document.getElementById(i);
+    //     if (grid.className == 'square2') {
+    //         columnLenght += 1;
+    //     }
+    // }
+    // let rowLenght = 0;
+    // for (let z = Number(first[1]); z <= 48; z += 8) {
+    //     var grid = document.getElementById(z);
+    //     console.log('HERE')
+    //     if (grid.className == 'square2') {
+    //         rowLenght += 1;
+    //     }
+    // }
+    // console.log(rowLenght, columnLenght)
     for (let index = 1; index <= 48; index++) {
         var grid = document.getElementById(index);
         if (grid.className == 'square2') {
@@ -189,9 +211,15 @@ function submitTemplate() {
             square.style.backgroundColor = color;
             grid.innerHTML = grid.innerHTML[0] + grid.innerHTML[1] + '_';
             grid.className = 'squareT';
+            if (appear == 0) {
+                first = grid.innerHTML.substring(0, 2)
+                templateAdd.push({ 'start': first, 'rows': document.getElementById('sizes').value[0], 'columns': document.getElementById('sizes').value[2] })
+                appear = 1
+            }
         }
     }
     colorsIndex += 1;
+    console.log(templateAdd)
 }
 
 function clearGrids() {
@@ -204,6 +232,7 @@ function clearGrids() {
         var grid = document.getElementById(index);
         if (grid.className == 'square2' || grid.className == 'squareT') {
             grid.className = 'square1';
+            grid.innerHTML = grid.innerHTML[0] + grid.innerHTML[1] + '-';
         }
     }
 }
