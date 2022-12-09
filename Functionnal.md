@@ -2,48 +2,52 @@
 <summary><b id="toc">Table of Content</b></summary>
 
 
-- [AppNews Network](#appnews-network)
+- [AppNews Network - Functional Specification](#appnews-network---functional-specification)
   - [1. Glossary](#1-glossary)
 - [2. Introduction](#2-introduction)
-  - [2.1. Goal of the project](#21-goal-of-the-project)
-  - [2.2. Scope](#22-scope)
-  - [2.3. In Scope](#23-in-scope)
-  - [2.4. Out Of Scope](#24-out-of-scope)
-  - [2.5. Deadlines](#25-deadlines)
-- [3. Functional Requirements](#3-functional-requirements)
-  - [3.1. Assumptions](#31-assumptions)
-  - [3.2. Constraints](#32-constraints)
-- [4. Personas](#4-personas)
-  - [4.1. Content Producers](#41-content-producers)
-    - [4.1.1. **Robert**](#411-robert)
-    - [4.1.2. **Jeanne**](#412-jeanne)
-  - [4.2. Viewers](#42-viewers)
-    - [4.2.1 **Bryan**](#421-bryan)
-    - [4.2.2 **Frédéric**](#422-frédéric)
-    - [4.2.3. **Marie**](#423-marie)
-    - [4.2.4. **Kim Seonghwa**](#424-kim-seonghwa)
-- [5. Use cases](#5-use-cases)
-  - [5.1. Functional Analysis](#51-functional-analysis)
-  - [5.2. Use Cases Analysis](#52-use-cases-analysis)
-- [6. Non-Functional Requirements](#6-non-functional-requirements)
-  - [6.1. Costs](#61-costs)
-    - [6.1.1. Hardware](#611-hardware)
+- [3. Goal of the project](#3-goal-of-the-project)
+  - [3.1. Scope](#31-scope)
+  - [3.2. In Scope](#32-in-scope)
+  - [3.3. Out Of Scope](#33-out-of-scope)
+  - [3.4. Deadlines](#34-deadlines)
+- [4. Functional Requirements](#4-functional-requirements)
+  - [4.1. Assumptions](#41-assumptions)
+  - [4.2. Constraints](#42-constraints)
+- [5. Personas](#5-personas)
+  - [5.1. Content Producers](#51-content-producers)
+    - [5.1.1. **Robert**](#511-robert)
+    - [5.1.2. **Jeanne**](#512-jeanne)
+  - [5.2. Viewers](#52-viewers)
+    - [5.2.1 **Bryan**](#521-bryan)
+    - [5.2.2 **Frédéric**](#522-frédéric)
+    - [5.2.3. **Marie**](#523-marie)
+    - [5.2.4. **Kim Seonghwa**](#524-kim-seonghwa)
+- [6. Use cases](#6-use-cases)
+  - [6.1. Functional Analysis](#61-functional-analysis)
+  - [6.2. Use Cases Analysis](#62-use-cases-analysis)
+- [7. Non-Functional Requirements](#7-non-functional-requirements)
+  - [7.1. Costs](#71-costs)
+    - [7.1.1. Hardware](#711-hardware)
       - [**Maintenance**](#maintenance)
-    - [6.1.2. Software](#612-software)
-    - [6.1.3. Energy consumption](#613-energy-consumption)
-  - [6.2. Security](#62-security)
-- [7. Conclusion](#7-conclusion)
+    - [7.1.2. Software](#712-software)
+    - [7.1.3. Energy consumption](#713-energy-consumption)
+  - [7.2. Environment](#72-environment)
+    - [7.2.1. Environmental impact](#721-environmental-impact)
+    - [7.2.2. Scalability](#722-scalability)
+- [8. Security](#8-security)
+- [9. Conclusion](#9-conclusion)
 
 </details> 
-  
-# AppNews Network
+
+<sub> Author : [Victor Leroy](https://www.linkedin.com/in/victor-leroy-64baa3229/) (Program Manager) </sub>
+
+<sub> Team : [Laurent Bouquin](https://www.linkedin.com/in/laurent-bouquin-60911a1b8/) (Project Leader), [Lucas Aubard](https://www.linkedin.com/in/lucas-aubard-596b37251/) (Technical Leader), [Alexis Lasselin](https://www.linkedin.com/in/alexis-lasselin-318649251/) (Software Engineer), [Paul Nowak](https://www.linkedin.com/in/paul-nowak-0757a61a7/) (Quality Assurance) </sub>
+
+---
+
+# AppNews Network - Functional Specification
 
 
-
-<sub> Author : [Victor Leroy](https://www.linkedin.com/in/victor-leroy-64baa3229/) (Program Manager)
-
-<sub> Team : [Laurent Bouquin](https://www.linkedin.com/in/laurent-bouquin-60911a1b8/) (Project Leader), [Lucas Aubard](https://www.linkedin.com/in/lucas-aubard-596b37251/) (Technical Leader),   
-  [Alexis Lasselin](https://www.linkedin.com/in/alexis-lasselin-318649251/) (Software Engineer), [Paul Nowak](https://www.linkedin.com/in/paul-nowak-0757a61a7/) (Quality Assurance) </sub>
 
 ## 1. Glossary
 
@@ -63,6 +67,8 @@
   
 - **Cyberattack** : A cyberattack is an attempt from hackers to damage or destroy a computer network or system.
 
+- **Ethernet** : Ethernet is a system for connecting a number of computer systems to form a local area network. It is a standard that defines how computers communicate over a network.
+
 - **Viewer** : We consider the viewer as someone viewing any of Jacobi's connected screen.
 
 
@@ -75,15 +81,15 @@ The Managing Director of Jacobi in France, Mr Saeed is constantly seeking ways t
 
 One of the many ways to achieve this is to digitalise the communication of the Company and make it easy to publish the content. Currently, factory news and important announcements are done by email to groups, on MS Teams Groups, Yammer, etc. However, of the 64 factory staff, only around half of the aforementioned have Company email addresses. Displaying paper format information is outdated and in a huge factory of 8 hectares, it is not efficient.
 
-## 2.1. Goal of the project
+# 3. Goal of the project
 
 The goal of this project is to create a communication tool that will be used to facilitate the communication between the company and its employees. 
 
-## 2.2. Scope
+## 3.1. Scope
 
 The most important points of this project is to be able to control the displayed content remotely, they also have to be independent to each other, which means that we could display different content on each  screen. 
 
-## 2.3. In Scope
+## 3.2. In Scope
 
 These are the mains features that are planned in our V0 : 
 - Adapt the content to the screen size
@@ -93,7 +99,7 @@ These are the mains features that are planned in our V0 :
 - Draft system (you can start writing a message and finish writing it later)
 
   
-## 2.4. Out Of Scope
+## 3.3. Out Of Scope
  
 Due to time and resources constraints, these features might be included in the upcoming versions :
 - Different languages
@@ -101,30 +107,32 @@ Due to time and resources constraints, these features might be included in the u
 - Unique logins for each users   
 - An history of the displayed content with a tracking of who changed what
   
-## 2.5. Deadlines
+## 3.4. Deadlines
 
 The deadline for the hardware choosing is the 14th November 2022. The deadline for the V0 is the 16th December 2022.
 
-# 3. Functional Requirements
+# 4. Functional Requirements
 
-## 3.1. Assumptions
+## 4.1. Assumptions
 - Content will be displayed horizontally.
 - Both buildings are connected to the same network.
 - The screens will be connected to the same network.  
 - Ethernet is the safest way to connect the screens to the network.
+- The V0 will concern 2 screens.
+- Each screen will be independent from each other.
   
-## 3.2. Constraints
+## 4.2. Constraints
 
 - There are 3 shifts per day. 
 - Small shutdown at Christmas time.
 - Wi-Fi sometimes had issues.
 
 
-# 4. Personas 
+# 5. Personas 
 
-## 4.1. Content Producers
+## 5.1. Content Producers
 
-### 4.1.1. **Robert**
+### 5.1.1. **Robert**
 
 Robert has been working for Jacobi since July 2020, he works as an HR manager. He is 31 years old and single. He likes listening to music while he is working but he also likes climbing and other extreme sports.   
 
@@ -132,7 +140,7 @@ Robert lives in Vierzon, so he comes most of the time walking, or he uses the bi
 
 He will need to access the screen in order to provide informations for his colleagues, about upcoming recruitment campaigns but also to give informations and advices if an intern is in the factory.
 
-### 4.1.2. **Jeanne**
+### 5.1.2. **Jeanne**
 
 Jeanne has been working for Jacobi since December 2021, she is working as the factory manager. She is 42 years old and lives in Orleans, she is married and has 2 children. She loves playing tennis with her husband and her childs.   
 
@@ -140,9 +148,9 @@ Because she is far from the factory, she takes the train every morning and eveni
 
 Jeanne's use of the screen displaying is pretty clear and simple, she wants to display the production numbers for her colleagues in order for them to have an idea on if they are doing well or not, but also to give them a heads up everyday. She would also like to have a widget displaying the weather, so that she can plan her day accordingly.
 
-## 4.2. Viewers
+## 5.2. Viewers
 
-### 4.2.1 **Bryan** 
+### 5.2.1 **Bryan** 
 
 Bryan is a technician that has been working for Jacobi since 2018, he is 28 years old and lives in Paris. He is single and lives with his family. He likes playing video games and watching movies. He comes to Vierzon by car at the end of the week-end, he takes the highway and it takes him around 3 hour to get there; where he stays for the week and then goes back to Paris on Friday evening.   
 
@@ -150,7 +158,7 @@ He comes to the factory every day by car, picks up Jeanne at the train station a
 
 Bryan wants to use the screen in order to know if there is any important information that he needs to know about, he also wants to know if there is any important information about the factory, such as if there is a problem with the machines.
 
-### 4.2.2 **Frédéric**
+### 5.2.2 **Frédéric**
 
 Frédéric is an engineer that has been working for Jacobi since 2016, he is 56 years old and lives in Salbris. He is married and has 4 children. He likes watching his son's rugby matches on his weekends.   
 
@@ -158,7 +166,7 @@ He comes to Vierzon by car everyday which takes him around 30 minutes to get to 
 
 Frédéric needs the screen in order to know if there is any important information that he needs to know about, mostly informations that concerns the production rate of the factory. He also wants to have some feedbacks from his manager, on the quality of the products that are being produced.
 
-### 4.2.3. **Marie**
+### 5.2.3. **Marie**
 
 Marie is an intern that joined Jacobi in September 2022, she is 21 years old and lives in Toulouse. She is here for 6 months and she is doing an internship in the factory. She likes mangas, parties and hanging out with her friends. She is currently living with her uncle in Vierzon. She comes back to Toulouse once every 2 weeks in order to see her family and her friends. 
 
@@ -166,15 +174,15 @@ Because her uncle is also working in the factory, he drives her to the factory e
 
 Marie will need the screen because she wants to get the factory informations everyday, in order to not miss anything important. She also wants to get the latest news about the company, in order to know what is going on in the company.
 
-### 4.2.4. **Kim Seonghwa**
+### 5.2.4. **Kim Seonghwa**
 
 Seonghwa is a customer of Jacobi since 2013, he is living in Korea and comes once every 6 months in order to have a meeting with Jeanne. He loves listening to K-pop music because his brother is working in this industry. It takes Seonghwa one day to come to Paris by plane, he then comes to Vierzon taking the train which takes him approximately 2 hours, then Jeanne picks him up at the train station and drives him to the factory. 
 
 Seonghwa will need an authorization in order to access the room where the screens are located, because there might be confidential informations displayed on the screen. He will also need to know if there is any important information that he needs to know about, in order to have a good meeting with Jeanne.
 
-# 5. Use cases
+# 6. Use cases
 
-## 5.1. Functional Analysis
+## 6.1. Functional Analysis
 
 - UC1 (Login to the website) :  
     - Robert connects to the website
@@ -210,7 +218,7 @@ Seonghwa will need an authorization in order to access the room where the screen
   - She is aware of the latest news
   - Case is closed
 
-## 5.2. Use Cases Analysis 
+## 6.2. Use Cases Analysis 
 Here is a more detailed version of the functional analysis above :
 <details>
 <summary><b id="toc"><u>Use case table</u></b></summary>
@@ -227,11 +235,11 @@ Here is a more detailed version of the functional analysis above :
 
   
 
-# 6. Non-Functional Requirements
+# 7. Non-Functional Requirements
 
-## 6.1. Costs
+## 7.1. Costs
 
-### 6.1.1. Hardware
+### 7.1.1. Hardware
 
 The hardware that will be used for this project is the following :
 
@@ -247,15 +255,32 @@ The toal cost of the hardware for one screen is around 550€. Because there are
   
 - The wall bracket shouldn't need any maintenance, it is a simple bracket that will be used to hang the television on the wall. As long as no one touches or breaks it, it should last for a long time.
     
-### 6.1.2. Software
+### 7.1.2. Software
 
 The database we will be using is [Firebase](https://firebase.google.com). It is a cloud database, which means that it is hosted on the cloud and we don't need to install it on our computer. It is also **free to use**, which is a good thing for us.
 
-### 6.1.3. Energy consumption
+### 7.1.3. Energy consumption
 
 The energy consumption of the TV is 0.084kWh. The TV will be turned on 24/7, so it will consume around 2.016kWh per day. The TV will be used the whole year, so it will consume around 735.84kWh per year. The price of the electricity in France is 0.1024€ per kWh, so one TV will cost around 75.35€ per year.
 
-## 6.2. Security 
+## 7.2. Environment
+
+### 7.2.1. Environmental impact
+
+One of the main environmental impact of this project is the energy consumption of the TV. As we said in the previous section, the TV will consume around 735.84kWh per year. This is a lot of energy. The TV is a necessary part of the project, and we can't remove it.   
+
+That's why we focused on the **scalability** of the project. If the company wants to add more screens, we can do it easily. We chose this screen because it is the most efficient and among the cheapest. We could have chosen a screen with a lower energy consumption, but it would have been more expensive. We could also have chosen a screen with a higher energy consumption, but it would have been cheaper. We chose the middle ground, because we think that it is the best option. We also had to chose a Smart TV in order to be compatible with our website.
+
+### 7.2.2. Scalability
+
+You can see on this image the energy consumption of the TV we have chosen :  
+
+![Energy consumption of the TV](E976401.jpg.avif)
+
+As you can see, it's rated G, which means that it consumes a lot of energy. That's why for the future of this project we would be more likely to aim, for better energy consumption, with a more expensive TV, this would be a long-term investment, as the quality is better so it will last longer but it also consumes less energy, so it will be cheaper in the long run. There's also an ecological aspect to this, as it consumes less energy, it will be better for the environment.
+
+
+# 8. Security 
 
 Following the [ANSSI's guidelines](https://www.ssi.gouv.fr/en/cybersecurity-in-france/ciip-in-france/), we ensured that our product followed the DICP criteria. (AIPT)
 
@@ -269,7 +294,7 @@ Following the [ANSSI's guidelines](https://www.ssi.gouv.fr/en/cybersecurity-in-f
 
 For more informations, we recommend you to visit the websites dedicated to that law.
 
-# 7. Conclusion
+# 9. Conclusion
 
 We had a lot of freedom for this project which led us finding a lot of interesting ideas and implement them on our website.
 
