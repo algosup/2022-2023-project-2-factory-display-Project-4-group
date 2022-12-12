@@ -96,8 +96,6 @@ These are the mains features that are planned in our V0 :
 - Widgets for weather, news, etc. that will be updated on a regular basis
 - A login page the website to ensure that only authorized people can use it (there will only be 4 people who will have their access granted to the tool)
 - Planning messages for a given date (i.e Friday for Monday)
-- Draft system (you can start writing a message and finish writing it later)
-
   
 ## 3.3. Out Of Scope
  
@@ -106,6 +104,8 @@ Due to time and resources constraints, these features might be included in the u
 - Smart screen in Paris to display informations
 - Unique logins for each users   
 - An history of the displayed content with a tracking of who changed what
+- Draft system (you can start writing a message and finish writing it later)
+
   
 ## 3.4. Deadlines
 
@@ -274,7 +274,7 @@ That's why we focused on the **scalability** of the project. If the company want
 
 You can see on this image the energy consumption of the TV we have chosen :  
 
-![Energy consumption of the TV](E976401.jpg.avif)
+![Energy consumption of the TV](EnergyChart.jpg)
 
 As you can see, it's rated G, which means that it consumes a lot of energy. That's why for the future of this project we would be more likely to aim, for better energy consumption, with a more expensive TV, this would be a long-term investment, as the quality is better so it will last longer but it also consumes less energy, so it will be cheaper in the long run. There's also an ecological aspect to this, as it consumes less energy, it will be better for the environment.
 
