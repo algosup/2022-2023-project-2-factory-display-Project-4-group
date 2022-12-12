@@ -87,6 +87,9 @@ Here is the [wall arm](https://www.but.fr/produits/8006023265794/Pack-support-mu
 - It's easier to install with a wall arm
 - It has a good graphic uality
 - Bigger than a monitor
+- No micro computer needed
+- Easier to fix
+- 
 
 ### 2.4. Software
 #### 2.4.1. Tizen Studio
@@ -129,8 +132,8 @@ This function allows us to display the selected template size.
 
 #### 3.7. rotateTemplate()
 
-This function allows us to rotate the template.
+This function allows us to rotate the selected template.
 
 #### 3.8. submitTemplate()
 
-This function allows us to submit the template.
+This function allows us to submit the selected template.
