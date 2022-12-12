@@ -5,10 +5,10 @@ var app = initializeFirebase();
 var db = getFirestore(app);
 
 function login() {
-    var email;
-    var password;
-    getDocs(collection(db, "users")).then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
+	var email;
+	var password;
+	getDocs(collection(db, "users")).then((querySnapshot) => {
+		querySnapshot.forEach((doc) => {
 			email = doc.data().email;
 			password = doc.data().password;
 			if (email == document.getElementById("e-mail").value && password == document.getElementById("password").value) { 
@@ -16,7 +16,7 @@ function login() {
 				console.log("Login successful");
 			}
 		});
-        }).then(() => {
+		}).then(() => {
 			document.getElementById("error").style = "color: red; display: block; text-align: center;";
 			document.getElementById("password").value = "";
 		});

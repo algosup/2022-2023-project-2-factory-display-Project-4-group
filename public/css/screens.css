@@ -1,98 +1,98 @@
 *{
-    margin: 0;
+	margin: 0;
 }
 body{
-    background-color: #2d2828;
+	background-color: #2d2828;
 }
 .taskbar{
-    background-color: #23242a;
-    width: 100%;
-    height: 100px;
-    display: grid;
-    grid-template-columns: 4fr 1fr 4fr 1fr 4fr 1fr 4fr;
+	background-color: #23242a;
+	width: 100%;
+	height: 100px;
+	display: grid;
+	grid-template-columns: 4fr 1fr 4fr 1fr 4fr 1fr 4fr;
 }
 .border{
-    width: 100%;
-    height: 2px;
-    background-color: #45f3ff;
+	width: 100%;
+	height: 2px;
+	background-color: #45f3ff;
 }
 .page1{
-    background-color: #45f3ff;
-    width: 150px;
-    height: 150px;
-    grid-column: 2;
-    border-radius: 1000px;
-    /* border: 2px solid #45f3ff; */
-    z-index: 1;
+	background-color: #45f3ff;
+	width: 150px;
+	height: 150px;
+	grid-column: 2;
+	border-radius: 1000px;
+	/* border: 2px solid #45f3ff; */
+	z-index: 1;
 }
 .page2{
-    background-color: #23242a;
-    width: 150px;
-    height: 150px;
-    grid-column: 4;
-    border-radius: 1000px;
-    border: 2px solid #45f3ff;
+	background-color: #23242a;
+	width: 150px;
+	height: 150px;
+	grid-column: 4;
+	border-radius: 1000px;
+	border: 2px solid #45f3ff;
 }
 .page3{
-    background-color: #23242a;
-    width: 150px;
-    height: 150px;
-    grid-column: 6;
-    border-radius: 1000px;
-    border: 2px solid #45f3ff;
+	background-color: #23242a;
+	width: 150px;
+	height: 150px;
+	grid-column: 6;
+	border-radius: 1000px;
+	border: 2px solid #45f3ff;
 }
 .page1:hover{
-    background-color: #45f3ff;
-    width: 150px;
-    height: 150px;
-    grid-column: 2;
-    border-radius: 1000px;
-    border: 10px solid #2d2828;
+	background-color: #45f3ff;
+	width: 150px;
+	height: 150px;
+	grid-column: 2;
+	border-radius: 1000px;
+	border: 10px solid #2d2828;
 }
 .page2:hover{
-    background-color: #2d2828;
-    width: 150px;
-    height: 150px;
-    grid-column: 4;
-    border-radius: 1000px;
+	background-color: #2d2828;
+	width: 150px;
+	height: 150px;
+	grid-column: 4;
+	border-radius: 1000px;
 }
 .page3:hover{
-    background-color: #2d2828;
-    width: 150px;
-    height: 150px;
-    grid-column: 6;
-    border-radius: 1000px;
+	background-color: #2d2828;
+	width: 150px;
+	height: 150px;
+	grid-column: 6;
+	border-radius: 1000px;
 }
 .down{
-    margin-top: 60px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+	margin-top: 60px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
 }
 .filters{
-    width: 100% - 20px;
-    grid-column: 1;
-    grid-row: 1 / -1;
-    height: 100% - 20px;
-    background-color: gray;
-    margin: 10px;
+	width: 100% - 20px;
+	grid-column: 1;
+	grid-row: 1 / -1;
+	height: 100% - 20px;
+	background-color: gray;
+	margin: 10px;
 }
 .screens{
-    grid-column: 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(auto-fit, 1fr);
+	grid-column: 2;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: repeat(auto-fit, 1fr);
 }
 .screen{
-    width: 100% - 20px;
-    height: 170px;
-    
-    background-color: white;
-    margin: 10px;
+	width: 100% - 20px;
+	height: 170px;
+	
+	background-color: white;
+	margin: 10px;
 }
 
 ion-icon {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 136px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 136px;
 }
