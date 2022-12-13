@@ -34,9 +34,22 @@
     <div class="border"></div>
     <div class="down">
         <div class="filters">
+            <button id="clearAll"> Réinitialiser tous les filtres </button>
             <label class="form-control">
-				<input type="checkbox" name="First" />
-				First
+				<input type="checkbox" class="check" name="Restricted" id="restricted" />
+				Privé
+			</label>
+			<label class="form-control">
+				<input type="checkbox" class="check" name="Non-restricted" id="non-restricted" />
+				Public
+			</label>
+			<label class="form-control">
+				<input type="checkbox" class="check" name="Have a template" id="have-a-template" />
+				Possède un modèle
+			</label>
+			<label class="form-control">
+				<input type="checkbox" class="check" name="Doesn't have a template" id="doesnt-have-a-template" />
+				Ne possède pas de modèle
 			</label>
         </div>
         <div class="screens" id="screens">
