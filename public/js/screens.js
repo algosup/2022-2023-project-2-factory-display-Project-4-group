@@ -13,14 +13,16 @@ function createScreensPage() {
     getDocs(collection(db, "Screens")).then((querySnapshot) => {
         screensNbr = querySnapshot.size - 1;
         querySnapshot.forEach((doc) => {
-            screensArray.push({ 'name': doc.data().name, 'id': doc.data().id, 'restricted': doc.data().restricted, 'templateID': doc.data().templateID });
+			if (doc.data().id != "-1"){
+            	screensArray.push({ 'name': doc.data().name, 'id': doc.data().id, 'restricted': doc.data().restricted, 'templateID': doc.data().templateID });
+			}
         });
     }).then(() => {
         console.log(screensNbr);
         for (let i = 0; i < screensNbr; i++) {
             var div = document.createElement("div");
             div.className = "screen";
-            div.innerHTML = screensArray[i].name;
+            div.innerHTML = screensArray[(i)].name;
             if (screensArray[i].restricted == true) {
                 div.style.border = "3px solid #a00000";
             } else {
