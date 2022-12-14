@@ -15,10 +15,10 @@ function logout() {
 
 function redirect() {
 	let id = location.href.split("=")[1];
-	let div1 = document.getElementById("0");
-	let div2 = document.getElementById("1");
-	let div3 = document.getElementById("2");
-	let div4 = document.getElementById("3");
+	let div1 = document.getElementById("div0");
+	let div2 = document.getElementById("div1");
+	let div3 = document.getElementById("div2");
+	let div4 = document.getElementById("div3");
 	let btn1 = document.createElement("button");
 	let btn2 = document.createElement("button");
 	let btn3 = document.createElement("button");
