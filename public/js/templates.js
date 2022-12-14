@@ -410,11 +410,9 @@ document.getElementById('submitToDb').addEventListener('click', submitTemplateTo
 
 templateSelect.addEventListener('change', getTemplates)
 
-async function updateTemplateInfos(template, idN, nameN){
+async function updateTemplateInfos(template, idN){
 	await updateDoc(doc(db, "Templates", idN), {
 		template: template,
-		id: idN,
-		name: nameN
 	});
 }
 
