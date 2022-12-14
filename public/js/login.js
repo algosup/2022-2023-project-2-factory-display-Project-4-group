@@ -1,5 +1,5 @@
 import { initializeFirebase } from "./firebase.js";
-import { getFirestore, getDocs, collection, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
+import { getFirestore, getDocs, collection, setDoc, doc, updateDoc, addDoc } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
 
 var app = initializeFirebase();
 var db = getFirestore(app);
@@ -7,20 +7,29 @@ var db = getFirestore(app);
 function login() {
 	var email;
 	var password;
+	var id
+	var connected;
 	getDocs(collection(db, "users")).then((querySnapshot) => {
-		querySnapshot.forEach((doc) => {
-			email = doc.data().email;
-			password = doc.data().password;
+		querySnapshot.forEach((docs) => {
+			email = docs.data().email;
+			password = docs.data().password;
+			id = docs.data().id;
+			connected = docs.data().connected;
 			if (email == document.getElementById("e-mail").value && password == document.getElementById("password").value) { 
-				self.location = "settings.html";
+				self.location = "screens.html?id=" + id;
 				console.log("Login successful");
+				updateDoc(doc(db, "users", id), {
+                    connected: true,
+                });
 			}
 		});
+		document.getElementById("error").style = "color: red; display: block; text-align: center;";
+		document.getElementById("password").value = "";
 		}).then(() => {
-			document.getElementById("error").style = "color: red; display: block; text-align: center;";
-			document.getElementById("password").value = "";
 		});
 	}
+
+
 
 
 let button = document.getElementById("submit");

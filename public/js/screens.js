@@ -42,7 +42,7 @@ function createScreensPage() {
 
 createScreensPage();
 
-document.getElementById('restricted').addEventListener('change', function() {
+document.getElementById('non-restricted').addEventListener('change', function() {
     if (this.checked) {
         screens.querySelectorAll('.screen').forEach(function(a) {
             if (a.classList.contains('restricted')) {
@@ -67,7 +67,7 @@ document.getElementById('restricted').addEventListener('change', function() {
         });
     }
 });
-document.getElementById('non-restricted').addEventListener('change', function() {
+document.getElementById('restricted').addEventListener('change', function() {
     if (this.checked) {
         screens.querySelectorAll('.screen').forEach(function(a) {
             if (a.classList.contains('nonrestricted')) {
