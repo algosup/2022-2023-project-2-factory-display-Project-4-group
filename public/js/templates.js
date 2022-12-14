@@ -138,10 +138,14 @@ function rotateTemplate() {
 	let columns = sizes.options[sizes.selectedIndex].value[0];
 	if (rot == 0 && sizes.options[sizes.selectedIndex].value[2] != 8) {
 		displaySelected(rows, columns);
+		console.log(rot);
 		rot = 1;
+		console.log(rot);
 	} else if (rot == 1 && sizes.options[sizes.selectedIndex].value[2] != 8) {
 		displaySelected(columns, rows);
+		console.log(rot);
 		rot = 0;
+		console.log(rot);
 	}
 }
 
@@ -193,6 +197,7 @@ function submitTemplate() {
 				} else {
 					templateAdd.push({ 'start': first, 'rows': document.getElementById('sizes').value[2], 'columns': document.getElementById('sizes').value[0], 'content': document.getElementById('textInput').value })
 				}
+				rot = 0;
 				appear = 1
 			}
 		}
@@ -242,20 +247,13 @@ function submitTemplateToDatabase() {
 			if (document.getElementById('templateName').value == '') {
 					alert('Veuillez donner un nom à votre modèle');
 			} else {
-				addDoc(collection(db, "Templates"), {
-					name: document.getElementById('templateName').value,
-					template: templateAdd,
-					id: dbLength,
-					content: document.getElementById('textInput').innerHTML
-				});
+				setTemplateInfos(String(dbLength), templateAdd, document.getElementById('templateName').value, document.getElementById('textInput').innerHTML);
 			}
 		} else {
 			let choice = confirm('Ce modèle existe déjà, voulez-vous le remplacer par celui-ci ?');
 			if (choice === true) {
-				updateDoc(doc(db, "Templates", idOfTemplate), {
-					template: templateAdd,
-					content: document.getElementById('textInput').innerHTML
-				});
+				// updateDoc(doc(db, "Templates", idOfTemplate), {template: templateAdd});
+				updateTemplateInfos(templateAdd, idOfTemplate, nameOfTemplate);
 			}
 		}
 	});
@@ -411,3 +409,20 @@ document.getElementById('displayed').addEventListener('click', submitTemplate)
 document.getElementById('submitToDb').addEventListener('click', submitTemplateToDatabase)
 
 templateSelect.addEventListener('change', getTemplates)
+
+async function updateTemplateInfos(template, idN, nameN){
+	await updateDoc(doc(db, "Templates", idN), {
+		template: template,
+		id: idN,
+		name: nameN
+	});
+}
+
+async function setTemplateInfos(idA, template, nameA, contentA){
+	await setDoc(doc(db, "Templates", idA), {
+		id: idA,
+		template: template,
+		name: nameA,
+		content: contentA
+	});
+}

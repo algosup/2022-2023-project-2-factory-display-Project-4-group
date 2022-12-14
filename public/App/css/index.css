@@ -32,6 +32,10 @@
 	background-color: #d2d2d2;
 	border: 3px solid #1f1f1f;
 	border-radius: 10px;
+	color: black;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: xx-large;
+	text-align: center;
 }
 #news{
 	grid-column: 1;

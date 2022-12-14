@@ -10,7 +10,7 @@ function getTemplatesFromDatabase() {
     let restrictedScreen;
     getDocs(collection(db, "Screens")).then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            if (doc.data().id == "7") {
+            if (doc.data().id == "8") {
                 templateId = doc.data().templateID
                 restrictedScreen = doc.data().restricted
             }
@@ -37,8 +37,7 @@ function displayInfos(start, rows, columns, content) {
     let info = document.createElement('div')
     info.className = "news"
     info.style.gridColumn = start[1] + '/' + String(Number(start[1]) + Number(columns))
-    info.style.gridRow = Strin(Number(start[0]) + 1) + '/' + String(Number(start[0]) + Number(rows) + 1)
-    info.style.color = 'red'
+    info.style.gridRow = String(Number(start[0]) + 1) + '/' + String(Number(start[0]) + Number(rows) + 1)
     info.innerHTML = content
     doc.appendChild(info)
 }
