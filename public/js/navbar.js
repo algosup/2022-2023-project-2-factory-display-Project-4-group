@@ -10,6 +10,7 @@ function logout() {
 }
 
 function redirect() {
+	// checkLog();
 	let id = location.href.split("=")[1];
 	let div1 = document.getElementById("div0");
 	let div2 = document.getElementById("div1");
@@ -43,9 +44,6 @@ function redirect() {
 	div4.appendChild(btn4);
 }
 
-redirect();
-
-
 function changeStatus(id, connected){
 	updateDoc(doc(db, "users", id), {
 		connected: connected,
@@ -57,3 +55,23 @@ function changeStatus(id, connected){
 	}
 });
 }
+
+async function checkLog() {
+	window.onload
+	const currentUrl = window.location.href;
+	let id;
+	if (currentUrl.includes("id=")) {
+		id = currentUrl.substring(currentUrl.indexOf("id=") + 3);
+		const querySnapshot = await getDocs(collection(db, "users"));
+		querySnapshot.forEach((doc) => {
+			if (doc.data().id == id && doc.data().connected == true) {
+				return console.log("Connected");
+			}
+		});
+	window.location.href = "index.html";
+	} else {
+		window.location.href = "index.html";
+	}
+}
+
+redirect();
