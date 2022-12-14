@@ -103,7 +103,7 @@ body {
     margin: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
 
 ion-icon {
@@ -115,30 +115,19 @@ ion-icon {
 input[type="checkbox"] {
     appearance: none;
     background-color: #fff;
-    margin: 0;
-    font: inherit;
-    width: 1.15em;
-    height: 1.15em;
-    border: 0.15em solid lime;
-    border-radius: 0.15em;
-    transform: translateY(-0.075em);
-    display: grid;
-    place-content: center;
 }
 
-input[type="checkbox"]::before {
-    content: "";
-    width: 0.65em;
-    height: 0.65em;
-    transform: scale(0);
-    transition: 120ms transform ease-in-out;
-    background-color: red;
-}
-
-input[type="checkbox"]:checked::before {
-    transform: scale(1);
-}
-
+#clearAll,
 label {
-    position: inherit;
+    width: 100%;
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+    display: flex;
+    font-size: x-large;
+    text-align: center !important;
+    justify-content: center;
+    background-color: #808080;
+    border: none;
+    cursor: pointer;
+    color: white;
 }

@@ -2,42 +2,42 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/templates.css">
-	<link rel="stylesheet" href="css/settings.css">
-	<title>Templates</title>
-	<script type="module" src="js/navbar.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/templates.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <title>Templates</title>
+    <script type="module" src="js/navbar.js" defer></script>
 </head>
 
 <body>
 
-	<div class="nav-login">
-		<div class="login">
-			<button class="nv-log" onclick="location.href='#'" type="button">
+    <div class="nav-login">
+        <div class="login">
+            <button class="nv-log" onclick="location.href='#'" type="button">
 				<i class="material-icons">person</i>
 			</button>
-		</div>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        </div>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-		<div class="nav-container">
-			<div class="nav-buttons">
-				<div class="nav-button" id="div0"></div>
-				<div class="nav-button" id="div1"></div>
-				<div class="nav-button" id="div2"></div>
-				<div class="nav-button" id="div3"></div>
-			</div>
-		</div>
-	</div>
-	<div class="content">
-		<div class="display" id="display">
-			<div name="square" id="time">14:36</div>
-			<div name="square" class="weather"></div>
-			<div class="news"></div>
-		</div>
-		<div class="contentButtons">
-			<select name="" id="sizes">
+        <div class="nav-container">
+            <div class="nav-buttons">
+                <div class="nav-button" id="div0"></div>
+                <div class="nav-button" id="div1"></div>
+                <div class="nav-button" id="div2"></div>
+                <div class="nav-button" id="div3"></div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="display" id="display">
+            <div name="square" id="time">14:36</div>
+            <div name="square" class="weather"></div>
+            <div class="news"></div>
+        </div>
+        <div class="contentButtons">
+            <select name="" id="sizes">
 				<option id="0" value="1x1">1x1</option>
 				<option id="1" value="1x2">1x2</option>
 				<option id="2" value="1x3">1x3</option>
@@ -54,37 +54,37 @@
 				<option id="13" value="6x6">6x6</option>
 				<option id="14" value="6x8">6x8</option>
 			</select>
-			<button class="buttons" id="rotate"> Rotate </button>
-			<select name="type" id="selectType">
+            <button class="buttons" id="rotate"> Rotate </button>
+            <select name="type" id="selectType">
 				<option value="Text">Text</option>
 				<option value="Image">Image</option>
 			</select>
-			<textarea id="textInput" type="text"></textarea>
-			<div id="ImageSelector">
-				<label for="imageInput">
+            <textarea id="textInput" type="text"></textarea>
+            <div id="ImageSelector">
+                <label for="imageInput">
 					Choose an image
 					<input id="imageInput" type="file" accept="Image/jpg, Image/png, Image/jpeg" />
 				</label>
-			</div>
-			<button class="buttons" id="displayed">Submit</button>
-		</div>
-	</div>
-	<div class="content">
-		<div class="display" id="display2">
-			<div name="square" id="time">14:36</div>
-			<div name="square" class="weather"></div>
-			<div class="news"></div>
-		</div>
-		<div class="contentButtons">
-			<select class="buttons" name="Templates" id="templates">
+            </div>
+            <button class="buttons" id="displayed">Submit</button>
+        </div>
+    </div>
+    <div class="content">
+        <div class="display" id="display2">
+            <div name="square" id="time">14:36</div>
+            <div name="square" class="weather"></div>
+            <div class="news"></div>
+        </div>
+        <div class="contentButtons">
+            <select class="buttons" name="Templates" id="templates">
 				<option value="None"> New </option>
 			</select>
-			<input type="text" name="templateName" id="templateName" maxlength="15" value="">
-			<button class="buttons" id="submitToDb"> Sauvegarder le modèle </button>
-		</div>
-	</div>
+            <input type="text" name="templateName" id="templateName" maxlength="15" value="">
+            <button class="buttons" id="submitToDb"> Sauvegarder le modèle </button>
+        </div>
+    </div>
 
-	<script type="module" src="js/templates.js"></script>
+    <script type="module" src="js/templates.js"></script>
 </body>
 
 </html>

@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/screens.css">
     <link rel="icon" href="ressources/logo.webp">
     <title>Écrans</title>
-	<script type="module" src="js/navbar.js" defer></script>
+    <script type="module" src="js/navbar.js" defer></script>
 </head>
 
 <body>
@@ -22,33 +22,34 @@
 			</button>
         </div>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<div class="nav-container">
-			<div class="nav-buttons">
-				<div class="nav-button" id="div0"></div>
-				<div class="nav-button" id="div1"></div>
-				<div class="nav-button" id="div2"></div>
-				<div class="nav-button" id="div3"></div>
-			</div>
-		</div>
+        <div class="nav-container">
+            <div class="nav-buttons">
+                <div class="nav-button" id="div0"></div>
+                <div class="nav-button" id="div1"></div>
+                <div class="nav-button" id="div2"></div>
+                <div class="nav-button" id="div3"></div>
+            </div>
+        </div>
     </div>
     <div class="border"></div>
     <div class="down">
         <div class="filters">
+            <div id="active"></div>
             <button id="clearAll"> Réinitialiser tous les filtres </button>
             <label class="form-control">
-				<input type="checkbox" class="check" name="Restricted" id="restricted" />
+				<input type="checkbox" class="check" name="Restricted" id="restricted" value="Privé" />
 				Privé
 			</label>
-			<label class="form-control">
-				<input type="checkbox" class="check" name="Non-restricted" id="non-restricted" />
+            <label class="form-control">
+				<input type="checkbox" class="check" name="Non-restricted" id="non-restricted" value="Public"/>
 				Public
 			</label>
-			<label class="form-control">
-				<input type="checkbox" class="check" name="Have a template" id="have-a-template" />
+            <label class="form-control">
+				<input type="checkbox" class="check" name="Have a template" id="have-a-template" value="Possède un modèle"/>
 				Possède un modèle
 			</label>
-			<label class="form-control">
-				<input type="checkbox" class="check" name="Doesn't have a template" id="doesnt-have-a-template" />
+            <label class="form-control">
+				<input type="checkbox" class="check" name="Doesnt have a template" id="doesnt-have-a-template" value="Ne possède pas de modèle"/>
 				Ne possède pas de modèle
 			</label>
         </div>
