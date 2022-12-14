@@ -10,23 +10,19 @@ function logout() {
 	updateDoc(doc(db, "users", id), {
 		connected: false,
 	});
+	location.href = "index.html";
 }
 
 function redirect() {
 	let id = location.href.split("=")[1];
-	let container = document.getElementById("nav-buttons")
-	let div1 = document.createElement("div");
-	let div2 = document.createElement("div");
-	let div3 = document.createElement("div");
-	let div4 = document.createElement("div");
+	let div1 = document.getElementById("0");
+	let div2 = document.getElementById("1");
+	let div3 = document.getElementById("2");
+	let div4 = document.getElementById("3");
 	let btn1 = document.createElement("button");
 	let btn2 = document.createElement("button");
 	let btn3 = document.createElement("button");
 	let btn4 = document.createElement("button");
-	div1.className = "nav-button";
-	div2.className = "nav-button";
-	div3.className = "nav-button";
-	div4.className = "nav-button";
 	btn1.className = "nv-btn";
 	btn2.className = "nv-btn";
 	btn3.className = "nv-btn";
@@ -44,15 +40,11 @@ function redirect() {
 	btn3.addEventListener("click", function() {
 		location.href = "settings.html?id=" + id;
 	})
-	btn4.setAttribute("onclick", "logout()");
+	btn4.addEventListener("click", logout);
 	div1.appendChild(btn1);
 	div2.appendChild(btn2);
 	div3.appendChild(btn3);
 	div4.appendChild(btn4);
-	container.appendChild(div1);
-	container.appendChild(div2);
-	container.appendChild(div3);
-	container.appendChild(div4);
 }
 
 redirect();

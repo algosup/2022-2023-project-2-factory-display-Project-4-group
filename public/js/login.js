@@ -7,7 +7,7 @@ var db = getFirestore(app);
 function login() {
 	var email;
 	var password;
-	var id
+	var id;
 	var connected;
 	getDocs(collection(db, "users")).then((querySnapshot) => {
 		querySnapshot.forEach((docs) => {
