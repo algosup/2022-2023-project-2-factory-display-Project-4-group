@@ -4,11 +4,15 @@ import { getFirestore, getDocs, collection, setDoc, doc, updateDoc, addDoc } fro
 var app = initializeFirebase();
 var db = getFirestore(app);
 
+
+var idA;
+
 function login() {
 	var email;
 	var password;
 	var id;
 	var connected;
+	var gq;
 	getDocs(collection(db, "users")).then((querySnapshot) => {
 		querySnapshot.forEach((docs) => {
 			email = docs.data().email;
@@ -16,11 +20,7 @@ function login() {
 			id = docs.data().id;
 			connected = docs.data().connected;
 			if (email == document.getElementById("e-mail").value && password == document.getElementById("password").value) { 
-				self.location = "screens.html?id=" + id;
-				console.log("Login successful");
-				updateDoc(doc(db, "users", id), {
-                    connected: true,
-                });
+				changeStatus(id, true);
 			}
 		});
 		document.getElementById("error").style = "color: red; display: block; text-align: center;";
@@ -29,7 +29,17 @@ function login() {
 		});
 	}
 
-
+function changeStatus(id, connected){
+	updateDoc(doc(db, "users", id), {
+		connected: connected,
+	}).then(() => {
+	if (connected == true) {
+		location.href = "screens.html?id=" + id;
+	} else {
+		location.href = "index.html";
+	}
+});
+}
 
 
 let button = document.getElementById("submit");

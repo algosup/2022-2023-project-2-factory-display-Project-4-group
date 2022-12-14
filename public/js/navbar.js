@@ -5,12 +5,8 @@ var app = initializeFirebase();
 var db = getFirestore(app);
 
 function logout() {
-	var id = location.href.split("=")[1];
-	var connected
-	updateDoc(doc(db, "users", id), {
-		connected: false,
-	});
-	location.href = "index.html";
+	let id = location.href.split("=")[1];
+	changeStatus(id, false);
 }
 
 function redirect() {
@@ -48,3 +44,16 @@ function redirect() {
 }
 
 redirect();
+
+
+function changeStatus(id, connected){
+	updateDoc(doc(db, "users", id), {
+		connected: connected,
+	}).then(() => {
+	if (connected == true) {
+		location.href = "screens.html?id=" + id;
+	} else {
+		location.href = "index.html";
+	}
+});
+}
