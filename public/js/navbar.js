@@ -10,7 +10,6 @@ function logout() {
 }
 
 function redirect() {
-	// checkLog();
 	let id = location.href.split("=")[1];
 	let div1 = document.getElementById("div0");
 	let div2 = document.getElementById("div1");
@@ -64,14 +63,18 @@ async function checkLog() {
 		id = currentUrl.substring(currentUrl.indexOf("id=") + 3);
 		const querySnapshot = await getDocs(collection(db, "users"));
 		querySnapshot.forEach((doc) => {
-			if (doc.data().id == id && doc.data().connected == true) {
-				return console.log("Connected");
+			if (doc.data().id == id) {
+				if (doc.data().connected == true) {
+					location.href = "screens.html?id=" + id;
+				} else {
+					window.location.href = "index.html";
+				}
 			}
 		});
-	window.location.href = "index.html";
 	} else {
 		window.location.href = "index.html";
 	}
 }
 
+checkLog();
 redirect();
