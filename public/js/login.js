@@ -45,3 +45,8 @@ function changeStatus(id, connected){
 let button = document.getElementById("submit");
 
 button.addEventListener("click", login);
+document.body.addEventListener("keydown", function(code) {
+	if (code.key == "Enter") {
+		login();
+	}
+});

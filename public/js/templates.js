@@ -11,12 +11,15 @@ let rot = 0;
 let sizes = document.getElementById('sizes');
 let type = document.getElementById('selectType');
 let rotate = document.getElementById('rotate');
-let colorsIndex = 0;
-let colors = ['#03045E', '#0077B6', '#00B4D8', '#90E0EF', '#03254C', '#1167B1', '#187BCD', '#2A9DF4', '#D0EFFF', '#0000FF', '#003CFF', '#07006B', '#3C00FF', '#043E7D'];
+let colorsIndexBlue = 0;
+let colorsIndexRed = 0;
+let colorsBlue = ['#03045E', '#0077B6', '#00B4D8', '#90E0EF', '#03254C', '#1167B1', '#187BCD', '#2A9DF4', '#D0EFFF', '#0000FF', '#003CFF', '#07006B', '#3C00FF', '#043E7D'];
+let colorsRed = ['#a0045E', '#a077B6', '#a0B4D8', '#a0E0EF', '#a0254C', '#a067B1', '#a07BCD', '#a09DF4', '#a00FFF', '#a000FF', '#a03CFF', '#a0006B', '#a000FF', '#a03E7D'];
 let row = 1;
 let column = 0;
 let templateAdd = new Array();
 let templateSelect = document.getElementById('templates')
+let status = false
 
 function getTemplatesInSelect() {
 	getDocs(collection(db, "Templates")).then((querySnapshot) => {
@@ -179,7 +182,8 @@ function displaySelected(rows, columns, start) {
 
 
 function submitTemplate() {
-	let color = colors[colorsIndex];
+	let colorBlue = colorsBlue[colorsIndexBlue];
+	let colorRed = colorsRed[colorsIndexRed];
 	let appear = 0
 	let first;
 	for (let index = 1; index <= 48; index++) {
@@ -187,25 +191,40 @@ function submitTemplate() {
 		if (grid.className == 'square2') {
 			let square = document.getElementById(index + 48);
 			square.className = 'squareD';
-			square.style.backgroundColor = color;
+			if (status){
+				square.style.backgroundColor = colorRed;
+			}else{
+				square.style.backgroundColor = colorBlue;
+			}
 			grid.innerHTML = grid.innerHTML[0] + grid.innerHTML[1] + '_';
 			grid.className = 'squareT';
 			if (appear == 0) {
 				first = grid.innerHTML.substring(0, 2)
 				if (rot == 0) {
-					templateAdd.push({ 'start': first, 'rows': document.getElementById('sizes').value[0], 'columns': document.getElementById('sizes').value[2], 'content': document.getElementById('textInput').value})
+					templateAdd.push({ 'start': first, 'rows': document.getElementById('sizes').value[0], 'columns': document.getElementById('sizes').value[2], 'content': document.getElementById('textInput').value, 'restricted': status})
 				} else {
-					templateAdd.push({ 'start': first, 'rows': document.getElementById('sizes').value[2], 'columns': document.getElementById('sizes').value[0], 'content': document.getElementById('textInput').value })
+					templateAdd.push({ 'start': first, 'rows': document.getElementById('sizes').value[2], 'columns': document.getElementById('sizes').value[0], 'content': document.getElementById('textInput').value, 'restricted': status})
 				}
 				rot = 0;
 				appear = 1
 			}
 		}
 	}
-	if (colorsIndex == colors.length - 1) {
-		colorsIndex = 0;
+	if (status){
+		if (colorsIndexRed == colorsRed.length - 1) {
+			colorsIndexRed = 0;
+		} else {
+			colorsIndexRed += 1;
+		}
 	} else {
-		colorsIndex += 1;
+		if (colorsIndexBlue == colorsBlue.length - 1) {
+			colorsIndexBlue = 0;
+		} else {
+			colorsIndexBlue += 1;
+		}
+	}
+	if (status){
+		document.getElementById('status').dispatchEvent(new Event('click'));
 	}
 	console.log(templateAdd)
 }
@@ -407,6 +426,16 @@ type.addEventListener('change', function() {
 document.getElementById('rotate').addEventListener('click', rotateTemplate)
 document.getElementById('displayed').addEventListener('click', submitTemplate)
 document.getElementById('submitToDb').addEventListener('click', submitTemplateToDatabase)
+document.getElementById('clear').addEventListener('click', clearGrids)
+document.getElementById('status').addEventListener('click', function(){
+	if (status == false){
+		document.getElementById('status').innerHTML = 'Ce bloc est privé';
+		status = true;
+	} else {
+		document.getElementById('status').innerHTML = 'Ce bloc est public';
+		status = false;
+	}
+});
 
 templateSelect.addEventListener('change', getTemplates)
 

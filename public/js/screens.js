@@ -8,6 +8,7 @@ var db = getFirestore(app);
 let screens = document.getElementById("screens")
 let screensNbr = 10;
 let screensArray = new Array;
+let restricted = new Array;
 
 function createScreensPage() {
     getDocs(collection(db, "Screens")).then((querySnapshot) => {
@@ -25,7 +26,6 @@ function createScreensPage() {
             div.id = i
             div.style.display = 'grid'
             div.style.gridTemplateRows = '1fr 2fr 1fr'
-            div.style.justifyContent = 'center'
             div.innerHTML = screensArray[(i)].name;
             if (screensArray[i].restricted == true) {
                 div.style.border = "3px solid #a00000";
@@ -46,7 +46,9 @@ function createScreensPage() {
             element.style.borderRadius = '5px'
             let selector = document.createElement('select')
             selector.style.gridRow = '3'
-            selector.style.width = '100%'
+            selector.style.width = '80%'
+			selector.style.left = '10%'
+			selector.style.position = 'relative'
             selector.style.backgroundColor = '#fff'
             selector.style.border = '2px solid #23242a'
             selector.style.borderBottom = 'none'
@@ -84,27 +86,20 @@ function getCheckedElements(element) {
         });
     }
 }
-screens.querySelectorAll('.screen').forEach(function(element) {
-    element.setAttribute('onclick', isSelected(element.id))
-})
-
-function isSelected(id) {
-    let element = document.getElementById(id)
-    console.log(element)
-    element.style.backgroundColor = '#fff'
-}
 
 createScreensPage();
 
 document.getElementById('non-restricted').addEventListener('change', function() {
     getCheckedElements(this);
     if (this.checked) {
+		document.getElementById('restricted-label').style.display = "none";
         screens.querySelectorAll('.screen').forEach(function(a) {
             if (a.classList.contains('restricted')) {
                 a.style.display = "none";
             }
         });
     } else {
+		document.getElementById('restricted-label').style.display = "block";
         screens.querySelectorAll('.screen').forEach(function(a) {
             if (a.classList.contains('restricted')) {
                 if (document.getElementById('non-restricted').checked == false && document.getElementById('have-a-template').checked == false && document.getElementById('doesnt-have-a-template').checked == false) {
@@ -125,12 +120,14 @@ document.getElementById('non-restricted').addEventListener('change', function() 
 document.getElementById('restricted').addEventListener('change', function() {
     getCheckedElements(document.getElementById('restricted'));
     if (this.checked) {
+		document.getElementById('non-restricted-label').style.display = "none";
         screens.querySelectorAll('.screen').forEach(function(a) {
             if (a.classList.contains('nonrestricted')) {
                 a.style.display = "none";
             }
         });
     } else {
+		document.getElementById('non-restricted-label').style.display = "block";
         screens.querySelectorAll('.screen').forEach(function(a) {
             if (a.classList.contains('nonrestricted')) {
                 a.style.display = "grid";
@@ -141,7 +138,7 @@ document.getElementById('restricted').addEventListener('change', function() {
 document.getElementById('doesnt-have-a-template').addEventListener('change', function() {
     getCheckedElements(this);
     if (this.checked) {
-		document.getElementById('have-a-template').style.display = "none";
+		document.getElementById('have-a-template-label').style.display = "none";
         screens.querySelectorAll('.screen').forEach(function(a) {
             if (a.classList.contains('template')) {
                 a.style.display = "none";
@@ -149,7 +146,7 @@ document.getElementById('doesnt-have-a-template').addEventListener('change', fun
         });
     } else {
         screens.querySelectorAll('.screen').forEach(function(a) {
-			document.getElementById('have-a-template').style.display = "grid";
+			document.getElementById('have-a-template-label').style.display = "block";
             if (a.classList.contains('template')) {
                 a.style.display = "grid";
             }
@@ -159,12 +156,14 @@ document.getElementById('doesnt-have-a-template').addEventListener('change', fun
 document.getElementById('have-a-template').addEventListener('change', function() {
     getCheckedElements(this);
     if (this.checked) {
+		document.getElementById('doesnt-have-a-template-label').style.display = "none";
         screens.querySelectorAll('.screen').forEach(function(a) {
             if (a.classList.contains('notemplate')) {
                 a.style.display = "none";
             }
         });
     } else {
+		document.getElementById('doesnt-have-a-template-label').style.display = "block";
         screens.querySelectorAll('.screen').forEach(function(a) {
             if (a.classList.contains('notemplate')) {
                 a.style.display = "grid";

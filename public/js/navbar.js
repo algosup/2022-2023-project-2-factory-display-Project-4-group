@@ -56,23 +56,19 @@ function changeStatus(id, connected){
 }
 
 window.onload = function() {
-	const currentUrl = window.location.href;
-	let id;
-	if (currentUrl.includes("id=")) {
-		id = currentUrl.substring(currentUrl.indexOf("id=") + 3);
-		const querySnapshot = getDocs(collection(db, "users"));
-		querySnapshot.forEach((doc) => {
-			if (doc.data().id == id) {
-				if (doc.data().connected == true) {
-					location.href = "screens.html?id=" + id;
+	let id = location.href.split("=")[1];
+		getDocs(collection(db, "users")).then((querySnapshot) => {
+			querySnapshot.forEach((doc) => {
+				console.log(doc.data().id);
+				if (doc.data().id == id) {
+					if (doc.data().connected != true) {
+						window.location.href = "index.html";
+					}
 				} else {
 					window.location.href = "index.html";
 				}
-			}
+			});
 		});
-	} else {
-		window.location.href = "index.html";
-	}
 }
 
 redirect();

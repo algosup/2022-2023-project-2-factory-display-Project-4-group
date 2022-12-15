@@ -55,7 +55,7 @@
 				<option id="14" value="6x8">6x8</option>
 			</select>
             <button class="buttons" id="rotate"> Pivoter </button>
-            <select name="type" id="selectType">
+            <select name="type" id="selectType" disabled>
 				<option value="Text">Texte</option>
 				<option value="Image">Image</option>
 			</select>
@@ -66,7 +66,9 @@
 					<input id="imageInput" type="file" accept="Image/jpg, Image/png, Image/jpeg" />
 				</label>
             </div>
-            <button class="buttons" id="displayed">Valider</button>
+			<button class="buttons" id="status" style="width: 32vw;"> Ce bloc est public </button>
+            <button class="buttons" id="displayed">Valider</button> 
+            <button class="buttons" id="clear"> Réinitialiser le modèle</button>
         </div>
     </div>
     <div class="content">
