@@ -93,3 +93,17 @@ async function setScreenInfos(idA, restricted, nameA, code) {
         templateID: ""
     });
 }
+
+document.getElementById('btnOK').addEventListener('click', function() {
+	if (document.getElementById("nb1").value && document.getElementById("nb2").value && document.getElementById("nb3").value && document.getElementById("nb4").value && document.getElementById("nb5").value) {
+		nb1 = string(document.getElementById('nb1').value)
+		nb2 = string(document.getElementById('nb2').value)
+		nb3 = string(document.getElementById('nb3').value)
+		nb4 = string(document.getElementById('nb4').value)
+		nb5 = string(document.getElementById('nb5').value)
+		code = nb1 + nb2 + nb3 + nb4 + nb5
+		alert('Le code est ' + code)
+	} else {
+		alert('Veuillez entrer un code valide')
+	}
+});
