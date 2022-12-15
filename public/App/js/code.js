@@ -66,6 +66,7 @@ document.getElementById('btnRT').addEventListener('click', function() {
     document.getElementById('code-title').style.display = 'none'
     document.getElementById('random-code').style.display = 'none'
     document.getElementById('btnCO').style.display = 'none'
+	document.getElementById('btnCY').style.display = 'none'
 });
 
 document.getElementById('btnRG').addEventListener('click', function() {
