@@ -95,16 +95,17 @@ These are the mains features that are planned in our V0 :
 - Adapt the content to the screen size
 - Widgets for weather, news, etc. that will be updated on a regular basis
 - A login page the website to ensure that only authorized people can use it (there will only be 4 people who will have their access granted to the tool)
-- Planning messages for a given date (i.e Friday for Monday)
+- Draft system (you can start writing a message and finish writing it later)
+- Unique logins for each users   
+  
   
 ## 3.3. Out Of Scope
  
 Due to time and resources constraints, these features might be included in the upcoming versions :
 - Different languages
 - Smart screen in Paris to display informations
-- Unique logins for each users   
 - An history of the displayed content with a tracking of who changed what
-- Draft system (you can start writing a message and finish writing it later)
+- Planning messages for a given date (i.e Friday for Monday)
 
   
 ## 3.4. Deadlines
