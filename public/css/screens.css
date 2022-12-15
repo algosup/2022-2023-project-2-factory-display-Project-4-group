@@ -14,12 +14,6 @@ body {
     grid-template-columns: 4fr 1fr 4fr 1fr 4fr 1fr 4fr;
 }
 
-.border {
-    width: 100%;
-    height: 2px;
-    background-color: #45f3ff;
-}
-
 .page1 {
     background-color: #45f3ff;
     width: 150px;
@@ -130,4 +124,15 @@ label {
     border: none;
     cursor: pointer;
     color: white;
+}
+
+#border {
+	width: 100%;
+	height: 2px;
+	background-color: #45f3ff;
+}
+
+li {
+	text-align: center;
+	color: white;
 }
