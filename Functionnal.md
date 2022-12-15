@@ -93,7 +93,7 @@ The most important points of this project is to be able to control the displayed
 
 These are the mains features that are planned in our V0 : 
 - Adapt the content to the screen size
-- Widgets for weather, news, etc. that will be updated on a regular basis
+- Widgets for weather and news that will be updated on a regular basis
 - A login page the website to ensure that only authorized people can use it (there will only be 4 people who will have their access granted to the tool)
 - Draft system (you can start writing a message and finish writing it later)
 - Unique logins for each users   
@@ -106,6 +106,7 @@ Due to time and resources constraints, these features might be included in the u
 - Smart screen in Paris to display informations
 - An history of the displayed content with a tracking of who changed what
 - Planning messages for a given date (i.e Friday for Monday)
+- Possibility of adding any widget
 
   
 ## 3.4. Deadlines
