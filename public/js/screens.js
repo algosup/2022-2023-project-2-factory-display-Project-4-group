@@ -139,8 +139,9 @@ document.getElementById('restricted').addEventListener('change', function() {
     }
 });
 document.getElementById('doesnt-have-a-template').addEventListener('change', function() {
-    getCheckedElements(document.getElementById('have-a-template'));
+    getCheckedElements(this);
     if (this.checked) {
+		document.getElementById('have-a-template').style.display = "none";
         screens.querySelectorAll('.screen').forEach(function(a) {
             if (a.classList.contains('template')) {
                 a.style.display = "none";
@@ -148,6 +149,7 @@ document.getElementById('doesnt-have-a-template').addEventListener('change', fun
         });
     } else {
         screens.querySelectorAll('.screen').forEach(function(a) {
+			document.getElementById('have-a-template').style.display = "grid";
             if (a.classList.contains('template')) {
                 a.style.display = "grid";
             }
@@ -155,7 +157,7 @@ document.getElementById('doesnt-have-a-template').addEventListener('change', fun
     }
 });
 document.getElementById('have-a-template').addEventListener('change', function() {
-    getCheckedElements(document.getElementById('doesnt-have-a-template'));
+    getCheckedElements(this);
     if (this.checked) {
         screens.querySelectorAll('.screen').forEach(function(a) {
             if (a.classList.contains('notemplate')) {
