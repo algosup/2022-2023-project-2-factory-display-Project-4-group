@@ -8,7 +8,7 @@ var db = getFirestore(app);
 let screens = document.getElementById("screens")
 let screensNbr = 10;
 let screensArray = new Array;
-let restricted = new Array;
+let templatesArray = new Array;
 
 function createScreensPage() {
     getDocs(collection(db, "Screens")).then((querySnapshot) => {
@@ -26,6 +26,7 @@ function createScreensPage() {
             div.id = i
             div.style.display = 'grid'
             div.style.gridTemplateRows = '1fr 2fr 1fr'
+			div.style.gridTemplateColumns = '1fr'
             div.innerHTML = screensArray[(i)].name;
             if (screensArray[i].restricted == true) {
                 div.style.border = "3px solid #a00000";
@@ -42,20 +43,43 @@ function createScreensPage() {
             screens.appendChild(div);
         }
     }).then(() => {
+		let num = screensNbr;
         screens.querySelectorAll('.screen').forEach(function(element) {
             element.style.borderRadius = '5px'
             let selector = document.createElement('select')
             selector.style.gridRow = '3'
+			selector.style.gridColumn = '1'
             selector.style.width = '80%'
-			selector.style.left = '10%'
+			// selector.style.left = '10%'
 			selector.style.position = 'relative'
             selector.style.backgroundColor = '#fff'
             selector.style.border = '2px solid #23242a'
             selector.style.borderBottom = 'none'
             selector.style.outline = 'none'
-            selector.style.borderRadius = '5px 5px 0 0'
+            selector.style.borderRadius = '5px 0 0 0'
+			selector.id = ("0" + String(num))
+			let btn = document.createElement('button')
+			btn.innerHTML = "✓"
+			btn.style.gridRow = '3'
+			btn.style.gridColumn = '1'
+			btn.style.width = '20%'
+			btn.style.position = 'relative'
+			btn.style.left = '80%'
+            btn.style.backgroundColor = '#fff'
+            btn.style.border = '2px solid #23242a'
+			btn.style.borderLeft = 'none'
+            btn.style.borderBottom = 'none'
+            btn.style.outline = 'none'
+            btn.style.borderRadius = '0 5px 0 0'
+			btn.id = String(num)
+			num += 1
+			let nullOption = document.createElement('option')
+			nullOption.value = "Vide"
+			nullOption.innerHTML = "Vide"
+			selector.appendChild(nullOption)
             getDocs(collection(db, "Templates")).then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
+					templatesArray.push({ 'name': doc.data().name, 'id': doc.data().id});
 					if (element.classList.contains('restricted')) {
 						let temp = false
 						doc.data().template.forEach(function(a) {
@@ -75,9 +99,26 @@ function createScreensPage() {
 						option.innerHTML = doc.data().name
 						selector.appendChild(option)
 					}
+					selector.querySelectorAll('option').forEach(function(a) {
+						if (doc.data().id == screensArray[element.id].templateID) {
+							a.selected = true
+							a.defaultSelected = true
+						}
+					});
                 });
             })
+			btn.addEventListener('click', function() {
+				let tId = this.id
+				let screenActual = document.getElementById(tId-9)
+				templatesArray.forEach(function(a) {
+					if (a.name == document.getElementById("0" + tId).value) {
+						changeTemplateInDatabase(a.id, screenActual.id)
+					}
+				})
+				console.log(document.getElementById("0" + this.id).id)
+			});
             element.appendChild(selector)
+			element.appendChild(btn)
         })
     });
 }
@@ -90,6 +131,7 @@ function getCheckedElements(element) {
     if (element.checked) {
         let list = document.createElement('li')
         list.innerHTML = element.value;
+		// list.id = element.id;
         document.getElementById('active').innerHTML += list.outerHTML
     } else {
         document.getElementById('active').querySelectorAll('li').forEach(function(a) {
@@ -111,6 +153,7 @@ document.getElementById('non-restricted').addEventListener('change', function() 
                 a.style.display = "none";
             }
         });
+		document.getElementById('border').style.display = "block";
     } else {
 		document.getElementById('restricted-label').style.display = "block";
         screens.querySelectorAll('.screen').forEach(function(a) {
@@ -128,6 +171,7 @@ document.getElementById('non-restricted').addEventListener('change', function() 
                 }
             }
         });
+		document.getElementById('border').style.display = "none";
     }
 });
 document.getElementById('restricted').addEventListener('change', function() {
@@ -139,6 +183,7 @@ document.getElementById('restricted').addEventListener('change', function() {
                 a.style.display = "none";
             }
         });
+		document.getElementById('border').style.display = "block";
     } else {
 		document.getElementById('non-restricted-label').style.display = "block";
         screens.querySelectorAll('.screen').forEach(function(a) {
@@ -146,6 +191,7 @@ document.getElementById('restricted').addEventListener('change', function() {
                 a.style.display = "grid";
             }
         });
+		document.getElementById('border').style.display = "none";
     }
 });
 document.getElementById('doesnt-have-a-template').addEventListener('change', function() {
@@ -157,6 +203,7 @@ document.getElementById('doesnt-have-a-template').addEventListener('change', fun
                 a.style.display = "none";
             }
         });
+		document.getElementById('border').style.display = "block";
     } else {
         screens.querySelectorAll('.screen').forEach(function(a) {
 			document.getElementById('have-a-template-label').style.display = "block";
@@ -164,6 +211,7 @@ document.getElementById('doesnt-have-a-template').addEventListener('change', fun
                 a.style.display = "grid";
             }
         });
+		document.getElementById('border').style.display = "none";
     }
 });
 document.getElementById('have-a-template').addEventListener('change', function() {
@@ -175,6 +223,7 @@ document.getElementById('have-a-template').addEventListener('change', function()
                 a.style.display = "none";
             }
         });
+		document.getElementById('border').style.display = "block";
     } else {
 		document.getElementById('doesnt-have-a-template-label').style.display = "block";
         screens.querySelectorAll('.screen').forEach(function(a) {
@@ -182,6 +231,7 @@ document.getElementById('have-a-template').addEventListener('change', function()
                 a.style.display = "grid";
             }
         });
+		document.getElementById('border').style.display = "none";
     }
 });
 document.getElementById('clearAll').addEventListener('click', function() {
@@ -198,3 +248,9 @@ document.getElementById('clearAll').addEventListener('click', function() {
     getCheckedElements(document.getElementById('doesnt-have-a-template'));
     document.getElementById('active').innerHTML = "";
 });
+
+async function changeTemplateInDatabase(templateId, idT){
+	await updateDoc(doc(db, "Screens", idT), {
+		templateID: templateId
+	});
+}
