@@ -55,13 +55,12 @@ function changeStatus(id, connected){
 });
 }
 
-async function checkLog() {
-	window.onload
+window.onload = function() {
 	const currentUrl = window.location.href;
 	let id;
 	if (currentUrl.includes("id=")) {
 		id = currentUrl.substring(currentUrl.indexOf("id=") + 3);
-		const querySnapshot = await getDocs(collection(db, "users"));
+		const querySnapshot = getDocs(collection(db, "users"));
 		querySnapshot.forEach((doc) => {
 			if (doc.data().id == id) {
 				if (doc.data().connected == true) {
@@ -76,5 +75,4 @@ async function checkLog() {
 	}
 }
 
-checkLog();
 redirect();
