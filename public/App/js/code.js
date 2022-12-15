@@ -43,6 +43,13 @@ document.getElementById('one').addEventListener('click', function() {
     generateRandomCode();
 })
 
+document.getElementById('two').addEventListener('click', function() {
+	document.getElementById('choices-title').style.display = 'none'
+	document.getElementById('choices').style.display = 'none'
+	document.getElementById('codeTitle').style.display = 'block'
+	document.getElementById('input-numbers').style.display = 'block'
+})
+
 document.getElementById('btnRS').addEventListener('click', function() {
     if (this.innerHTML == 'Cet écran est public') {
         privat = true
