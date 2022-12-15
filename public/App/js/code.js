@@ -1,5 +1,5 @@
 import { initializeFirebase } from "../../js/firebase.js";
-import { getFirestore, getDocs, collection, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
+import { getFirestore, getDocs, collection, addDoc, doc } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
 
 var app = initializeFirebase();
 var db = getFirestore(app);
@@ -14,6 +14,9 @@ function generateRandomCode() {
         for (let i = 0; String(code).length < 5; i++) {
             code = "0" + code
         }
+        if (checkExistingCodes(code)) {
+            generateRandomCode();
+        }
         element.innerHTML = code
     } else {
         element.innerHTML = randomCode;
@@ -27,7 +30,9 @@ function generateRandomCode() {
 function checkExistingCodes(code) {
     getDocs(collection(db, "Screens")).then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            console.log(doc.data().code);
+            if (doc.data().code == code) {
+                return true
+            }
         });
     });
     return false
@@ -44,10 +49,10 @@ document.getElementById('one').addEventListener('click', function() {
 })
 
 document.getElementById('two').addEventListener('click', function() {
-	document.getElementById('choices-title').style.display = 'none'
-	document.getElementById('choices').style.display = 'none'
-	document.getElementById('codeTitle').style.display = 'block'
-	document.getElementById('input-numbers').style.display = 'block'
+    document.getElementById('choices-title').style.display = 'none'
+    document.getElementById('choices').style.display = 'none'
+    document.getElementById('codeTitle').style.display = 'block'
+    document.getElementById('code2').style.display = 'grid'
 })
 
 document.getElementById('btnRS').addEventListener('click', function() {
@@ -66,8 +71,9 @@ document.getElementById('btnRT').addEventListener('click', function() {
     document.getElementById('code-title').style.display = 'none'
     document.getElementById('random-code').style.display = 'none'
     document.getElementById('btnCO').style.display = 'none'
-	document.getElementById('btnCY').style.display = 'none'
+    document.getElementById('btnCY').style.display = 'none'
 });
+
 
 document.getElementById('btnRG').addEventListener('click', function() {
     generateRandomCode();
@@ -76,35 +82,75 @@ document.getElementById('btnRG').addEventListener('click', function() {
 document.getElementById('btnCN').addEventListener('click', function() {
     let id;
     getDocs(collection(db, "Screens")).then((querySnapshot) => {
-        id = querySnapshot.size
+        id = String(querySnapshot.size - 1)
     }).then(() => {
         let nam = document.getElementById('btnNM').value
         console.log(id, privat, nam, document.getElementById('random-code').innerHTML)
-        setScreenInfos(id, privat, nam, document.getElementById('random-code').innerHTML)
+        setScreenInfos(id, privat, String(nam), String(document.getElementById('random-code').innerHTML))
     });
 });
 
+/**
+ * 
+ * @param {String} idA 
+ * @param {Boolean} restricted 
+ * @param {String} nameA 
+ * @param {String} code 
+ */
 async function setScreenInfos(idA, restricted, nameA, code) {
-    await setDoc(doc(db, "Templates", idA), {
+    await addDoc(collection(db, "Screens"), {
         id: idA,
         name: nameA,
         code: code,
         reload: false,
         restricted: restricted,
-        templateID: ""
+        templateID: "",
     });
 }
 
-document.getElementById('btnOK').addEventListener('click', function() {
-	if (document.getElementById("nb1").value && document.getElementById("nb2").value && document.getElementById("nb3").value && document.getElementById("nb4").value && document.getElementById("nb5").value) {
-		nb1 = string(document.getElementById('nb1').value)
-		nb2 = string(document.getElementById('nb2').value)
-		nb3 = string(document.getElementById('nb3').value)
-		nb4 = string(document.getElementById('nb4').value)
-		nb5 = string(document.getElementById('nb5').value)
-		code = nb1 + nb2 + nb3 + nb4 + nb5
-		alert('Le code est ' + code)
-	} else {
-		alert('Veuillez entrer un code valide')
-	}
+
+document.getElementById('btnRO').addEventListener('click', function() {
+    document.getElementById('choices-title').style.display = 'block'
+    document.getElementById('choices').style.display = 'grid'
+        // document.getElementById('codeTitle').style.display = 'none'
+        // document.getElementById('btnRO').style.display = 'none'
+        // document.getElementById('btnOK').style.display = 'none'
+    document.getElementById('code2').style.display = 'none'
 });
+
+document.getElementById('btnOK').addEventListener('click', async function() {
+    if (document.getElementById("nb1").value && document.getElementById("nb2").value && document.getElementById("nb3").value && document.getElementById("nb4").value && document.getElementById("nb5").value) {
+        let nb1 = String(document.getElementById('nb1').value)
+        let nb2 = String(document.getElementById('nb2').value)
+        let nb3 = String(document.getElementById('nb3').value)
+        let nb4 = String(document.getElementById('nb4').value)
+        let nb5 = String(document.getElementById('nb5').value)
+        let code = nb1 + nb2 + nb3 + nb4 + nb5
+        console.log(code)
+        let res = await getScreensData(code)
+        if (res.exist) {
+            location.href = "index.html?id=" + res.id
+        } else {
+            alert("Aucun écran ne possède ce code")
+        }
+    }
+});
+
+/**
+ * 
+ * @param {String} dataCode
+ * @returns {Boolean, String}
+ */
+async function getScreensData(dataCode) {
+    let exist = false
+    let id;
+    await getDocs(collection(db, "Screens")).then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            if (doc.data().code === dataCode) {
+                id = doc.data().id
+                exist = true
+            }
+        });
+    });
+    return { exist, id }
+}

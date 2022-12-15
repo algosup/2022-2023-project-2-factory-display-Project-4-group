@@ -33,15 +33,16 @@
     </div>
 
 
-	<h1 class="code" id="codeTitle">Entrez le code souhaité:</h1>
-	<form class="code" id="input-numbers">
-		<input class="number-input" type="number" min="0" max="9" id="nb1"/>
-		<input class="number-input" type="number" min="0" max="9" id="nb2"/>
-		<input class="number-input" type="number" min="0" max="9" id="nb3"/>
-		<input class="number-input" type="number" min="0" max="9" id="nb4"/>
-		<input class="number-input" type="number" min="0" max="9" id="nb5"/>
-		<button id="btnOK">OK</button>
-	</form>
+    <div class="code2" id="code2">
+        <h1 id="codeTitle">Entrez le code souhaité:</h1>
+        <input class="number-input" type="text" id="nb1" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+        <input class="number-input" type="text" id="nb2" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+        <input class="number-input" type="text" id="nb3" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+        <input class="number-input" type="text" id="nb4" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+        <input class="number-input" type="text" id="nb5" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+        <button id="btnOK">OK</button>
+        <button id="btnRO">Retour au choix</button>
+    </div>
 </body>
 
 </html>

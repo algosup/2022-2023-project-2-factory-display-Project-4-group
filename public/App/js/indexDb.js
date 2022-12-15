@@ -8,9 +8,10 @@ function getTemplatesFromDatabase() {
     let templateId;
     let templateArray = [];
     let restrictedScreen;
+    let ScreenId = location.href.split('=')[1]
     getDocs(collection(db, "Screens")).then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            if (doc.data().id == "8") {
+            if (doc.data().id == ScreenId) {
                 templateId = doc.data().templateID
                 restrictedScreen = doc.data().restricted
             }
