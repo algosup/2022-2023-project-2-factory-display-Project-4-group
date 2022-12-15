@@ -56,12 +56,25 @@ function createScreensPage() {
             selector.style.borderRadius = '5px 5px 0 0'
             getDocs(collection(db, "Templates")).then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
-                    if (doc.data().id != "-1") {
-                        let option = document.createElement('option')
-                        option.value = doc.data().name
-                        option.innerHTML = doc.data().name
-                        selector.appendChild(option)
-                    }
+					if (element.classList.contains('restricted')) {
+						let temp = false
+						doc.data().template.forEach(function(a) {
+							if (a.restricted == true){
+								temp = true
+							}
+						});
+						if (temp == false) {
+							let option = document.createElement('option')
+							option.value = doc.data().name
+							option.innerHTML = doc.data().name
+							selector.appendChild(option)
+						}
+					} else {
+						let option = document.createElement('option')
+						option.value = doc.data().name
+						option.innerHTML = doc.data().name
+						selector.appendChild(option)
+					}
                 });
             })
             element.appendChild(selector)
