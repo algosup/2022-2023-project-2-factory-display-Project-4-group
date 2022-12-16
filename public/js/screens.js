@@ -117,7 +117,7 @@ function createScreensPage() {
             })
             btn.addEventListener('click', function() {
                 let tId = this.id
-                let screenActual = document.getElementById(tId - 9)
+                let screenActual = document.getElementById(tId - screensNbr)
                 templatesArray.forEach(function(a) {
                     if (a.name == document.getElementById("0" + tId).value) {
                         changeTemplateInDatabase(a.id, screenActual.id)
