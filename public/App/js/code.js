@@ -58,7 +58,7 @@ document.getElementById('two').addEventListener('click', function() {
 document.getElementById('btnRS').addEventListener('click', function() {
     if (this.innerHTML == 'Cet écran est public') {
         privat = true
-        this.innerHTML = 'cet écran est privé'
+        this.innerHTML = 'Cet écran est privé'
     } else {
         this.innerHTML = 'Cet écran est public'
         privat = false
@@ -87,7 +87,8 @@ document.getElementById('btnCN').addEventListener('click', function() {
         let nam = document.getElementById('btnNM').value
         console.log(id, privat, nam, document.getElementById('random-code').innerHTML)
         setScreenInfos(id, privat, String(nam), String(document.getElementById('random-code').innerHTML))
-    });
+    }).then(() => {
+	})
 });
 
 /**
@@ -97,15 +98,17 @@ document.getElementById('btnCN').addEventListener('click', function() {
  * @param {String} nameA 
  * @param {String} code 
  */
-async function setScreenInfos(idA, restricted, nameA, code) {
-    await addDoc(collection(db, "Screens"), {
+function setScreenInfos(idA, restricted, nameA, code) {
+    addDoc(collection(db, "Screens"), {
         id: idA,
         name: nameA,
         code: code,
         reload: false,
         restricted: restricted,
         templateID: "",
-    });
+    }).then(() => {
+		location.href = "index.html?id=" + idA
+	})
 }
 
 

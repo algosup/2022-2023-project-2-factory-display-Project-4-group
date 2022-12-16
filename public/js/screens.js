@@ -121,7 +121,9 @@ function createScreensPage() {
                 templatesArray.forEach(function(a) {
                     if (a.name == document.getElementById("0" + tId).value) {
                         changeTemplateInDatabase(a.id, screenActual.id)
-                    }
+                    } else if (document.getElementById("0" + tId).value == "Vide") {
+						changeTemplateInDatabase("", screenActual.id)
+					}
                 })
                 console.log(document.getElementById("0" + this.id).id)
             });
@@ -259,6 +261,7 @@ document.getElementById('clearAll').addEventListener('click', function() {
 
 async function changeTemplateInDatabase(templateId, idT) {
     await updateDoc(doc(db, "Screens", idT), {
-        templateID: templateId
+        templateID: templateId,
+		reload: true
     });
 }

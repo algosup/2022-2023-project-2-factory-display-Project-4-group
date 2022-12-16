@@ -4,11 +4,14 @@ import { getFirestore, getDocs, collection, setDoc, doc, updateDoc, addDoc } fro
 var app = initializeFirebase();
 var db = getFirestore(app);
 
+
+
+let ScreenId = location.href.split('=')[1]
+
 function getTemplatesFromDatabase() {
     let templateId;
     let templateArray = [];
     let restrictedScreen;
-    let ScreenId = location.href.split('=')[1]
     getDocs(collection(db, "Screens")).then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             if (doc.data().id == ScreenId) {
@@ -18,7 +21,6 @@ function getTemplatesFromDatabase() {
         });
     }).then(
         getDocs(collection(db, "Templates")).then((querySnapshot) => {
-            console.log(templateId, typeof(templateId));
             querySnapshot.forEach((doc) => {
                 if (doc.data().id == templateId) {
                     templateArray = doc.data().template;
@@ -43,12 +45,26 @@ function displayInfos(start, rows, columns, content) {
     doc.appendChild(info)
 }
 
+var time = setInterval(getReload, 5000)
+function getReload(){
+	getDocs(collection(db, "Screens")).then((querySnapshot) => {
+		querySnapshot.forEach((doc) => {
+			if (doc.data().id == ScreenId) {
+				if (doc.data().reload){
+					updateReload(false, ScreenId);
+				}
+			}
+		});
+	});
+}
 
-
-
-
-
-
+async function updateReload(reload, idN){
+	await updateDoc(doc(db, "Screens", idN), {
+		reload: reload,
+	}).then(() => {
+		location.reload();
+	});
+}
 
 
 
