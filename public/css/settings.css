@@ -1,0 +1,134 @@
+/* body {
+	font-family: sans-serif;
+	line-height: 1.5;
+	justify-content: center;
+	background-color: var(--c-bg-body);
+	transform: background-color 1s ease;
+	color: var(--c-text-primary);
+} */
+
+body {
+    background-color: #2d2828;
+}
+
+.menu {
+    width: 40vw;
+    margin-top: 80px;
+    margin-left: 30vw;
+    background-color: var(--c-bg-primary);
+    transition: background-color .30s ease;
+    border-radius: 15px;
+    transform: scale(0.85);
+}
+
+.menu-header {
+    padding: 1rem;
+}
+
+.down {
+    margin-top: 60px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.menu-header-title {
+    font-size: 1.4rem;
+    color: var(--c-text-secondary);
+    font-weight: 700;
+}
+
+.theme-switcher input {
+    display: none;
+}
+
+.theme-switcher {
+    position: relative;
+    background-color: var(--c-bg-secondary);
+    border-radius: 10px;
+    display: flex;
+    padding: 0 3px;
+}
+
+.theme-switcher label {
+    position: relative;
+    z-index: 2;
+    width: calc(100% / 3);
+    color: var(--c-text-secondary);
+}
+
+.theme-switcher label span {
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.theme-switcher label span:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.theme-switcher .slider {
+    position: absolute;
+    z-index: 1;
+    width: calc((100% - 6px) / 3);
+    top: 3px;
+    transform: translatex(-110%);
+    bottom: 3px;
+    border-radius: 8px;
+    transition: .30s ease, transform 0.25s ease-out;
+    background-color: var(--c-bg-button);
+}
+
+.theme-switcher input:nth-of-type(1):checked~.slider {
+    transform: translateX(0);
+}
+
+.theme-switcher input:nth-of-type(2):checked~.slider {
+    transform: translateX(100%);
+}
+
+.theme-switcher input:nth-of-type(3):checked~.slider {
+    transform: translateX(200%);
+}
+
+.menu-body {
+    padding: 1rem;
+    border-top: 1px solid var(--c-border-primary);
+    transition: border-color .30s ease;
+}
+
+.menu-body a {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    padding: 0.6rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: .30s ease;
+}
+
+.menu-body a:hover {
+    background-color: var(--c-bg-secondary);
+}
+
+ion-icon {
+    margin-right: 5px;
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.footer {
+    height: 5vh;
+    width: 100vw;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    padding: 0;
+    color: whitesmoke;
+    background-color: black;
+    font-size: large;
+}

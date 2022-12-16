@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+}
+
+.down {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    background-color: #1f1f1f;
+    color: #d2d2d2;
+}
+
+.time {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 3em;
+    color: #ff6600;
+    background-color: #d2d2d2;
+    border: 3px solid #1f1f1f;
+    border-radius: 10px;
+}
+
+#time {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.weather {
+    grid-column: 2/-1;
+    grid-row: 1;
+}
+
+.news {
+    background-color: #d2d2d2;
+    border: 3px solid #1f1f1f;
+    border-radius: 10px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    text-align: center;
+}
+
+#news {
+    grid-column: 1;
+    grid-row: 2/4;
+    display: block;
+}
+
+#news1 {
+    grid-column: 1;
+    grid-row: 4/5;
+}
+
+#news2 {
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+
+#news3 {
+    grid-column: 4/5;
+    grid-row: 2/6;
+}
+
+#news4 {
+    grid-column: 2/4;
+    grid-row: 4/6;
+}
+
+#news5 {
+    grid-column: 5/8;
+    grid-row: 2/6;
+}
+
+#News {
+    background-color: #d2d2d2;
+    grid-column: 1/-1;
+    border-radius: 10px;
+    grid-row: 8;
+    width: 100vw;
+    display: block;
+    border-top: 1px solid #1f1f1f;
+    border-radius: 10px 10px 0 0;
+}

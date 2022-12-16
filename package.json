@@ -1,0 +1,23 @@
+{
+  "name": "2022-2023-project-2-factory-display-project-4-group",
+  "version": "1.0.0",
+  "description": "<h1>2022-2023 project 4 factory display</h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/algosup/2022-2023-project-2-factory-display-Project-4-group.git"
+  },
+  "author": "Group 4",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/algosup/2022-2023-project-2-factory-display-Project-4-group/issues"
+  },
+  "homepage": "https://github.com/algosup/2022-2023-project-2-factory-display-Project-4-group#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "firebase-admin": "^11.3.0"
+  }
+}

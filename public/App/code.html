@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="css/code.css">
+    <title>Code</title>
+    <script type="module" src="js/code.js" defer></script>
+</head>
+
+<body>
+    <h1 id="choices-title">Voulez-vous:</h1>
+    <div id="choices">
+        <div class="choice" id="one">
+            <p> Générer un nouveau code </p>
+        </div>
+        <div class="choice" id="two">
+            <p> Utiliser un code déjà existant </p>
+        </div>
+    </div>
+    <h1 class="code" id="code-title">Le code de l'appareil est le suivant:</h1>
+    <h1 class="code" id="random-code"></h1>
+    <div class="code" id="btnCY">
+        <button id="btnRS">Cet écran est public</button>
+        <input id="btnNM" placeholder="Veuillez nommer cet écran">
+    </div>
+    <div class="code" id="btnCO">
+        <button id="btnRT">Retour au choix</button>
+        <button id="btnRG"> Regénérer un code </button>
+        <button id="btnCN"> Continuer avec ce code </button>
+    </div>
+
+
+    <div class="code2" id="code2">
+        <h1 id="codeTitle">Entrez le code souhaité:</h1>
+        <input class="number-input" type="text" id="nb1" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+        <input class="number-input" type="text" id="nb2" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+        <input class="number-input" type="text" id="nb3" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+        <input class="number-input" type="text" id="nb4" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+        <input class="number-input" type="text" id="nb5" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+        <button id="btnOK">OK</button>
+        <button id="btnRO">Retour au choix</button>
+    </div>
+</body>
+
+</html>
